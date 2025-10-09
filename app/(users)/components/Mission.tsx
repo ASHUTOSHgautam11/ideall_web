@@ -8,9 +8,7 @@ export default function Mission() {
             Leading International Trade Solutions
           </h2>
           <p className="text-xl max-w-4xl mx-auto opacity-90 leading-relaxed">
-            Ideall Solutions stands at the forefront of international trade and procurement solutions. 
-            With a wealth of advancing connections to source, AI-powered, and digitally connected 
-            services utilizing experience across all phases of product development.
+            Ideall Solutionz stands at the forefront of international trade and procurement. Leveraging a vast global network and AI-powered, digitally connected services, we bring expertise across every stage of product development — from sourcing to delivery.
           </p>
         </div>
 

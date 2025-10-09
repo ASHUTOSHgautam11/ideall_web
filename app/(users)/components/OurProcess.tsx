@@ -34,9 +34,13 @@ const OurProcess = () => {
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-secondary  mb-4 text-center">
           Our Process
         </h2>
-        <p className="text-lg text-white  mb-10 md:mb-10 lg:mb-20 mt-6 text-center max-w-full mx-auto leading-relaxed">
-         Our process begins with a clear understanding of your needs, enabling us to identify and align with the most reliable suppliers. We then connect you directly with trusted partners, fostering strong and transparent collaborations. Finally, we ensure seamless delivery by overseeing quality, logistics, and timelines, driving every project toward lasting success.
+        <p className="text-lg text-white  mb-10 md:mb-10 lg:mb-0 mt-6 text-center max-w-full mx-auto leading-relaxed">
+          A streamlined approach to connecting you with the right products and ensuring your success.
         </p>
+        <p className="text-lg text-white  mb-10 md:mb-10 lg:mb-20 mt-6 text-center max-w-full mx-auto leading-relaxed">
+          Our process begins with a clear understanding of your needs, enabling us to identify and align with the most reliable suppliers. We then connect you directly with trusted partners, fostering strong and transparent collaborations. Finally, we ensure seamless delivery by overseeing quality, logistics, and timelines, driving every project toward lasting success.
+        </p>
+
 
         {/* Process Steps */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 relative pb-10">

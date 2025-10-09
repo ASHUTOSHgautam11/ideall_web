@@ -21,7 +21,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
             <div className="w-full">
                 <SubHeading
                     title="Who We Are"
-                    description="IDeall Solutionz is a part of IDeall group of companies, which was started in 2002 and at present is having a turn over US$ 15Mn funded by private equity. Headquartered in Singapore, it has evolved as a key player and has offices in India, China, Hong Kong, UAE and Vietnam. IDeall group of Co's has 4 major divisions, which specializes in International Trading of Life style Goods, Chemicals, Metals and alloys and Information Technology."
+                    description="IDeall Solutionz is part of the IDeall group of companies, which started in 2002 and at present has a turn over US$ 15Mn, funded by private equity. Headquartered in Singapore, it evolved as a key player and now has offices in India, China, Hong Kong, UAE and Vietnam. IDeall group has 4 major divisions, specializing in: International Trading of Life style Goods, Chemicals, Metals and alloys and Information Technology."
                 />
             </div>
 
@@ -53,7 +53,8 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                         </div>
                         {/* Paragraph */}
                         <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-8 leading-relaxed text-gray-900 m-4">
-                            We empower global enterprises by sourcing exceptional lifestyle products and delivering them through a seamless, dependable network. Our focus is on building trust, ensuring quality, and driving sustainable growth with every connection.
+                            Your Sourcing Partner for a Connected World.<br />
+                            Our Sourcing, Your Strength. Empowering global businesses with seamless access to premium lifestyle products through a trusted, efficient, and expansive supply network.
                         </p>
 
 
@@ -81,8 +82,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                                 Redefining Innovation
                             </h3>
                             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90">
-                                Experience transformative flooring solutions crafted with cutting-edge
-                                innovation and European excellence, designed to revolutionize your space.
+                                Crafted to inspire, designed to endure — redefining modern luxury.
                             </p>
                         </div>
 
@@ -92,8 +92,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                                 Crafting Dreams into Reality
                             </h3>
                             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90">
-                                Our team goes beyond design; we bring your unique vision to life, creating
-                                captivating environments that inspire and delight.
+                                Turning inspiration into enduring creation.
                             </p>
                         </div>
                         {/* Section 3 */}
@@ -102,8 +101,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                                 Crafting Dreams into Reality
                             </h3>
                             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90">
-                                Our team goes beyond design; we bring your unique vision to life, creating
-                                captivating environments that inspire and delight.
+                                Born from skilled hands and visionary minds — craftsmanship worth celebrating.
                             </p>
                         </div>
 
@@ -113,7 +111,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                                 Timeless Elegance
                             </h3>
                             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90 mb-10">
-                               Discover lifestyle solutions that blend modern sophistication with enduring style, curated to elevate every space with grace and distinction.
+                                Refined today, revered forever.
                             </p>
 
                             {/* Section 5 */}

@@ -152,16 +152,22 @@ export default function Slider() {
       {/* Content Overlay */}
       <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="bg-gray-900/60 backdrop-blur-none border border-gray-700 p-6 sm:p-8 md:p-10 shadow-2xl animate-in slide-in-from-bottom duration-1000">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-5 leading-tight">
+          <h1
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-5 leading-tight"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
             {currentSlide.title}
           </h1>
 
-          <p className="text-sm sm:text-lg lg:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p
+            className="text-sm sm:text-lg lg:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
             {currentSlide.description}
           </p>
 
           {/* Badges */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+          {/* <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
             {['🌍 Global Sourcing', '✅ Quality Assurance', '📦 Trade Facilitation'].map((item, i) => (
               <span
                 key={i}
@@ -170,7 +176,7 @@ export default function Slider() {
                 {item}
               </span>
             ))}
-          </div>
+          </div> */}
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

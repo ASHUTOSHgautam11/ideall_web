@@ -1,6 +1,5 @@
 "use client";
-import React from 'react';
-import Feature7 from './Feature7';
+import Link from "next/link";
 
 // Define the type for each feature item
 interface FeatureItem {
@@ -96,156 +95,95 @@ const TrustedByGlobal: React.FC = () => {
         },
     ];
 
-    // Stats data
-    const stats = [
-        { value: "500+", label: "Projects Completed" },
-        { value: "98%", label: "Client Satisfaction" },
-        { value: "2M+", label: "Sq Ft Installed" },
-        { value: "15+", label: "Years Experience" },
-    ];
-
     return (
         <section
             style={{
-                padding: '50px 20px',
-                textAlign: 'center',
-                backgroundColor: '#f7f4f2ff',
-
+                padding: "50px 20px",
+                textAlign: "center",
+                backgroundColor: "#f7f4f2ff",
             }}
             aria-labelledby="trusted-by-heading"
         >
-
             {/* Main Header */}
             <div className="text-center mb-16">
                 <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
                     TRUSTED BY GLOBAL BUSINESSES
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                    From Singapore to the world, connecting quality suppliers to growing businesses
+                    From Singapore to the world, connecting quality suppliers to growing
+                    businesses
                 </p>
             </div>
-            
-            
+
             {/* Features Grid */}
             <div
                 style={{
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    flexWrap: 'wrap',
-                    gap: '30px',
-                    maxWidth: '1200px',
-                    margin: '0 auto',
+                    display: "flex",
+                    justifyContent: "space-around",
+                    flexWrap: "wrap",
+                    gap: "30px",
+                    maxWidth: "1200px",
+                    margin: "0 auto",
                 }}
             >
                 {features.map((feature, index) => (
-                    <div
+                    <Link href="/our-story"
                         key={index}
                         style={{
-                            flex: '1',
-                            minWidth: '200px',
-                            padding: '20px',
-                            borderRadius: '12px',
-                            background: '#fff',
-                            boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
-                            transition: 'transform 0.3s ease',
-                            cursor: 'pointer',
+                            flex: "1",
+                            minWidth: "200px",
+                            padding: "20px",
+                            borderRadius: "12px",
+                            background: "#fff",
+                            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+                            transition: "transform 0.3s ease",
+                            cursor: "pointer",
                         }}
                         onMouseEnter={(e) => {
-                            (e.currentTarget as HTMLElement).style.transform = 'scale(1.03)';
+                            (e.currentTarget as HTMLElement).style.transform = "scale(1.03)";
                         }}
                         onMouseLeave={(e) => {
-                            (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
+                            (e.currentTarget as HTMLElement).style.transform = "scale(1)";
                         }}
                         role="region"
                         aria-label={`${feature.title}: ${feature.description}`}
                     >
                         <div
                             style={{
-                                width: '60px',
-                                height: '60px',
-                                borderRadius: '12px',
-                                backgroundColor: '#9c86d8ff',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                margin: '0 auto 15px',
-                                color: '#2d1c6bff',
+                                width: "60px",
+                                height: "60px",
+                                borderRadius: "12px",
+                                backgroundColor: "#9c86d8ff",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                margin: "0 auto 15px",
+                                color: "#2d1c6bff",
                             }}
                         >
                             {feature.icon}
                         </div>
                         <h3
                             style={{
-                                fontSize: '1.1rem',
-                                fontWeight: 'bold',
-                                marginBottom: '8px',
+                                fontSize: "1.1rem",
+                                fontWeight: "bold",
+                                marginBottom: "8px",
                             }}
                         >
                             {feature.title}
                         </h3>
                         <p
                             style={{
-                                fontSize: '0.95rem',
-                                lineHeight: '1.5',
+                                fontSize: "0.95rem",
+                                lineHeight: "1.5",
                             }}
                         >
                             {feature.description}
                         </p>
-                    </div>
+                    </Link>
+
                 ))}
             </div>
-            <br />
-            <br />
-            <br />
-
-            {/* Stats Section */}
-            {/* <div
-                style={{
-                    marginTop: '40px',
-                    padding: '20px',
-                    backgroundColor: '#ffffff',
-                    borderRadius: '16px',
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
-                    maxWidth: '1200px',
-                    margin: '0 auto',
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'center',
-                    gap: '20px',
-                }}
-                role="region"
-                aria-label="Company achievements and statistics"
-            >
-                {stats.map((stat, index) => (
-                    <div
-                        key={index}
-                        style={{
-                            textAlign: 'center',
-                            flex: '1',
-                        }}
-                    >
-                        <div
-                            style={{
-                                fontSize: '2rem',
-                                fontWeight: 'bold',
-                                color: '#2d1c6bff',
-                                marginBottom: '4px',
-                            }}
-                        >
-                            {stat.value}
-                        </div>
-                        <div
-                            style={{
-                                fontSize: '0.85rem',
-                                color: '#555',
-                                fontWeight: 'normal',
-                            }}
-                        >
-                            {stat.label}
-                        </div>
-                    </div>
-                ))}
-            </div> */}
         </section>
     );
 };

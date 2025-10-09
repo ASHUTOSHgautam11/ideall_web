@@ -86,7 +86,7 @@ export default function WhyPartner() {
     <>
       <SubHeading
         title="Why Partner with Ideall Solutions?"
-        description="We connect businesses with trusted global manufacturers and suppliers, ensuring access to premium products worldwide. Our rigorous quality assurance processes guarantee that every delivery meets international standards. With decades of trade expertise, we simplify complex logistics and compliance challenges. Partnering with us means driving efficiency, growth, and long-term success for your business."
+        description=" We connect businesses with a global network of trusted manufacturers and suppliers, providing seamless access to premium products worldwide. Through rigorous quality assurance and compliance expertise, we ensure every delivery meets the highest international standards. Backed by decades of trade experience, we simplify complex logistics so you can focus on growth. Partner with us to enhance efficiency, reliability, and long-term success."
       />
 
       <section className="relative mb-20 overflow-hidden">

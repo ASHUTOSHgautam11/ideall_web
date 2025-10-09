@@ -124,7 +124,7 @@ export default function StoryHero() {
             Our Story
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-full mx-auto leading-relaxed">
-            We don't just find suppliers; we vet them. We don't just ship products, we oversee quality and logistics firsthand. We bring the world to you, so that you can focus on growing your business.
+            We don’t just find suppliers — we verify and trust them. We don’t just ship products — we personally manage quality and logistics at every step. We bring the world to your doorstep, so you can focus on what matters most: growing your business.
           </p>
         </div>
 
