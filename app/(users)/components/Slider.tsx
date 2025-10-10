@@ -13,7 +13,7 @@ const slides = [
     title: 'Premium Flooring Solutions',
     description: 'Global sourcing of luxury flooring materials with quality assurance',
     cta: 'Explore Flooring',
-    href: '/product-categories/flooring'
+    href: '/product-categories/floorings'
   },
   {
     img: 'assets/slider/slider6.png',

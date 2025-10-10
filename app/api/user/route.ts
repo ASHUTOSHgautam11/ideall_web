@@ -8,6 +8,7 @@ export async function POST(request: Request) {
 
   console.log(`name: ${name}`);
   console.log(`email: ${email}`);
+  
 
   return Response.json({ message: 'Data received successfully!' });
 }

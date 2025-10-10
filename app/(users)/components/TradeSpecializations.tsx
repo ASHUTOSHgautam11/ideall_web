@@ -10,6 +10,7 @@ const specializations = [
     title: 'Floorings',
     description: 'Premium flooring solutions from hardwood to luxury stone',
     features: [
+      'Carpet & Carpet Tils',
       'Luxury Vinyl Tiles',
       'Engineered & Hardwood',
       'Premium Carpets',
