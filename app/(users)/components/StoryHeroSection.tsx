@@ -20,7 +20,7 @@ const StoryHeroSection: React.FC<HeroSectionProps> = () => {
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl text-gray-900 mb-4 sm:mb-6 leading-normal max-w-xl mx-auto lg:mx-0">
-              Ideall Solutionz, founded in Singapore in 2002 as part of the IDeall Group of Companies, began with a clear mission: to simplify and optimise global trade for the lifestyle goods industry. Today, we have become the premier sourcing and trading partner for lifestyle goods, empowering our clients to achieve their business goals by providing seamless access to a world of high-quality products.
+              Founded in Singapore in 2002 as part of the IDeall Group of Companies, Ideall Solutionz began with a clear mission: to simplify and optimize global trade in the lifestyle goods industry. Today, we are a leading sourcing and trading partner, empowering clients to achieve their business goals through seamless access to high-quality products from around the world.
             </p>
 
             <div className="inline-flex items-center px-3 py-1.5 bg-primary/20 rounded-full text-primary text-xs sm:text-sm font-medium mb-4 sm:mb-6">
