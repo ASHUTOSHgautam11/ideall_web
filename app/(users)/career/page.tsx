@@ -1,10 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import HeroVideoSection from '../components/HeroVideoSection';
+import WhyPartner from '../components/WhyPartner';
+import ContactBanner from '../components/ContactBanner';
+import CoreValues from '../components/CoreValues';
+import PartnershipOpportunities from '../components/PartnershipOpportunities';
+
+// ✅ Type for a Job
+interface Job {
+  id: number;
+  title: string;
+  department: string;
+  location: string;
+  type: string;
+  experience: string;
+  posted: string;
+  description: string;
+  requirements: string[];
+}
 
 // Mock job data
-const JOBS = [
+const JOBS: Job[] = [
   {
     id: 1,
     title: 'Sales Associate',
@@ -48,19 +65,29 @@ export default function Career() {
   const [selectedLocation, setSelectedLocation] = useState('All');
   const [selectedType, setSelectedType] = useState('All');
   const [search, setSearch] = useState('');
-
-  const [selectedJob, setSelectedJob] = useState<any>(null);
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const [showDetails, setShowDetails] = useState(false);
   const [showApply, setShowApply] = useState(false);
 
-  const filteredJobs = JOBS.filter(
-    (job) =>
+  // ✨ Refs for smooth scroll
+  const jobsRef = useRef<HTMLDivElement | null>(null);
+  const cultureRef = useRef<HTMLDivElement | null>(null);
+
+  const filteredJobs = JOBS.filter((job) => {
+    return (
       (selectedDept === 'All' || job.department === selectedDept) &&
       (selectedLocation === 'All' || job.location === selectedLocation) &&
       (selectedType === 'All' || job.type === selectedType) &&
       (job.title.toLowerCase().includes(search.toLowerCase()) ||
         job.description.toLowerCase().includes(search.toLowerCase()))
-  );
+    );
+  });
+
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <>
@@ -81,17 +108,24 @@ export default function Career() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-          <button className="px-6 py-3 bg-primary hover:bg-primary-600 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          <button
+            onClick={() => scrollToSection(jobsRef)}
+            className="px-6 py-3 bg-primary hover:bg-primary-600 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+          >
             View Open Positions
           </button>
-          <button className="px-6 py-3 bg-secondary border border-secondary text-white hover:bg-secondary-500 font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+
+          <button
+            onClick={() => scrollToSection(cultureRef)}
+            className="px-6 py-3 bg-secondary border border-secondary text-white hover:bg-secondary-500 font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2"
+          >
             Learn About Our Culture
           </button>
         </div>
       </div>
 
-      {/* Filter Bar */}
-      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      {/* Filter Bar & Jobs Section */}
+      <div ref={jobsRef} className="min-h-50 bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto mb-10 bg-white p-4 rounded-lg shadow">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <input
@@ -101,7 +135,6 @@ export default function Career() {
               onChange={(e) => setSearch(e.target.value)}
               className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
             />
-
             <select
               value={selectedDept}
               onChange={(e) => setSelectedDept(e.target.value)}
@@ -113,7 +146,6 @@ export default function Career() {
                 </option>
               ))}
             </select>
-
             <select
               value={selectedLocation}
               onChange={(e) => setSelectedLocation(e.target.value)}
@@ -125,7 +157,6 @@ export default function Career() {
                 </option>
               ))}
             </select>
-
             <select
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
@@ -142,65 +173,60 @@ export default function Career() {
 
         {/* Job Cards */}
         <div className="max-w-7xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredJobs.map((job) => (
-            <div
-              key={job.id}
-              className="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition"
-            >
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-lg font-semibold text-primary uppercase">
-                    {job.title}
-                  </h3>
-                  <span className="text-xs bg-gray-100 text-gray-800 px-3 py-1 rounded-full">
-                    {job.type}
-                  </span>
-                </div>
-
-                <div className="flex flex-wrap gap-2 text-sm text-gray-600 mb-3">
-                  <span>{job.department}</span> •
-                  <span>{job.location}</span> •
-                  <span>{job.experience}</span>
-                </div>
-
-                <p className="text-gray-700 mb-3">{job.description}</p>
-
-                <h4 className="text-sm font-semibold mb-1">Key Requirements:</h4>
-                <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 mb-4">
-                  {job.requirements.map((req, i) => (
-                    <li key={i}>{req}</li>
-                  ))}
-                </ul>
-
-                <p className="text-xs text-gray-500 mb-4">
-                  Posted {new Date(job.posted).toLocaleDateString()}
-                </p>
-
-                <div className="flex gap-3">
-                  <button
-                    className="flex-1 py-2 border border-primary text-primary hover:text-white rounded-md hover:bg-primary-500 transition"
-                    onClick={() => {
-                      setSelectedJob(job);
-                      setShowDetails(true);
-                    }}
-                  >
-                    View Details
-                  </button>
-                  <button
-                    className="flex-1 py-2 bg-primary text-white rounded-md hover:bg-primary-500 transition"
-                    onClick={() => {
-                      setSelectedJob(job);
-                      setShowApply(true);
-                    }}
-                  >
-                    Quick Apply
-                  </button>
+          {filteredJobs.length > 0 ? (
+            filteredJobs.map((job) => (
+              <div
+                key={job.id}
+                className="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition"
+              >
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-lg font-semibold text-primary uppercase">
+                      {job.title}
+                    </h3>
+                    <span className="text-xs bg-gray-100 text-gray-800 px-3 py-1 rounded-full">
+                      {job.type}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-2 text-sm text-gray-600 mb-3">
+                    <span>{job.department}</span> •
+                    <span>{job.location}</span> •
+                    <span>{job.experience}</span>
+                  </div>
+                  <p className="text-gray-700 mb-3">{job.description}</p>
+                  <h4 className="text-sm font-semibold mb-1">Key Requirements:</h4>
+                  <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 mb-4">
+                    {job.requirements.map((req, i) => (
+                      <li key={i}>{req}</li>
+                    ))}
+                  </ul>
+                  <p className="text-xs text-gray-500 mb-4">
+                    Posted {new Date(job.posted).toLocaleDateString()}
+                  </p>
+                  <div className="flex gap-3">
+                    <button
+                      className="flex-1 py-2 border border-primary text-primary hover:text-white rounded-md hover:bg-primary-500 transition"
+                      onClick={() => {
+                        setSelectedJob(job);
+                        setShowDetails(true);
+                      }}
+                    >
+                      View Details
+                    </button>
+                    <button
+                      className="flex-1 py-2 bg-primary text-white rounded-md hover:bg-primary-500 transition"
+                      onClick={() => {
+                        setSelectedJob(job);
+                        setShowApply(true);
+                      }}
+                    >
+                      Quick Apply
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-
-          {filteredJobs.length === 0 && (
+            ))
+          ) : (
             <p className="col-span-full text-center text-gray-500 py-10">
               No jobs found.
             </p>
@@ -208,126 +234,14 @@ export default function Career() {
         </div>
       </div>
 
-      {/* View Details Modal */}
-      {showDetails && selectedJob && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white w-full max-w-2xl rounded-lg shadow-lg p-6 relative max-h-[90vh] overflow-y-auto">
-            <button
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-              onClick={() => setShowDetails(false)}
-            >
-              ✕
-            </button>
+      {/* Culture Section */}
+      <div ref={cultureRef}>
+        <PartnershipOpportunities />
+      </div>
 
-            <h2 className="text-2xl font-bold mb-2">{selectedJob.title}</h2>
-            <p className="text-sm text-gray-600 mb-4">
-              Department: {selectedJob.department} | Location: {selectedJob.location}
-            </p>
-
-            <p className="text-gray-700 mb-3">{selectedJob.description}</p>
-
-            <h4 className="text-sm font-semibold mb-2">Requirements:</h4>
-            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 mb-4">
-              {selectedJob.requirements.map((req: string, i: number) => (
-                <li key={i}>{req}</li>
-              ))}
-            </ul>
-
-            <button
-              className="w-full py-2 bg-primary text-white font-medium rounded-md hover:bg-primary-600 transition"
-              onClick={() => {
-                setShowDetails(false);
-                setShowApply(true);
-              }}
-            >
-              Apply Now
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Quick Apply Modal */}
-      {showApply && selectedJob && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white w-full max-w-lg rounded-lg shadow-lg p-6 relative max-h-[90vh] overflow-y-auto">
-            <button
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-              onClick={() => setShowApply(false)}
-            >
-              ✕
-            </button>
-
-            <h2 className="text-2xl font-bold mb-2">
-              Apply for {selectedJob.title}
-            </h2>
-            <p className="text-sm text-gray-600 mb-4">
-              Department: {selectedJob.department} | Location: {selectedJob.location}
-            </p>
-
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-primary"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  required
-                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-primary"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-primary"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Resume (PDF/DOC)
-                </label>
-                <input
-                  type="file"
-                  accept=".pdf,.doc,.docx"
-                  className="mt-1 w-full text-sm"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">
-                  Cover Letter
-                </label>
-                <textarea
-                  rows={3}
-                  className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-primary"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full py-2 bg-primary text-white font-medium rounded-md hover:bg-primary-600 transition"
-              >
-                Submit Application
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
+      <WhyPartner />
+      <ContactBanner />
+      <CoreValues />
     </>
   );
 }

@@ -35,8 +35,8 @@ export default function Navigation() {
       icon: Package, 
       dropdown: ['Floorings', 'Furniture', 'Fabrics', 'Walls'] 
     },
-    { name: 'Career', href: '/career', icon: Briefcase },
-    { name: 'Payment', href: '/payment', icon: CreditCard },
+    { name: 'Work With Us', href: '/career', icon: Briefcase },
+    // { name: 'Payment', href: '/payment', icon: CreditCard },
     { name: 'Media', href: '/media', icon: PlayCircle },
   ];
 
