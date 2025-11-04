@@ -14,11 +14,11 @@ export default function OurStory() {
 
       {/* <HeroVideoSection /> */}
       <StoryHeroSection />
-      <CoreValues />
-      <WhatSetsUsApart/>
-      <StoryHero />
-      <OurProcess/>
       <CompanyTimeline />
+      <WhatSetsUsApart/>
+      <OurProcess/>
+      <StoryHero />
+      <CoreValues />
       <Mission />
     </main>
   );

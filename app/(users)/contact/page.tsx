@@ -8,8 +8,8 @@ import PartnershipOpportunities from '../components/PartnershipOpportunities';
 export default function Contact() {
   return (
     <>
-      <HeroVideoSection heading='Connect With Us' description='Ready to discuss your procurement needs? Our team is here to help you navigate global markets 
-              and source premium interior solutions.' videoSrc='/assets/video/video4.mp4' />
+      <HeroVideoSection heading='Contact Us' description='Ready to discuss your procurement needs? Our team is here to help you navigate global markets 
+              and source premium interior solutions.' videoSrc='/assets/video/video2.mp4' />
       <main>
 
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white">

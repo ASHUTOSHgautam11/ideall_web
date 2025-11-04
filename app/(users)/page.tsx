@@ -9,10 +9,12 @@ import { LucideSliders } from 'lucide-react';
 import TrustedByGlobal from '@/app/(users)/components/TrustedByGlobal';
 import AboutHome from '@/app/(users)/components/AboutHome';
 import Feature7 from '@/app/(users)/components/Feature7';
+import HomeHero from './components/HomeHero';
 export default function Home() {
   return (
     <>
       <main>
+        {/* <HomeHero/> */}
         <Slider />
         {/* <Feature7/> */}
         <TrustedByGlobal />

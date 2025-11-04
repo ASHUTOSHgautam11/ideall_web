@@ -11,7 +11,6 @@ import {
   Package,
   Briefcase,
   PlayCircle,
-  CreditCard,
   Phone,
 } from 'lucide-react';
 import { Button } from '@/app/(users)/components/ui/button';
@@ -30,13 +29,12 @@ export default function Navigation() {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Our Story', href: '/our-story', icon: Users },
-    { 
-      name: 'Product Categories', 
-      icon: Package, 
-      dropdown: ['Floorings', 'Furniture', 'Fabrics', 'Walls'] 
+    {
+      name: 'Product Categories',
+      icon: Package,
+      dropdown: ['Floorings', 'Furniture', 'Fabrics', 'Walls'],
     },
-    { name: 'Work With Us', href: '/career', icon: Briefcase },
-    // { name: 'Payment', href: '/payment', icon: CreditCard },
+    { name: 'Career With Us', href: '/career', icon: Briefcase },
     { name: 'Media', href: '/media', icon: PlayCircle },
   ];
 
@@ -57,17 +55,19 @@ export default function Navigation() {
             aria-label="Ideall Solutions Home"
             style={{ fontFamily: 'var(--font-inter)' }}
           >
-            <div className="w-10 h-10 rounded-full shadow-sm overflow-hidden">
+            <div className="w-18 h-18   shadow-sm overflow-hidden">
               <Image
                 src="/IDEALLS LOGO.png"
                 alt="Ideall Solutions Logo"
-                width={40}
-                height={40}
+                width={90}
+                height={90}
                 className="object-contain"
                 priority
               />
             </div>
-            <span className="hidden md:inline font-semibold text-gray-900 text-base">Ideall Solutions</span>
+            <span className="hidden md:inline font-semibold text-[#926f4e] text-base">
+              Ideall Solutionz
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -81,26 +81,28 @@ export default function Navigation() {
                     <div key={item.name} className="relative">
                       <button
                         onClick={toggleProductDropdown}
-                        className={`group flex items-center space-x-1.5 text-gray-900 hover:text-[#272557] font-medium transition-colors duration-200`}
+                        className="group flex items-center space-x-1.5 text-[#926f4e] hover:text-[#7b5d40] font-medium transition-colors duration-200"
                         style={{ fontFamily: 'var(--font-inter)' }}
                       >
-                        <IconComponent size={18} className="text-gray-900 group-hover:text-[#272557]" />
+                        <IconComponent
+                          size={18}
+                          className="text-[#926f4e] group-hover:text-[#7b5d40]"
+                        />
                         <span className="text-sm sm:text-base font-medium">{item.name}</span>
                       </button>
 
                       {/* Dropdown Menu */}
                       <div
-                        className={`absolute top-full left-0 mt-2 w-44 bg-gray/900 shadow-md rounded-md border border-gray-200 z-50 overflow-hidden transition-all duration-300 ease-in-out ${
-                          isProductDropdownOpen
+                        className={`absolute top-full left-0 mt-2 w-44 bg-white shadow-md rounded-md border border-gray-200 z-50 overflow-hidden transition-all duration-300 ease-in-out ${isProductDropdownOpen
                             ? 'max-h-96 opacity-100 scale-100'
                             : 'max-h-0 opacity-0 scale-95 pointer-events-none'
-                        }`}
+                          }`}
                       >
                         {item.dropdown.map((subItem) => (
                           <Link
                             key={subItem}
                             href={`/product-categories/${subItem.toLowerCase()}`}
-                            className="block px-4 py-2 text-gray-900 hover:bg-gray-100 cursor-pointer transition-colors"
+                            className="block px-4 py-2 text-[#926f4e] hover:bg-gray-100 cursor-pointer transition-colors"
                           >
                             {subItem}
                           </Link>
@@ -114,12 +116,14 @@ export default function Navigation() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`group flex items-center space-x-1.5 text-gray-900 hover:text-[#272557] font-medium transition-colors duration-200 ${
-                      isActivePath(item.href) ? 'text-[#272557]' : ''
-                    }`}
+                    className={`group flex items-center space-x-1.5 text-[#926f4e] hover:text-[#7b5d40] font-medium transition-colors duration-200 ${isActivePath(item.href) ? 'text-[#7b5d40] font-semibold' : ''
+                      }`}
                     style={{ fontFamily: 'var(--font-inter)' }}
                   >
-                    <IconComponent size={18} className="text-gray-900 group-hover:text-[#272557]" />
+                    <IconComponent
+                      size={18}
+                      className="text-[#926f4e] group-hover:text-[#7b5d40]"
+                    />
                     <span className="text-sm sm:text-base font-medium">{item.name}</span>
                   </Link>
                 );
@@ -130,12 +134,12 @@ export default function Navigation() {
               <Button
                 variant="outline"
                 size="sm"
-                className="border-gray-400 hover:bg-gray-100 text-gray-900 font-medium transition-colors"
+                className="border-[#926f4e] hover:bg-[#926f4e] hover:text-white text-[#926f4e] font-medium transition-colors"
                 onClick={() => (window.location.href = '/contact')}
                 style={{ fontFamily: 'var(--font-inter)' }}
               >
                 <Phone size={16} className="mr-1.5" />
-                Connect With Us
+                Connect Us
               </Button>
             </div>
           </div>
@@ -143,7 +147,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-900 hover:bg-gray-100 active:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-[#272557]"
+            className="lg:hidden p-2 rounded-md text-[#926f4e] hover:bg-gray-100 active:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-[#926f4e]"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
             style={{ fontFamily: 'var(--font-inter)' }}
@@ -154,9 +158,10 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-            isMenuOpen ? 'max-h-[600px] opacity-100 py-3' : 'max-h-0 opacity-0 pointer-events-none'
-          }`}
+          className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen
+              ? 'max-h-[600px] opacity-100 py-3'
+              : 'max-h-0 opacity-0 pointer-events-none'
+            }`}
           style={{ transitionProperty: 'max-height, opacity', fontFamily: 'var(--font-inter)' }}
         >
           <div className="px-4 py-4 bg-white/10 backdrop-blur-lg border-t border-white/20 space-y-3">
@@ -167,23 +172,24 @@ export default function Navigation() {
                     <div key={item.name} className="space-y-1">
                       <button
                         onClick={() => setIsProductDropdownOpen(!isProductDropdownOpen)}
-                        className="flex w-full items-center justify-between px-3 py-2 rounded-lg text-gray-900 hover:text-[#272557] hover:bg-white/10 font-medium transition-colors"
+                        className="flex w-full items-center justify-between px-3 py-2 rounded-lg text-[#926f4e] hover:text-[#7b5d40] hover:bg-white/10 font-medium transition-colors"
                       >
                         {item.name}
                         <span>{isProductDropdownOpen ? '-' : '+'}</span>
                       </button>
 
                       <div
-                        className={`pl-6 overflow-hidden transition-all duration-300 ease-in-out ${
-                          isProductDropdownOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
-                        }`}
+                        className={`pl-6 overflow-hidden transition-all duration-300 ease-in-out ${isProductDropdownOpen
+                            ? 'max-h-96 opacity-100'
+                            : 'max-h-0 opacity-0 pointer-events-none'
+                          }`}
                       >
                         {item.dropdown.map((subItem) => (
                           <Link
                             key={subItem}
                             href={`/product-categories/${subItem.toLowerCase()}`}
                             onClick={() => setIsMenuOpen(false)}
-                            className="block px-3 py-2 rounded-lg text-gray-900 hover:text-[#272557] hover:bg-white/10 cursor-pointer transition-colors"
+                            className="block px-3 py-2 rounded-lg text-[#926f4e] hover:text-[#7b5d40] hover:bg-white/10 cursor-pointer transition-colors"
                           >
                             {subItem}
                           </Link>
@@ -198,9 +204,8 @@ export default function Navigation() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-900 hover:text-[#272557] hover:bg-white/10 transition-colors duration-200 ${
-                      isActivePath(item.href) ? 'text-[#272557] bg-white/10' : ''
-                    }`}
+                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-[#926f4e] hover:text-[#7b5d40] hover:bg-white/10 transition-colors duration-200 ${isActivePath(item.href) ? 'text-[#7b5d40] bg-white/10' : ''
+                      }`}
                   >
                     <item.icon size={20} />
                     <span className="font-medium">{item.name}</span>
@@ -212,7 +217,7 @@ export default function Navigation() {
             <div className="mt-5 pt-4 border-t border-white/20 space-y-3">
               <Button
                 variant="outline"
-                className="w-full justify-center gap-2 text-gray-900 border-gray-400 hover:bg-gray-100 font-medium"
+                className="w-full justify-center gap-2 text-[#926f4e] border-[#926f4e] hover:bg-[#926f4e] hover:text-white font-medium"
                 onClick={() => {
                   setIsMenuOpen(false);
                   window.location.href = '/contact';
@@ -220,7 +225,7 @@ export default function Navigation() {
                 style={{ fontFamily: 'var(--font-inter)' }}
               >
                 <Phone size={24} />
-                Connect With Us
+                Contact Us
               </Button>
             </div>
           </div>

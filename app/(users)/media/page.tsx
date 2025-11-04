@@ -39,26 +39,26 @@ export default function Media() {
       <HeroVideoSection
         heading="Our Media Section"
         description="The Media Page serves as a centralized hub for showcasing your company’s latest news, updates, and multimedia content. It’s designed to keep stakeholders, customers, and the public informed about brand activities, achievements, and industry presence."
-        videoSrc="/assets/video/video4.mp4"
+        videoSrc="/assets/video/video3.mp4"
       />
 
       <main>
         {/* Intro */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
-                Media Section
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Stay connected with our latest company updates, industry
-                recognitions, and achievements. Explore stories, press releases,
-                and galleries that highlight our journey in shaping interiors
-                with excellence.
-              </p>
-            </div>
-          </div>
-        </section>
+        <div className="max-w-6xl mx-auto text-center mb-16 mt-14">
+          <h1 className="text-4xl sm:text-5xl font-bold text-secondary mb-4">
+            Media Section
+          </h1>
+          <p className="text-lg text-gray-900 max-w-3xl mx-auto mb-14">
+            Stay connected with our latest company updates, industry
+            recognitions, and achievements. Explore stories, press releases,
+            and galleries that highlight our journey in shaping interiors
+            with excellence.
+          </p>
+
+
+        </div>
+
+
 
         {/* Latest News */}
         <section className="py-16 bg-white">

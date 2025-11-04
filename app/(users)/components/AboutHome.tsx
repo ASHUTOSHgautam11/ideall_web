@@ -21,7 +21,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
             <div className="w-full">
                 <SubHeading
                     title="Who We Are"
-                    description="IDeall Solutionz is part of the IDeall group of companies, which started in 2002 and at present has a turn over US$ 15Mn, funded by private equity. Headquartered in Singapore, it evolved as a key player and now has offices in India, China, Hong Kong, UAE and Vietnam. IDeall group has 4 major divisions, specializing in: International Trading of Life style Goods, Chemicals, Metals and alloys and Information Technology."
+                    description="Founded in 2002, Ideall Solutionz has extensive experience as a trusted sourcing partner and product design specialist for Flooring experts including Design Houses, Architectural firms, distributors and MNCs across over 40 countries in Asia, Asia-Pacific and the Middle East. Ideallss specialises in four categories of Lifestyle Goods, namely Flooring, Fabrics, Furniture and Fashion walls (note to ashutosh: put link from here into the products sections), and we leverage our trusted import partners with over two-decades of supplier-client relationships from over 18 countries to best curate flooring solutions tailored to your needs with the highest quality products."
                 />
             </div>
 
@@ -59,7 +59,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
 
 
 
-
+  
                         {/* Logo / Brand */}
                         {/* <div className="flex flex-col items-center space-y-2">
                             <div className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center">

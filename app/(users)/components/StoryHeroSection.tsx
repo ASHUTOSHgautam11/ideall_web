@@ -1,20 +1,41 @@
 'use client';
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/app/(users)/components/ui/button";
 
 interface HeroSectionProps { }
 
+const images = [
+  "/assets/global-trade-network2.jpg",
+  "/assets/global-trade-network1.jpg",
+  "/assets/global-trade-network3.jpg",
+  "/assets/global-trade-network2.jpg",
+];
+
 const StoryHeroSection: React.FC<HeroSectionProps> = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  // Auto image rotation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 4000); // Change every 4 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="pt-20 sm:pt-28 lg:pt-6 pb-10 sm:pb-10 lg:pb-0 px-4 sm:px-6 lg:px-20 bg-[#c7b29fff] min-h-[60vh] sm:min-h-[75vh] lg:min-h-[80vh] flex items-center justify-center text-center">
+    <section className="pt-20 sm:pt-28 lg:pt-6 pb-10 sm:pb-10 lg:pb-0 px-4 sm:px-6 lg:px-20 bg-[#c0b2a4] min-h-[60vh] sm:min-h-[75vh] lg:min-h-[80vh] flex items-center justify-center text-center">
       <div className="relative z-10 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mt-6 sm:mt-5">
 
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-4xl lg:text-6xl font-bold text-[#947457ff] mb-4 sm:mb-6 leading-tight">
+            <h1
+              className="text-4xl sm:text-4xl lg:text-6xl font-bold text-[#926f4e] mb-4 sm:mb-6 leading-tight"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
               A Global Vision,
               <span className="text-primary block mt-4 sm:mt-5">Grounded in Trust</span>
             </h1>
@@ -42,17 +63,28 @@ const StoryHeroSection: React.FC<HeroSectionProps> = () => {
             </div>
           </div>
 
-          {/* Right Content - Hero Image with Stats */}
+          {/* Right Content - Dynamic Hero Image with Stats */}
           <div className="relative mt-10 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src="/hero/slide3.png"
-                alt="Simachi Designs craftsman working on premium flooring installation"
-                className="w-full h-72 sm:h-80 md:h-96 lg:h-[500px] object-cover"
-                width={800}
-                height={500}
-                priority
-              />
+            <div className="relative rounded-2xl overflow-hidden shadow-xl w-full h-72 sm:h-80 md:h-96 lg:h-[500px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentImage}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={images[currentImage]}
+                    alt="Hero Image"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </motion.div>
+              </AnimatePresence>
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
 

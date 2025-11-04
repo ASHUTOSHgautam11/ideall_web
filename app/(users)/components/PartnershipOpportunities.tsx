@@ -72,8 +72,8 @@ const PartnershipOpportunities: React.FC = () => {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-secondary">Partnership Opportunities</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-5xl mb-6 font-bold text-secondary">Partnership Opportunities</h2>
+          <p className="text-lg text-gray-900 max-w-3xl mx-auto">
             We work with various types of partners across the interior design and construction value chain.
           </p>
         </div>
@@ -88,8 +88,8 @@ const PartnershipOpportunities: React.FC = () => {
               <p className="text-gray-600 mb-6">{item.description}</p>
 
               <div className="space-y-3 mb-6">
-                <h4 className="font-medium text-gray-800">Networking Benefits</h4>
-                <ul className="list-disc list-inside text-gray-600 space-y-2 marker:text-secondary">
+                <h4 className="font-medium text-gray-900">Networking Benefits</h4>
+                <ul className="list-disc list-inside text-gray-900 space-y-2 marker:text-secondary">
                   {item.benefits.map((benefit, i) => (
                     <li key={i}>{benefit}</li>
                   ))}
@@ -97,8 +97,8 @@ const PartnershipOpportunities: React.FC = () => {
               </div>
 
               <div>
-                <h4 className="font-medium text-gray-800">Requirements</h4>
-                <ul className="list-disc list-inside text-gray-600 space-y-2 mt-2 marker:text-secondary">
+                <h4 className="font-medium text-gray-900">Requirements</h4>
+                <ul className="list-disc list-inside text-gray-900 space-y-2 mt-2 marker:text-secondary">
                   {item.requirements.map((req, i) => (
                     <li key={i}>{req}</li>
                   ))}

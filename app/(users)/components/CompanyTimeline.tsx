@@ -41,9 +41,9 @@ export default function CompanyTimeline() {
   }, []);
 
   return (
-    <section className="py-20 bg-gray-50 relative">
+    <section className="py-14 bg-gray-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl lg:text-5xl font-bold text-primary text-center mb-5">
+        <h2 className="text-3xl lg:text-5xl font-bold text-secondary text-center mb-5">
           Our Milestones
         </h2>
         <p className="text-base text-center sm:text-lg md:text-xl text-gray-900 max-w-full mx-auto leading-relaxed mb-10">

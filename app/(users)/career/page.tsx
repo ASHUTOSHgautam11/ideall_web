@@ -100,11 +100,11 @@ export default function Career() {
 
       {/* Intro Section */}
       <div className="max-w-6xl mx-auto text-center mb-16 mt-14">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-          Join Our Team & Shape the Future
+        <h1 className="text-4xl sm:text-5xl font-bold text-secondary mb-4">
+          Your Next Big Opportunity Starts Here
         </h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-14">
-          We're looking for passionate individuals who want to make a difference. Discover opportunities to grow your career while building products that impact millions of users worldwide.
+        <p className="text-lg text-gray-900 max-w-3xl mx-auto mb-14">
+          We’re not just building products — we’re building the future. Join a passionate team of dreamers, creators, and doers, and turn your ideas into experiences that inspire millions worldwide.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">

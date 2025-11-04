@@ -6,7 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+ 
+
 :root {
+
   /* Core Colors */
   --color-background: #ffffff;
   --color-foreground: #1A1A1A;
@@ -68,9 +71,10 @@
   /* Font Families */
   --font-playfair: "Playfair Display", serif;
   --font-inter: "Inter", sans-serif;
-  --font-libertinus: "Libertinus Serif Display", serif;
+  /* --font-roboto: "Roboto", sans-serif; */
+  /* --font-libertinus: "Libertinus Serif Display", serif;
   --font-baskerville: "Libre Baskerville", serif;
-  --font-caslon: "Libre Caslon Text", serif;
+  --font-caslon: "Libre Caslon Text", serif; */
 }
 
 .dark {
