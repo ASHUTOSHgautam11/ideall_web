@@ -35,7 +35,7 @@ export default function Navigation() {
       dropdown: ['Floorings', 'Furniture', 'Fabrics', 'Walls'],
     },
     { name: 'Career With Us', href: '/career', icon: Briefcase },
-    { name: 'Media', href: '/media', icon: PlayCircle },
+    // { name: 'Media', href: '/media', icon: PlayCircle },
   ];
 
   const isActivePath = (path: string) => pathname === path;

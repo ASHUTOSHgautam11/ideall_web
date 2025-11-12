@@ -107,7 +107,7 @@ export default function Media() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-gradient-to-r from-primary/90 to-primary text-white text-center">
+        <section className="py-20 bg-primary text-white text-center">
           <div className="max-w-3xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-6">
               Interested in Featuring Us?

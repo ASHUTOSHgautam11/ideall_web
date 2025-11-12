@@ -132,39 +132,39 @@ export default function Slider(): JSX.Element {
             <div className="absolute inset-0 bg-gradient-to-r from-[#031024]/90 via-[#031024]/70 to-transparent" />
           </div>
 
-          {/* Hero Content */}
+          {/* Hero Content (responsive version) */}
           <div
-            className="relative z-10 max-w-6xl flex items-center h-full"
+            className="relative z-10 max-w-7xl flex flex-col lg:flex-row items-center h-full px-4 sm:px-8 md:px-12 lg:px-0"
             style={{
               marginLeft: 'clamp(1rem, 5vw, 200px)',
-              marginRight: 'clamp(1rem, 10vw, 420px)',
+              marginRight: 'clamp(1rem, 8vw, 320px)',
             }}
           >
-            <div className="w-full lg:w-1/2 text-left text-white py-12">
+            <div className="w-full lg:w-1/2 text-left text-white py-10 sm:py-12 md:py-16 flex flex-col justify-center">
               <h1
-                className="text-4xl sm:text-6xl lg:text-6xl font-extrabold leading-tight mb-4"
-                style={{ fontFamily: 'var(--font-playfair)', lineHeight: '1.4' }}
+                className="text-3xl sm:text-5xl md:text-6xl xl:text-6xl font-extrabold mb-4 sm:mb-6 leading-snug sm:leading-tight"
+                style={{ fontFamily: 'var(--font-playfair)' }}
               >
                 {currentSlide.title}
               </h1>
 
               {currentSlide.subtitle && (
-                <p className="text-md sm:text-lg text-gray-200 font-semibold mb-3">
+                <p className="text-base sm:text-lg md:text-xl text-gray-200 font-semibold mb-3 sm:mb-4">
                   {currentSlide.subtitle}
                 </p>
               )}
 
               {currentSlide.description && (
-                <p className="text-sm sm:text-lg text-gray-300 max-w-xl mb-8 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-xl mb-8 leading-relaxed">
                   {currentSlide.description}
                 </p>
               )}
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col xs:flex-row sm:flex-row gap-3 sm:gap-4">
                 {currentSlide.primaryCta && currentSlide.href && (
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-primary-dark text-white px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg font-semibold shadow-lg"
+                    className="bg-primary hover:bg-primary-dark text-white px-5 sm:px-7 md:px-8 py-3.5 sm:py-4 md:py-5 text-sm sm:text-base md:text-lg font-semibold shadow-lg"
                     asChild
                   >
                     <Link href={currentSlide.href}>{currentSlide.primaryCta}</Link>
@@ -175,7 +175,7 @@ export default function Slider(): JSX.Element {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg font-semibold"
+                    className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-5 sm:px-7 md:px-8 py-3.5 sm:py-4 md:py-5 text-sm sm:text-base md:text-lg font-semibold"
                     asChild
                   >
                     <Link href="/contact">{currentSlide.secondaryCta}</Link>
@@ -184,6 +184,7 @@ export default function Slider(): JSX.Element {
               </div>
             </div>
 
+            {/* Empty space for layout balance */}
             <div className="hidden lg:block w-1/2 h-full" />
           </div>
         </>
@@ -194,8 +195,9 @@ export default function Slider(): JSX.Element {
             slide.img ? (
               <div
                 key={`${slide.img}-${idx}`}
-                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === current ? 'opacity-100 z-0' : 'opacity-0 z-[-1]'
-                  }`}
+                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                  idx === current ? 'opacity-100 z-0' : 'opacity-0 z-[-1]'
+                }`}
                 aria-hidden={idx !== current}
               >
                 <Image src={slide.img} alt={slide.alt} fill sizes="100vw" className="object-cover" />
@@ -251,10 +253,11 @@ export default function Slider(): JSX.Element {
         {slides.map((_, idx) => (
           <button
             key={idx}
-            className={`w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full transition-all duration-500 ${idx === current
+            className={`w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full transition-all duration-500 ${
+              idx === current
                 ? 'bg-white scale-110 sm:scale-125 ring-1 sm:ring-2 ring-white/70'
                 : 'bg-white/50 hover:bg-white/75'
-              }`}
+            }`}
             onClick={() => goToSlide(idx)}
             aria-label={`Go to slide ${idx + 1}`}
             aria-current={idx === current}

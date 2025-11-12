@@ -17,7 +17,7 @@ export default function Home() {
         {/* <HomeHero/> */}
         <Slider />
         {/* <Feature7/> */}
-        <TrustedByGlobal />
+        <TrustedByGlobal />    
         <AboutHome />
         {/* <Hero /> */}
         <TradeSpecializations />
