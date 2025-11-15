@@ -56,7 +56,7 @@ export default function Fabrics() {
       <HeroVideoSection
         heading="Fabrics"
         description="High-quality fabrics designed for upholstery, window treatments, and performance-driven applications."
-        videoSrc="/assets/video/video6.mp4"
+        videoSrc="/assets/video/video4.mp4"
       />
       <Subcategory {...data} />
     </main>

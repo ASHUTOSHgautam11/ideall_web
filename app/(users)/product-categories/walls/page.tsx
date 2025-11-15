@@ -56,7 +56,7 @@ export default function FashionWalls() {
       <HeroVideoSection
         heading="Fashion Walls"
         description="Stylish wall solutions that blend design, functionality, and modern finishes."
-        videoSrc="/assets/video/video7.mp4"
+        videoSrc="/assets/video/video4.mp4"
       />
       <Subcategory {...data} />
     </main>

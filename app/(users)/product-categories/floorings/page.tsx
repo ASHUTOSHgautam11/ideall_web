@@ -5,7 +5,7 @@ import HeroVideoSection from '../../components/HeroVideoSection';
 export default function Floorings() {
   const data = {
     title: 'Floorings',
-    description: 'Premium flooring solutions sourced from global manufacturers with stringent quality standards.',
+    description: 'Explore our premium range of carpet tiles designed for durability, comfort, and modern aesthetics. Perfect for commercial and residential spaces, offering versatile styles to suit every interior.',
     productCategories: [
       {
         name: 'Carpet & Carpet Tiles',

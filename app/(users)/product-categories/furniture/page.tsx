@@ -61,7 +61,7 @@ export default function Furniture() {
       <HeroVideoSection
         heading="Furniture"
         description="Premium furniture collections designed for modern living, commercial spaces, and hospitality environments."
-        videoSrc="/assets/video/video5.mp4"
+        videoSrc="/assets/video/video4.mp4"
       />
       <Subcategory {...data} />
     </main>
