@@ -1,5 +1,4 @@
-// Updated responsive Slider component
-// (Only responsive units & styling improved — design unchanged)
+// Updated responsive Slider component with improved proportional height
 
 'use client';
 
@@ -111,12 +110,23 @@ export default function Slider(): JSX.Element {
 
   return (
     <section
-      className="relative h-[56vh] md:h-[52vh] lg:h-[85vh] flex items-center justify-center overflow-hidden"
+      className="
+        relative
+        h-[70vh]            /* Mobile */
+        sm:h-[75vh]         /* Large Mobile */
+        md:h-[80vh]         /* Tablet */
+        lg:h-[90vh]         /* Laptop */
+        xl:h-[95vh]         /* Desktop */
+        2xl:h-[84vh]        /* Large monitors */
+        flex items-center justify-center
+        overflow-hidden
+      "
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-roledescription="carousel"
     >
-      {/* HERO SLIDE RESPONSIVE FIX */}
+
+      {/** HERO SLIDE */}
       {currentSlide?.type === 'hero' ? (
         <>
           <div className="absolute inset-0 overflow-hidden">
@@ -132,10 +142,8 @@ export default function Slider(): JSX.Element {
             <div className="absolute inset-0 bg-gradient-to-r from-[#031024]/90 via-[#031024]/70 to-transparent" />
           </div>
 
-          <div
-            className="relative z-10 w-full max-w-[1400px] flex flex-col lg:flex-row items-center h-full px-4 sm:px-8 md:px-12"
-          >
-            <div className="w-full lg:w-1/2 text-left text-white pt-28 pb-8 sm:pt-32 sm:pb-12 md:pt-40 lg:pt-28 lg:pb-16 flex flex-col justify-center">
+          <div className="relative z-10 w-full max-w-[1400px] flex flex-col lg:flex-row items-center h-full px-4 sm:px-8 md:px-12">
+            <div className="w-full lg:w-1/2 text-left text-white pt-28 sm:pt-32 md:pt-40 lg:pt-28 flex flex-col justify-center">
               <h1
                 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 sm:mb-6 leading-snug"
                 style={{ fontFamily: 'var(--font-playfair)' }}
@@ -237,12 +245,14 @@ export default function Slider(): JSX.Element {
         </>
       )}
 
-      {/* Indicators */}
+      {/** Indicators */}
       <div className="absolute bottom-4 sm:bottom-6 flex space-x-2 z-20">
         {slides.map((_, idx) => (
           <button
             key={idx}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-500 ${idx === current ? 'bg-white scale-125 ring-2 ring-white/80' : 'bg-white/50 hover:bg-white/80'
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-500 ${idx === current
+                ? 'bg-white scale-125 ring-2 ring-white/80'
+                : 'bg-white/50 hover:bg-white/80'
               }`}
             onClick={() => goToSlide(idx)}
             aria-label={`Go to slide ${idx + 1}`}
@@ -251,7 +261,7 @@ export default function Slider(): JSX.Element {
         ))}
       </div>
 
-      {/* Nav Arrows */}
+      {/** Previous Arrow */}
       <button
         className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full"
         onClick={() => navigateSlides('prev')}
@@ -262,6 +272,7 @@ export default function Slider(): JSX.Element {
         </svg>
       </button>
 
+      {/** Next Arrow */}
       <button
         className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full"
         onClick={() => navigateSlides('next')}
@@ -272,7 +283,7 @@ export default function Slider(): JSX.Element {
         </svg>
       </button>
 
-      {/* Slide Counter */}
+      {/** Slide Counter */}
       <div className="absolute top-4 sm:top-6 right-4 sm:right-6 text-white/80 text-xs sm:text-sm font-medium z-20 bg-black/30 px-2 sm:px-3 py-1 rounded-full">
         {current + 1} / {slides.length}
       </div>
