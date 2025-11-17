@@ -1,4 +1,5 @@
-// Updated responsive Slider component with improved HERO responsiveness
+// Updated responsive Slider component
+// (Only responsive units & styling improved — design unchanged)
 
 'use client';
 
@@ -110,21 +111,14 @@ export default function Slider(): JSX.Element {
 
   return (
     <section
-      className="
-        relative
-        h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[57vh] xl:h-[70vh] 2xl:h-[84vh]
-        flex items-center justify-center
-        overflow-hidden
-      "
+      className="relative h-[80vh] md:h-[82vh] lg:h-[85vh] flex items-center justify-center overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-roledescription="carousel"
     >
-
-      {/* ================= HERO SLIDE (UPDATED) ================= */}
+      {/* HERO SLIDE RESPONSIVE FIX */}
       {currentSlide?.type === 'hero' ? (
         <>
-          {/* Background Video */}
           <div className="absolute inset-0 overflow-hidden">
             <video
               src="/assets/HomeHero1.mp4"
@@ -138,62 +132,34 @@ export default function Slider(): JSX.Element {
             <div className="absolute inset-0 bg-gradient-to-r from-[#031024]/90 via-[#031024]/70 to-transparent" />
           </div>
 
-          {/* Hero Content */}
-          <div className="relative z-10 w-full max-w-[1400px] flex flex-col lg:flex-row items-center h-full px-4 sm:px-6 md:px-10">
-            <div
-              className="
-                w-full lg:w-1/2 text-white 
-                flex flex-col justify-center
-                pt-24 sm:pt-28 md:pt-36 lg:pt-32 xl:pt-28
-              "
-            >
+          <div
+            className="relative z-10 w-full max-w-[1400px] flex flex-col lg:flex-row items-center h-full px-4 sm:px-8 md:px-12"
+          >
+            <div className="w-full lg:w-1/2 text-left text-white pt-28 pb-8 sm:pt-32 sm:pb-12 md:pt-40 lg:pt-28 lg:pb-16 flex flex-col justify-center">
               <h1
-                className="
-                  font-extrabold leading-snug
-                  text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
-                  mb-3 sm:mb-5
-                "
+                className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 sm:mb-6 leading-snug"
                 style={{ fontFamily: 'var(--font-playfair)' }}
               >
                 {currentSlide.title}
               </h1>
 
               {currentSlide.subtitle && (
-                <p
-                  className="
-                    text-sm sm:text-lg md:text-xl lg:text-2xl 
-                    font-semibold text-gray-200
-                    mb-2 sm:mb-3
-                  "
-                >
+                <p className="text-sm sm:text-lg md:text-xl text-gray-200 font-semibold mb-3 sm:mb-4">
                   {currentSlide.subtitle}
                 </p>
               )}
 
               {currentSlide.description && (
-                <p
-                  className="
-                    text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 
-                    text-gray-300 leading-relaxed max-w-xl 
-                    mb-4 sm:mb-6 lg:mb-8
-                  "
-                >
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 max-w-xl mb-6 lg:mb-8 leading-relaxed">
                   {currentSlide.description}
                 </p>
               )}
 
-              {/* Buttons */}
               <div className="flex flex-col xs:flex-row sm:flex-row gap-3 sm:gap-4">
                 {currentSlide.primaryCta && currentSlide.href && (
                   <Button
                     size="lg"
-                    className="
-                      bg-primary hover:bg-primary-dark text-white
-                      px-5 sm:px-7 md:px-8 lg:px-10
-                      py-3 sm:py-4 md:py-5
-                      text-sm sm:text-base md:text-lg lg:text-xl
-                      font-semibold shadow-lg
-                    "
+                    className="bg-primary hover:bg-primary-dark text-white px-5 sm:px-7 md:px-8 py-3.5 sm:py-4 text-sm md:text-lg font-semibold shadow-lg"
                     asChild
                   >
                     <Link href={currentSlide.href}>{currentSlide.primaryCta}</Link>
@@ -204,13 +170,7 @@ export default function Slider(): JSX.Element {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="
-                      border-2 border-white text-white hover:bg-white hover:text-primary
-                      px-5 sm:px-7 md:px-8 lg:px-10
-                      py-3 sm:py-4 md:py-5
-                      text-sm sm:text-base md:text-lg lg:text-xl
-                      font-semibold
-                    "
+                    className="border-2 border-white text-white hover:bg-white hover:text-primary px-5 sm:px-7 md:px-8 py-3.5 sm:py-4 text-sm md:text-lg font-semibold"
                     asChild
                   >
                     <Link href="/contact">{currentSlide.secondaryCta}</Link>
@@ -223,7 +183,6 @@ export default function Slider(): JSX.Element {
           </div>
         </>
       ) : (
-        /* ============== NORMAL SLIDES (UNCHANGED) ============== */
         <>
           {slides.map((slide, idx) =>
             slide.img ? (
@@ -231,6 +190,7 @@ export default function Slider(): JSX.Element {
                 key={`${slide.img}-${idx}`}
                 className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === current ? 'opacity-100 z-0' : 'opacity-0 z-[-1]'
                   }`}
+                aria-hidden={idx !== current}
               >
                 <Image src={slide.img} alt={slide.alt} fill sizes="100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
@@ -285,24 +245,27 @@ export default function Slider(): JSX.Element {
             className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-500 ${idx === current ? 'bg-white scale-125 ring-2 ring-white/80' : 'bg-white/50 hover:bg-white/80'
               }`}
             onClick={() => goToSlide(idx)}
+            aria-label={`Go to slide ${idx + 1}`}
+            aria-current={idx === current}
           />
         ))}
       </div>
 
-      {/* Prev Arrow */}
+      {/* Nav Arrows */}
       <button
         className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full"
         onClick={() => navigateSlides('prev')}
+        aria-label="Previous slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 sm:h-6 w-5 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
 
-      {/* Next Arrow */}
       <button
         className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-2 sm:p-3 rounded-full"
         onClick={() => navigateSlides('next')}
+        aria-label="Next slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 sm:h-6 w-5 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
