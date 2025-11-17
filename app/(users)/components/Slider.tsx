@@ -1,6 +1,4 @@
 // Updated responsive Slider component
-// (Only responsive units & styling improved — design unchanged)
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -116,7 +114,6 @@ export default function Slider(): JSX.Element {
       onMouseLeave={() => setIsHovered(false)}
       aria-roledescription="carousel"
     >
-      {/* HERO SLIDE RESPONSIVE FIX */}
       {currentSlide?.type === 'hero' ? (
         <>
           <div className="absolute inset-0 overflow-hidden">
@@ -132,10 +129,18 @@ export default function Slider(): JSX.Element {
             <div className="absolute inset-0 bg-gradient-to-r from-[#031024]/90 via-[#031024]/70 to-transparent" />
           </div>
 
-          <div
-            className="relative z-10 w-full max-w-[1400px] flex flex-col lg:flex-row items-center h-full px-4 sm:px-8 md:px-12"
-          >
-            <div className="w-full lg:w-1/2 text-left text-white pt-28 pb-8 sm:pt-32 sm:pb-12 md:pt-40 lg:pt-28 lg:pb-16 flex flex-col justify-center">
+          <div className="relative z-10 w-full max-w-[1400px] flex flex-col lg:flex-row items-center h-full px-4 sm:px-8 md:px-12">
+            <div
+              className="
+                w-full lg:w-1/2 text-left text-white
+                pt-28 pb-8
+                sm:pt-32 sm:pb-12
+                md:pt-40
+                lg:pt-28 lg:pb-16
+                laptopFix:pt-40   /* 🔥 FIX FOR 1286px LAPTOPS ONLY */
+                flex flex-col justify-center
+              "
+            >
               <h1
                 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 sm:mb-6 leading-snug"
                 style={{ fontFamily: 'var(--font-playfair)' }}
