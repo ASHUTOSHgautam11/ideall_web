@@ -115,8 +115,8 @@ export default function Slider(): JSX.Element {
         h-[70vh]            /* Mobile */
         sm:h-[75vh]         /* Large Mobile */
         md:h-[80vh]         /* Tablet */
-        lg:h-[90vh]         /* Laptop */
-        xl:h-[95vh]         /* Desktop */
+        lg:h-[84vh]         /* Laptop */
+        xl:h-[90vh]         /* Desktop */
         2xl:h-[84vh]        /* Large monitors */
         flex items-center justify-center
         overflow-hidden
