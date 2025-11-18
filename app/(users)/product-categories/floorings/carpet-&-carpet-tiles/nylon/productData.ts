@@ -201,7 +201,7 @@ export const products: ProductType[] = [
       },
     ],
     ctaLinks: {
-      requestSamples: "/contact/request-samples?product=professional-texture-series",
+      requestSamples: " ",
     },
   },
 
