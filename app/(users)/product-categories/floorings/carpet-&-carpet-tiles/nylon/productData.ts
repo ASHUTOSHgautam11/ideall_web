@@ -141,9 +141,9 @@ export const products: ProductType[] = [
       },
     ],
     ctaLinks: {
-      requestSamples: "/contact/request-samples?product=urban-concrete-series",
-      technicalSupport: "/contact/technical-support?product=urban-concrete-series",
-      downloadSheet: "/downloads/uc-2401-datasheet.pdf",
+      requestSamples: "",
+      technicalSupport: "",
+      downloadSheet: "",
     },
   },
 
@@ -201,7 +201,7 @@ export const products: ProductType[] = [
       },
     ],
     ctaLinks: {
-      requestSamples: " ",
+      requestSamples: "",
     },
   },
 
