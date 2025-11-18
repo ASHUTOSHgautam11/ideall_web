@@ -22,6 +22,7 @@ export interface ProductType {
   colors: string;
   img: string; // hero image
   thumbnail?: string;
+  specPdf?: string;
   description: string;
   features: string[];
   applications: string; // short text (comma separated)
@@ -57,6 +58,7 @@ export const products: ProductType[] = [
     colors: "6 Colors",
     img: "/assets/products/nylon/naylon1.avif",
     thumbnail: "/assets/products/nylon/naylon1.avif",
+    specPdf: "/assets/pdf/floorings/naylon/urban-concrete-series-specifications.pdf",
     description:
       "Contemporary nylon carpet tiles featuring weathered concrete aesthetics perfect for modern office environments.",
     features: [
@@ -70,10 +72,10 @@ export const products: ProductType[] = [
     applications: "Corporate offices, Meeting rooms, Reception areas, Co-working spaces",
     sustainability: "Cradle to Cradle Certified; Contains recycled content",
     installationGallery: [
-      "/images/flooring/gallery/urban-1.jpg",
-      "/images/flooring/gallery/urban-2.jpg",
-      "/images/flooring/gallery/urban-3.jpg",
-      "/images/flooring/gallery/urban-4.jpg",
+      "/assets/products/floorings/nylon/urban/naylon1.avif",
+      "/assets/products/floorings/nylon/urban/naylon2.avif",
+      "/assets/products/floorings/nylon/urban/naylon3.avif",
+      "/assets/products/floorings/nylon/urban/naylon4.png",
     ],
     technicalSpecs: [
       { label: "Construction", value: "Tufted loop pile" },
@@ -101,20 +103,23 @@ export const products: ProductType[] = [
       "Open plan offices",
     ],
     availableColors: [
-      { name: "Metropolitan Grey", code: "MG-01", img: "/images/flooring/colors/mg-01.jpg" },
-      { name: "Urban Charcoal", code: "UC-02", img: "/images/flooring/colors/uc-02.jpg" },
-      { name: "Industrial Concrete", code: "IC-03", img: "/images/flooring/colors/ic-03.jpg" },
-      { name: "Modern Stone", code: "MS-04", img: "/images/flooring/colors/ms-04.jpg" },
-      { name: "Business Grey", code: "BG-05", img: "/images/flooring/colors/bg-05.jpg" },
-      { name: "Executive Slate", code: "ES-06", img: "/images/flooring/colors/es-06.jpg" },
+      { name: "Metropolitan Grey", code: "MG-01", img: "/assets/products/floorings/nylon/urban/nayloncolor1.jpg" },
+      { name: "Urban Charcoal", code: "UC-02", img: "/assets/products/floorings/nylon/urban/nayloncolor2.jpg" },
+      { name: "Industrial Concrete", code: "IC-03", img: "/assets/products/floorings/nylon/urban/nayloncolor3.jpg" },
+      { name: "Modern Stone", code: "MS-04", img: "/assets/products/floorings/nylon/urban/nayloncolor4.jpg" },
+      { name: "Business Grey", code: "BG-05", img: "/assets/products/floorings/nylon/urban/nayloncolor5.jpg" },
+      { name: "Executive Slate", code: "ES-06", img: "/assets/products/floorings/nylon/urban/nayloncolor6.jpg" },
     ],
     certifications: [
-      "Cradle to Cradle Certified",
-      "Green Label Plus certified",
-      "Low VOC emissions",
-      "Recyclable backing material",
-      "Carbon neutral manufacturing",
+      "/assets/products/floorings/nylon/urban/icon1.jpg",
+      "/assets/products/floorings/nylon/urban/icon2.jpg",
+      "/assets/products/floorings/nylon/urban/icon3.jpg",
+      "/assets/products/floorings/nylon/urban/icon4.jpg",
+      "/assets/products/floorings/nylon/urban/icon5.jpg",
+      "/assets/products/floorings/nylon/urban/icon6.jpg",
+      "/assets/products/floorings/nylon/urban/icon7.jpg",
     ],
+
     installationSteps: [
       {
         id: 1,

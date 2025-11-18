@@ -133,7 +133,7 @@ export default function Slider(): JSX.Element {
           </div>
 
           <div
-            className="relative z-10 w-full max-w-[1400px] flex flex-col lg:flex-row items-center h-full px-4 sm:px-8 md:px-12"
+            className="relative z-10 w-full max-w-[1800px] flex flex-col lg:flex-row items-center h-full px-4 sm:px-8 md:px-12 ml-40"
           >
             <div className="w-full lg:w-1/2 text-left text-white pt-28 pb-8 sm:pt-32 sm:pb-12 md:pt-40 lg:pt-28 lg:pb-16 flex flex-col justify-center">
               <h1
@@ -179,7 +179,7 @@ export default function Slider(): JSX.Element {
               </div>
             </div>
 
-            <div className="hidden lg:block w-1/2 h-full" />
+             
           </div>
         </>
       ) : (
