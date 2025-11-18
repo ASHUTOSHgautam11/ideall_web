@@ -357,7 +357,8 @@ export default function ProductClient({ product }: any) {
                     </div>
                 </div>
             </section>
-
+ 
+ 
             <div className="h-24"></div>
         </div>
     );
