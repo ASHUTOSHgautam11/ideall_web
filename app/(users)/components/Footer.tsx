@@ -58,9 +58,14 @@ export default function Footer() {
                   Our Story
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/product-categories" className="text-primary hover:text-primary transition-colors duration-200">
                   Product Categories
+                </Link>
+              </li> */}
+              <li>
+                <Link href="/career" className="text-primary hover:text-primary transition-colors duration-200">
+                  Career With Us
                 </Link>
               </li>
               <li>
