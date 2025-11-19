@@ -31,7 +31,7 @@ const StoryHeroSection: React.FC<HeroSectionProps> = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Left Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left mt-20">
             <h1
               className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#926f4e] mb-4 sm:mb-6 leading-tight"
               style={{ fontFamily: "var(--font-playfair)" }}
@@ -42,7 +42,7 @@ const StoryHeroSection: React.FC<HeroSectionProps> = () => {
               </span>
             </h1>
 
-            <p className="text-base sm:text-sm lg:text-sm text-gray-900 mb-5 sm:mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-sm lg:text-lg text-gray-900 mb-5 sm:mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0">
               Founded in Singapore in 2002 as part of the IDeall Group of
               Companies, Ideall Solutionz began with a clear mission: to simplify
               and optimize global trade in the lifestyle goods industry. Today, we
@@ -50,7 +50,7 @@ const StoryHeroSection: React.FC<HeroSectionProps> = () => {
               seamless access to high-quality products from around the world.
             </p>
 
-            <div className="inline-flex items-center px-3 py-1.5 bg-primary/20 rounded-full text-primary text-xs sm:text-xxs font-medium mb-5 sm:mb-6">
+            <div className="inline-flex items-center px-3 py-1.5 bg-primary/20 rounded-full text-primary text-xs sm:text-sm font-medium mb-5 sm:mb-6">
               <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
               Crafting Excellence Since 1995
             </div>
@@ -73,7 +73,7 @@ const StoryHeroSection: React.FC<HeroSectionProps> = () => {
           <div className="relative">
             {/* Image Box */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl w-full 
-      h-72 sm:h-80 md:h-96 lg:h-[465px] mt-20">
+      h-72 sm:h-75 md:h-80 lg:h-[400px] mt-20">
 
               <AnimatePresence mode="wait">
                 <motion.div
