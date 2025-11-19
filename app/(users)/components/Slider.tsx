@@ -119,69 +119,112 @@ export default function Slider(): JSX.Element {
       {/* HERO SLIDE RESPONSIVE FIX */}
       {currentSlide?.type === 'hero' ? (
         <>
-          <div className="absolute inset-0 overflow-hidden">
-            <video
-              src="/assets/HomeHero1.mp4"
-              poster="/assets/HomeHero.png"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#031024]/90 via-[#031024]/70 to-transparent" />
-          </div>
-
-          <div
-            className="relative z-10 w-full max-w-[1800px] flex flex-col lg:flex-row items-center h-full px-4 sm:px-8 md:px-12 ml-40"
-          >
-            <div className="w-full lg:w-1/2 text-left text-white pt-28 pb-8 sm:pt-32 sm:pb-12 md:pt-40 lg:pt-28 lg:pb-16 flex flex-col justify-center">
-              <h1
-                className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 sm:mb-6 leading-snug"
-                style={{ fontFamily: 'var(--font-playfair)' }}
-              >
-                {currentSlide.title}
-              </h1>
-
-              {currentSlide.subtitle && (
-                <p className="text-sm sm:text-lg md:text-xl text-gray-200 font-semibold mb-3 sm:mb-4">
-                  {currentSlide.subtitle}
-                </p>
-              )}
-
-              {currentSlide.description && (
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 max-w-xl mb-6 lg:mb-8 leading-relaxed">
-                  {currentSlide.description}
-                </p>
-              )}
-
-              <div className="flex flex-col xs:flex-row sm:flex-row gap-3 sm:gap-4">
-                {currentSlide.primaryCta && currentSlide.href && (
-                  <Button
-                    size="lg"
-                    className="bg-primary hover:bg-primary-dark text-white px-5 sm:px-7 md:px-8 py-3.5 sm:py-4 text-sm md:text-lg font-semibold shadow-lg"
-                    asChild
-                  >
-                    <Link href={currentSlide.href}>{currentSlide.primaryCta}</Link>
-                  </Button>
-                )}
-
-                {currentSlide.secondaryCta && (
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-white text-white hover:bg-white hover:text-primary px-5 sm:px-7 md:px-8 py-3.5 sm:py-4 text-sm md:text-lg font-semibold"
-                    asChild
-                  >
-                    <Link href="/contact">{currentSlide.secondaryCta}</Link>
-                  </Button>
-                )}
-              </div>
+          <div className="relative w-full h-[80vh] sm:h-[90vh] lg:h-screen">
+            {/* Background Video */}
+            <div className="absolute inset-0 overflow-hidden">
+              <video
+                src="/assets/HomeHero1.mp4"
+                poster="/assets/HomeHero.png"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#031024]/90 via-[#031024]/70 to-transparent" />
             </div>
 
-             
+            {/* Content Section */}
+            <div
+              className="
+        relative z-10 
+        w-full max-w-[1500px] 
+        flex flex-col lg:flex-row 
+        items-center 
+        h-full 
+        px-4 sm:px-8 md:px-12 
+        mx-auto
+      "
+            >
+              {/* Left Text Section */}
+              <div
+                className="
+          w-full lg:w-1/2 
+          text-left text-white 
+          pt-20 sm:pt-28 md:pt-36 lg:pt-24 
+          pb-10 
+          flex flex-col justify-center
+        "
+              >
+                <h1
+                  className="
+            text-2xl sm:text-3xl md:text-4xl 
+            lg:text-4xl xl:text-6xl 
+            font-extrabold 
+            mb-4 sm:mb-6 
+            leading-snug
+          "
+                  style={{ fontFamily: 'var(--font-playfair)' }}
+                >
+                  {currentSlide.title}
+                </h1>
+
+                {currentSlide.subtitle && (
+                  <p className="text-base sm:text-base md:text-base text-gray-200 font-semibold mb-3 sm:mb-4">
+                    {currentSlide.subtitle}
+                  </p>
+                )}
+
+                {currentSlide.description && (
+                  <p className="text-sm sm:text-base md:text-base text-gray-300 max-w-xl mb-6 lg:mb-8 leading-relaxed">
+                    {currentSlide.description}
+                  </p>
+                )}
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  {currentSlide.primaryCta && currentSlide.href && (
+                    <Button
+                      size="lg"
+                      className="
+                bg-primary hover:bg-primary-dark 
+                text-white 
+                px-4 sm:px-7 md:px-8 
+                py-3.5 sm:py-4 
+                text-sm md:text-sm 
+                font-semibold 
+                shadow-lg
+              "
+                      asChild
+                    >
+                      <Link href={currentSlide.href}>{currentSlide.primaryCta}</Link>
+                    </Button>
+                  )}
+
+                  {currentSlide.secondaryCta && (
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="
+                border-2 border-white 
+                text-white 
+                hover:bg-white hover:text-primary 
+                px-4 sm:px-5 md:px-6 
+                py-3 sm:py-4 
+                text-sm md:text-sm 
+                font-semibold
+              "
+                      asChild
+                    >
+                      <Link href="/contact">{currentSlide.secondaryCta}</Link>
+                    </Button>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         </>
+
       ) : (
         <>
           {slides.map((slide, idx) =>
