@@ -26,7 +26,7 @@ const StoryHeroSection: React.FC<HeroSectionProps> = () => {
   }, []);
 
   return (
-    <section className="pt-20 sm:pt-24 lg:pt-10 pb-16 px-4 sm:px-6 lg:px-20 bg-[#c0b2a4] flex items-center justify-center">
+    <section className="pt-14 sm:pt-24 lg:pt-10 pb-16 px-4 sm:px-6 lg:px-20 bg-[#c0b2a4] flex items-center justify-center">
       <div className="relative z-10 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
@@ -73,7 +73,7 @@ const StoryHeroSection: React.FC<HeroSectionProps> = () => {
           <div className="relative">
             {/* Image Box */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl w-full 
-      h-72 sm:h-75 md:h-80 lg:h-[400px] mt-20">
+      h-72 sm:h-75 md:h-80 lg:h-[500px] mt-20">
 
               <AnimatePresence mode="wait">
                 <motion.div
