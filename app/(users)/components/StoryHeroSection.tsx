@@ -73,7 +73,7 @@ const StoryHeroSection: React.FC<HeroSectionProps> = () => {
           <div className="relative">
             {/* Image Box */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl w-full 
-      h-72 sm:h-75 md:h-80 lg:h-[500px] mt-20">
+      h-72 sm:h-75 md:h-80 lg:h-[600px] mt-20">
 
               <AnimatePresence mode="wait">
                 <motion.div
