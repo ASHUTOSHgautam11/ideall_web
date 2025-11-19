@@ -82,7 +82,7 @@ const TrustedByGlobal: React.FC = () => {
   return (
     <section
       style={{
-        padding: "60px 0",
+        padding: "45px 0",
         backgroundColor: "#f7f4f2ff",
         textAlign: "center",
       }}
