@@ -44,7 +44,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                             connecting them to high-quality lifestyle goods through an extensive, reliable, and efficient  .
                         </p>
                         {/* About Image */}
-                        <div className="mb-5 max-w-sm mx-auto ">
+                        <div className="mb-5 max-w-sm mx-auto p-5 ">
                             <img
                                 src="/assets/hero/shape2.png"
                                 alt="Team collaboration at Ideall Solutionz"
