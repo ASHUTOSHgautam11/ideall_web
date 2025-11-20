@@ -7,7 +7,7 @@ import ContactBanner from '../components/ContactBanner';
 import CoreValues from '../components/CoreValues';
 import PartnershipOpportunities from '../components/PartnershipOpportunities';
 
-// ✅ Type for a Job
+// Job type
 interface Job {
   id: number;
   title: string;
@@ -20,7 +20,7 @@ interface Job {
   requirements: string[];
 }
 
-// Mock job data
+// Mock data
 const JOBS: Job[] = [
   {
     id: 1,
@@ -56,6 +56,7 @@ const JOBS: Job[] = [
   },
 ];
 
+// Filter options
 const DEPARTMENTS = ['All', 'Sales', 'Finance', 'IT', 'Documentation'];
 const LOCATIONS = ['All', 'Delhi-NCR & Beyond', 'Delhi', 'Remote'];
 const TYPES = ['All', 'Full-time', 'Part-time', 'Contract'];
@@ -69,10 +70,10 @@ export default function Career() {
   const [showDetails, setShowDetails] = useState(false);
   const [showApply, setShowApply] = useState(false);
 
-  // ✨ Refs for smooth scroll
   const jobsRef = useRef<HTMLDivElement | null>(null);
   const cultureRef = useRef<HTMLDivElement | null>(null);
 
+  // Filtering
   const filteredJobs = JOBS.filter((job) => {
     return (
       (selectedDept === 'All' || job.department === selectedDept) &&
@@ -91,95 +92,96 @@ export default function Career() {
 
   return (
     <>
-      {/* Hero Section */}
+      {/* HERO */}
       <HeroVideoSection
         heading="Join Our Team & Shape the Future"
         description="We are looking for passionate individuals who want to make a difference. Discover opportunities to grow your career while building products that impact millions of users worldwide."
         videoSrc="/assets/video/video4.mp4"
       />
 
-      {/* Intro Section */}
-      <div className="max-w-6xl mx-auto text-center mb-16 mt-14">
-        <h1 className="text-4xl sm:text-5xl font-bold text-secondary mb-4">
+      {/* INTRO SECTION */}
+      <div className="max-w-6xl mx-auto text-center mb-16 mt-10 px-4">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary mb-4">
           Your Next Big Opportunity Starts Here
         </h1>
-        <p className="text-lg text-gray-900 max-w-3xl mx-auto mb-14">
-          We’re not just building products — we’re building the future. Join a passionate team of dreamers, creators, and doers, and turn your ideas into experiences that inspire millions worldwide.
+
+        <p className="text-base sm:text-lg text-gray-900 max-w-3xl mx-auto mb-10">
+          We’re not just building products — we’re building the future. Join a passionate team of dreamers, creators, and doers.
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12 px-4">
           <button
             onClick={() => scrollToSection(jobsRef)}
-            className="px-6 py-3 bg-primary hover:bg-primary-600 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+            className="px-6 py-3 bg-primary hover:bg-primary-600 text-white font-medium rounded-lg transition w-full sm:w-auto"
           >
             View Open Positions
           </button>
 
           <button
             onClick={() => scrollToSection(cultureRef)}
-            className="px-6 py-3 bg-secondary border border-secondary text-white hover:bg-secondary-500 font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2"
+            className="px-6 py-3 bg-secondary border border-secondary text-white hover:bg-secondary-500 font-medium rounded-lg transition w-full sm:w-auto"
           >
             Learn About Our Culture
           </button>
         </div>
       </div>
 
-      {/* Filter Bar & Jobs Section */}
-      <div ref={jobsRef} className="min-h-50 bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto mb-10 bg-white p-4 rounded-lg shadow">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      {/* JOB FILTERS */}
+      <div ref={jobsRef} className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto mb-10 bg-white p-4 md:p-6 rounded-lg shadow">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Search */}
             <input
               type="text"
               placeholder="Search jobs..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
             />
+
+            {/* Dropdowns */}
             <select
               value={selectedDept}
               onChange={(e) => setSelectedDept(e.target.value)}
-              className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
             >
               {DEPARTMENTS.map((dept) => (
-                <option key={dept} value={dept}>
-                  {dept}
-                </option>
+                <option key={dept} value={dept}>{dept}</option>
               ))}
             </select>
+
             <select
               value={selectedLocation}
               onChange={(e) => setSelectedLocation(e.target.value)}
-              className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
             >
               {LOCATIONS.map((loc) => (
-                <option key={loc} value={loc}>
-                  {loc}
-                </option>
+                <option key={loc} value={loc}>{loc}</option>
               ))}
             </select>
+
             <select
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
-              className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
             >
               {TYPES.map((type) => (
-                <option key={type} value={type}>
-                  {type}
-                </option>
+                <option key={type} value={type}>{type}</option>
               ))}
             </select>
           </div>
         </div>
 
         {/* Job Cards */}
-        <div className="max-w-7xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="max-w-7xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-1">
           {filteredJobs.length > 0 ? (
             filteredJobs.map((job) => (
               <div
                 key={job.id}
                 className="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition"
               >
-                <div className="p-6">
+                <div className="p-5 sm:p-6">
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="text-lg font-semibold text-primary uppercase">
                       {job.title}
@@ -188,24 +190,29 @@ export default function Career() {
                       {job.type}
                     </span>
                   </div>
+
                   <div className="flex flex-wrap gap-2 text-sm text-gray-600 mb-3">
                     <span>{job.department}</span> •
                     <span>{job.location}</span> •
                     <span>{job.experience}</span>
                   </div>
+
                   <p className="text-gray-700 mb-3">{job.description}</p>
+
                   <h4 className="text-sm font-semibold mb-1">Key Requirements:</h4>
                   <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 mb-4">
                     {job.requirements.map((req, i) => (
                       <li key={i}>{req}</li>
                     ))}
                   </ul>
+
                   <p className="text-xs text-gray-500 mb-4">
                     Posted {new Date(job.posted).toLocaleDateString()}
                   </p>
+
                   <div className="flex gap-3">
                     <button
-                      className="flex-1 py-2 border border-primary text-primary hover:text-white rounded-md hover:bg-primary-500 transition"
+                      className="flex-1 py-2 border border-primary text-primary hover:text-white rounded-md hover:bg-primary transition"
                       onClick={() => {
                         setSelectedJob(job);
                         setShowDetails(true);
@@ -213,8 +220,9 @@ export default function Career() {
                     >
                       View Details
                     </button>
+
                     <button
-                      className="flex-1 py-2 bg-primary text-white rounded-md hover:bg-primary-500 transition"
+                      className="flex-1 py-2 bg-primary text-white rounded-md hover:bg-primary-600 transition"
                       onClick={() => {
                         setSelectedJob(job);
                         setShowApply(true);
@@ -234,7 +242,7 @@ export default function Career() {
         </div>
       </div>
 
-      {/* Culture Section */}
+      {/* CULTURE SECTION */}
       <div ref={cultureRef}>
         <PartnershipOpportunities />
       </div>
