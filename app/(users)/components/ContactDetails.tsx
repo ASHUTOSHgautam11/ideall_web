@@ -24,26 +24,37 @@ export default function ContactDetails() {
                         </p>
                     </div>
 
-                    {/* PHONE */}
-                    <div className="rounded-xl p-6 bg-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border-gray-200 border">
-                        <p className="flex items-center gap-2 text-gray-700">
-                            <Phone className="text-secondary" size={18} /> Tel: +(65) 63254142
-                        </p>
+                    <div className="grid grid-cols-1 gap-4">
+
+                        {/* PHONE */}
+                        <a href="tel:+6563254142">
+                            <div className="rounded-xl p-6 bg-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border border-gray-200">
+                                <p className="flex items-center gap-2 text-gray-700">
+                                    <Phone className="text-secondary" size={18} /> Tel: +(65) 63254142
+                                </p>
+                            </div>
+                        </a>
+
+                        {/* FAX */}
+                        <a href="fax:+6563254840">
+                            <div className="rounded-xl p-6 bg-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border border-gray-200">
+                                <p className="flex items-center gap-2 text-gray-700">
+                                    <Phone className="text-secondary" size={18} /> Fax: +(65) 63254840
+                                </p>
+                            </div>
+                        </a>
+
+                        {/* EMAIL */}
+                        <a href="mailto:sales@ideallss.com">
+                            <div className="rounded-xl p-6 bg-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border border-gray-200">
+                                <p className="flex items-center gap-2 text-gray-700">
+                                    <Mail className="text-secondary" size={18} /> sales@ideallss.com
+                                </p>
+                            </div>
+                        </a>
+
                     </div>
 
-                    {/* FAX */}
-                    <div className="rounded-xl p-6 bg-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border-gray-200 border">
-                        <p className="flex items-center gap-2 text-gray-700">
-                            <Phone className="text-secondary" size={18} /> Fax: +(65) 63254840
-                        </p>
-                    </div>
-
-                    {/* EMAIL */}
-                    <div className="rounded-xl p-6 bg-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border-gray-200 border">
-                        <p className="flex items-center gap-2 text-gray-700">
-                            <Mail className="text-secondary" size={18} /> sales@ideallss.com
-                        </p>
-                    </div>
 
                     {/* READY TO GET STARTED CARD */}
                     <div className="rounded-xl p-6 bg-primary shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border border-primary/30">

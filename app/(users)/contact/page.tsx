@@ -6,6 +6,7 @@ import WhyPartner from '@/app/(users)/components/WhyPartner';
 import HeroVideoSection from '../components/HeroVideoSection';
 import PartnershipOpportunities from '../components/PartnershipOpportunities';
 import ContactDetails from '../components/ContactDetails';
+import ClientReviews from '../components/ClientReviews';
 export default function Contact() {
   return (
     <>
@@ -24,20 +25,13 @@ export default function Contact() {
               </p>
             </div>
             <ContactDetails />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-              <ContactForm />
-              <ContactInfo />
-            </div>
-            {/* <PartnershipOpportunities /> */}
-
-
-
+            <ContactForm />
+            <ClientReviews />
           </div>
         </section>
         <WhyPartner />
         <ContactBanner />
-        <CoreValues />
+        {/* <CoreValues /> */}
       </main>
     </>
   );
