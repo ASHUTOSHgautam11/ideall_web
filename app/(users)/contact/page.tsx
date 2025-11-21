@@ -17,14 +17,13 @@ export default function Contact() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h1 className="text-4xl lg:text-5xl font-bold text-secondary mb-6">
-                Connect With Us
+                Let’s Work Together
               </h1>
               <p className="text-xl text-gray-900 max-w-3xl mx-auto">
-                Ready to discuss your procurement needs? Our team is here to help you navigate global markets
-                and source premium interior solutions.
+                Reach out to us for reliable support in navigating markets, evaluating materials, and securing top-quality interior products.
               </p>
             </div>
-              <ContactDetails/>
+            <ContactDetails />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
               <ContactForm />
