@@ -109,7 +109,7 @@ export default function Footer() {
 
         <div className="border-t border-primary-900 mt-8 pt-8 text-center">
           <p className="text-primary">
-            © 2025 Ideall Solutions Singapore PTE LTD. All rights reserved.
+            © 2025 Ideall Solutionz Singapore PTE LTD. All rights reserved.
           </p>
         </div>
       </div>

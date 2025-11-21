@@ -2,11 +2,12 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 interface HeroVideoSectionProps {
     heading: string;
     description: string;
-    videoSrc?: string; // Optional, default video if not provided
+    videoSrc?: string;
 }
 
 const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({
@@ -39,8 +40,8 @@ const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({
                     transition={{ duration: 0.8 }}
                     className="text-4xl sm:text-5xl md:text-6xl font-bold"
                     style={{
-                        fontFamily: 'var(--font-playfair)', // Apply Playfair Display
-                        lineHeight: '1.3',
+                        fontFamily: "var(--font-playfair)",
+                        lineHeight: "1.3",
                     }}
                 >
                     {heading}
@@ -52,14 +53,27 @@ const HeroVideoSection: React.FC<HeroVideoSectionProps> = ({
                     transition={{ duration: 1, delay: 0.3 }}
                     className="mt-4 text-lg sm:text-xl md:text-2xl max-w-7xl"
                     style={{
-                        fontFamily: 'var(--font-inter)', // Apply Inter for description
-                        lineHeight: '1.7',
+                        fontFamily: "var(--font-inter)",
+                        lineHeight: "1.7",
                     }}
                 >
                     {description}
                 </motion.p>
             </div>
 
+            {/* ▼ Floating Down Arrow (bottom center) */}
+            <motion.div
+                initial={{ y: 0 }}
+                animate={{ y: [0, 12, 0] }} // smooth up-down animation
+                transition={{
+                    duration: 1.8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 cursor-pointer"
+            >
+                <ChevronDown size={42} className="text-white opacity-80" />
+            </motion.div>
         </section>
     );
 };
