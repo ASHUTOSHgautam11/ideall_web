@@ -26,7 +26,7 @@ export default function Contact() {
             </div>
             <ContactDetails />
             <ContactForm />
-            <ClientReviews />
+            {/* <ClientReviews /> */}
           </div>
         </section>
         <WhyPartner />
