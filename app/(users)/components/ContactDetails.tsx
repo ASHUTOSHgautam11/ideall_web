@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Printer } from "lucide-react";
 
 export default function ContactDetails() {
     return (
@@ -39,7 +40,8 @@ export default function ContactDetails() {
                         <a href="fax:+6563254840">
                             <div className="rounded-xl p-6 bg-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all border border-gray-200">
                                 <p className="flex items-center gap-2 text-gray-700">
-                                    <Phone className="text-secondary" size={18} /> Fax: +(65) 63254840
+                                    <Printer className="text-secondary" size={18} />
+                                    Fax: +(65) 63254840
                                 </p>
                             </div>
                         </a>

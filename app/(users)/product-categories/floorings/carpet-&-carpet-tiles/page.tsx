@@ -10,7 +10,7 @@ export default function Floorings() {
       description: 'High-performance nylon carpet tiles suitable for commercial and residential applications.',
       features: ['Stain resistant', 'Easy installation', 'High durability', 'Modular design'],
       applications: ['Office spaces', 'Hotels', 'Retail environments'],
-      imageUrl: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=900&h=600&fit=crop',
+      imageUrl: '/assets/products/floorings/nylon/Nylon_Carpet_Tiles.avif',
       href: '/product-categories/floorings/carpet-&-carpet-tiles/nylon',
     },
     {
@@ -18,7 +18,7 @@ export default function Floorings() {
       description: 'Cost-effective carpet tiles with excellent stain resistance and easy maintenance.',
       features: ['Moisture resistant', 'Budget friendly', 'Easy to clean', 'Fade resistant'],
       applications: ['Educational facilities', 'Healthcare', 'Light commercial'],
-      imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=600&fit=crop',
+      imageUrl: '/assets/products/floorings/polyproplene/Polypropylene_Tiles.jpg',
       href: '/product-categories/floorings/carpet-&-carpet-tiles/polypropylene',
     },
     {
@@ -26,7 +26,7 @@ export default function Floorings() {
       description: 'Premium natural fiber carpet tiles offering luxury feel and superior performance.',
       features: ['Natural insulation', 'Luxurious texture', 'Flame resistant', 'Eco friendly'],
       applications: ['Executive offices', 'Hotels', 'High-end residential'],
-      imageUrl: '',
+      imageUrl: '/assets/products/floorings/woolblend/Wool_Blend_Tiles.jpg',
       href: '/product-categories/floorings/carpet-&-carpet-tiles/wool-blend',
     },
     {
@@ -34,7 +34,7 @@ export default function Floorings() {
       description: 'Advanced solution-dyed nylon tiles with exceptional colorfastness and durability.',
       features: ['UV stable', 'High traffic rated', 'Permanent color', 'Bleach cleanable'],
       applications: ['Airports', 'Hospitals', 'Educational institutions'],
-      imageUrl: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=900&h=600&fit=crop',
+      imageUrl: '/assets/products/floorings/solutiondyednylon/Solution_Dyed_Nylon.jpg',
       href: '/product-categories/floorings/carpet-&-carpet-tiles/solution-dyed',
     },
   ];
