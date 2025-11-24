@@ -9,22 +9,22 @@ export default function Floorings() {
     productCategories: [
       {
         name: 'Carpet & Carpet Tiles',
-        imageUrl: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=600&h=400&fit=crop',
+        imageUrl: '/assets/products/floorings/Carpet&CarpetTiles/Carpet & Carpet Tiles.jpg',
         description: 'Luxurious and durable carpets for every space.',
       },
       {
         name: 'Artificial and Sports Grass',
-        imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop',
+        imageUrl: '/assets/products/floorings/ArtificialandSportsGrass/Artificial and Sports Grass.webp',
         description: 'Realistic, low-maintenance synthetic turf.',
       },
       {
         name: 'Vinyl Floorings & Laminates',
-        imageUrl: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=600&h=400&fit=crop',
+        imageUrl: '/assets/products/floorings/VinylFloorings&Laminates/Vinyl Floorings & Laminates.avif',
         description: 'Waterproof, stylish, and easy to install.',
       },
       {
         name: 'Engineered & Solid Wood',
-        imageUrl: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=600&h=400&fit=crop',
+        imageUrl: '/assets/products/floorings/Engineered&SolidWood/Engineered & Solid Wood.jpg',
         description: 'Timeless natural wood with modern resilience.',
       },
     ],

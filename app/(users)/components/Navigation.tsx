@@ -26,13 +26,10 @@ export default function Navigation() {
     setIsProductDropdownOpen(false);
   }, [pathname]);
 
-  // ✔ Scroll listener for BG + text color change
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) setScrolled(true);
-      else setScrolled(false);
+      setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -82,7 +79,6 @@ export default function Navigation() {
               />
             </div>
 
-            {/* Logo Text Color Based on Scroll */}
             <span
               className={`hidden md:inline font-semibold text-base transition-colors duration-300
               ${scrolled ? 'text-[#926f4e]' : 'text-white'}
@@ -105,16 +101,18 @@ export default function Navigation() {
                         onClick={toggleProductDropdown}
                         className={`group flex items-center space-x-1.5 font-medium transition-colors duration-200
                           ${scrolled ? 'text-[#926f4e]' : 'text-white'}
+                          hover:text-[#7b5d40]   /* ⚡ FIX — hover color */
                         `}
                       >
                         <IconComponent
                           size={18}
-                          className={`${scrolled ? 'text-[#926f4e]' : 'text-white'} group-hover:text-[#7b5d40]`}
+                          className={`${scrolled ? 'text-[#926f4e]' : 'text-white'}
+                          group-hover:text-[#7b5d40]`}   /* ⚡ FIX */
                         />
                         <span>{item.name}</span>
                       </button>
 
-                      {/* Dropdown Menu */}
+                      {/* Dropdown */}
                       <div
                         className={`absolute top-full left-0 mt-2 w-44 bg-white shadow-md rounded-md border border-gray-200 z-50 overflow-hidden transition-all duration-300 ease-in-out
                         ${isProductDropdownOpen ? 'max-h-96 opacity-100 scale-100' : 'max-h-0 opacity-0 scale-95 pointer-events-none'}
@@ -124,7 +122,7 @@ export default function Navigation() {
                           <Link
                             key={subItem}
                             href={`/product-categories/${subItem.toLowerCase()}`}
-                            className="block px-4 py-2 text-[#926f4e] hover:bg-gray-100 cursor-pointer transition-colors"
+                            className="block px-4 py-2 text-[#926f4e] hover:bg-[#f8f5f2] hover:text-[#7b5d40] transition-colors"  /* ⚡ FIX */
                           >
                             {subItem}
                           </Link>
@@ -140,12 +138,16 @@ export default function Navigation() {
                     href={item.href}
                     className={`group flex items-center space-x-1.5 font-medium transition-colors duration-200
                       ${scrolled ? 'text-[#926f4e]' : 'text-white'}
-                      ${isActivePath(item.href) ? 'font-semibold' : ''}
+                      ${isActivePath(item.href) ? 'text-[#7b5d40] font-semibold' : ''}   /* ⚡ FIX Active */
+                      hover:text-[#7b5d40]   /* ⚡ FIX Hover */
                     `}
                   >
                     <IconComponent
                       size={18}
-                      className={`${scrolled ? 'text-[#926f4e]' : 'text-white'} group-hover:text-[#7b5d40]`}
+                      className={`${scrolled ? 'text-[#926f4e]' : 'text-white'}
+                      group-hover:text-[#7b5d40]
+                      ${isActivePath(item.href) ? 'text-[#7b5d40]' : ''}   /* ⚡ FIX Active */
+                    `}
                     />
                     <span>{item.name}</span>
                   </Link>
@@ -169,11 +171,12 @@ export default function Navigation() {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`lg:hidden p-2 rounded-md transition-colors
               ${scrolled ? 'text-[#926f4e]' : 'text-white'}
+              hover:text-[#7b5d40]   /* ⚡ FIX */
             `}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -194,7 +197,7 @@ export default function Navigation() {
                     <div key={item.name} className="space-y-1">
                       <button
                         onClick={() => setIsProductDropdownOpen(!isProductDropdownOpen)}
-                        className="flex w-full items-center justify-between px-3 py-2 rounded-lg text-[#926f4e] hover:bg-white/10 font-medium"
+                        className="flex w-full items-center justify-between px-3 py-2 rounded-lg text-[#926f4e] hover:bg-white/20 hover:text-[#7b5d40] font-medium"  /* ⚡ FIX */
                       >
                         {item.name}
                         <span>{isProductDropdownOpen ? '-' : '+'}</span>
@@ -210,7 +213,7 @@ export default function Navigation() {
                             key={subItem}
                             href={`/product-categories/${subItem.toLowerCase()}`}
                             onClick={() => setIsMenuOpen(false)}
-                            className="block px-3 py-2 rounded-lg text-[#926f4e] hover:bg-white/10"
+                            className="block px-3 py-2 rounded-lg text-[#926f4e] hover:bg-white/20 hover:text-[#7b5d40] transition-colors"  /* ⚡ FIX */
                           >
                             {subItem}
                           </Link>
@@ -225,7 +228,9 @@ export default function Navigation() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center space-x-3 px-3 py-2 rounded-lg text-[#926f4e] hover:bg-white/10"
+                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-[#926f4e] hover:bg-white/20 hover:text-[#7b5d40] transition-colors
+                      ${isActivePath(item.href) ? 'text-[#7b5d40] font-semibold' : ''}   /* ⚡ FIX Active */
+                    `}
                   >
                     <item.icon size={20} />
                     <span className="font-medium">{item.name}</span>

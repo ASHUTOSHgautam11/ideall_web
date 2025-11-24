@@ -316,9 +316,9 @@ export default function Slider(): JSX.Element {
       </button>
 
       {/* Slide Counter */}
-      <div className="absolute top-4 sm:top-6 right-4 sm:right-6 text-white/80 text-xs sm:text-sm font-medium z-20 bg-black/30 px-2 sm:px-3 py-1 rounded-full">
+      {/* <div className="absolute top-4 sm:top-6 right-4 sm:right-6 text-white/80 text-xs sm:text-sm font-medium z-20 bg-black/30 px-2 sm:px-3 py-1 rounded-full">
         {current + 1} / {slides.length}
-      </div>
+      </div> */}
     </section>
   );
 }
