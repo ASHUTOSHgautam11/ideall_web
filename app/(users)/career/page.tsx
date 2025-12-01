@@ -4,7 +4,7 @@ import HeroVideoSection from '../components/HeroVideoSection';
 import WhyPartner from '../components/WhyPartner';
 import ContactBanner from '../components/ContactBanner';
 import CoreValues from '../components/CoreValues';
-import PartnershipOpportunities from '../components/PartnershipOpportunities';
+// import PartnershipOpportunities from '../components/PartnershipOpportunities';
 import CareerInfo from '../components/CareerInfo';
 
 export default function Career() {
@@ -13,10 +13,9 @@ export default function Career() {
       {/* HERO SECTION */}
       <HeroVideoSection
         heading="Join Our Team & Shape the Future"
-        description="We are looking for passionate individuals who want to make a difference. Discover opportunities to grow your career while building products that impact millions of users worldwide."
+        description="We are looking for passionate in individuals who want to make a difference. Discover opportunities to grow your career while building products that impact millions of users worldwide."
         videoSrc="/assets/video/video4.mp4"
       />
-
       {/* CAREER SECTION */}
       <CareerInfo />
 
