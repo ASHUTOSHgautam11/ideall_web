@@ -88,86 +88,64 @@ export default function ProductClient({ product }: any) {
 
             {/* Gallery */}
             <section className="mt-20">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6"><u>Room Shoots || Colors Gallery</u></h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                    <u>Room Shoots</u>
+                </h2>
 
-                {/* Tabs */}
-                <div className="flex gap-4 mb-8">
-                    <button
-                        onClick={() => setActiveTab("room")}
-                        className={`px-5 py-2 text-sm font-medium rounded-lg transition-all border
-            ${activeTab === "room"
-                                ? "bg-secondary text-white border-secondary shadow"
-                                : "text-gray-600 bg-white border-gray-300 hover:bg-gray-100"
-                            }`}
-                    >
-                        Room Shoots
-                    </button>
-
-                    <button
-                        onClick={() => setActiveTab("colors")}
-                        className={`px-5 py-2 text-sm font-medium rounded-lg transition-all border
-            ${activeTab === "colors"
-                                ? "bg-secondary text-white border-secondary shadow"
-                                : "text-gray-600 bg-white border-gray-300 hover:bg-gray-100"
-                            }`}
-                    >
-                        Available Colors
-                    </button>
+                {/* Room Shoots Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    {product.installationGallery.map((img: string, i: number) => (
+                        <div
+                            key={i}
+                            className="rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition"
+                        >
+                            <Image
+                                src={img}
+                                alt={`${product.title} room shot ${i + 1}`}
+                                width={400}
+                                height={260}
+                                className="object-cover h-40 w-full transition-transform duration-500 hover:scale-105 cursor-pointer"
+                                onClick={() => {
+                                    setLightboxImg(img);
+                                    setLightboxOpen(true);
+                                }}
+                            />
+                        </div>
+                    ))}
                 </div>
 
-                {/* Gallery Content */}
-                <div className="transition-all duration-500 ease-out">
-                    {activeTab === "room" && (
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                            {product.installationGallery.map((img: string, i: number) => (
-                                <div
-                                    key={i}
-                                    className="rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition"
-                                >
-                                    <Image
-                                        src={img}
-                                        alt={`${product.title} gallery ${i + 1}`}
-                                        width={400}
-                                        height={260}
-                                        className="object-cover h-40 w-full transition-transform duration-500 hover:scale-105 cursor-pointer"
-                                        onClick={() => {
-                                            setLightboxImg(img);
-                                            setLightboxOpen(true);
-                                        }}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    )}
+                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                    <u>Available Colors</u>
+                </h2>
 
-                    {activeTab === "colors" && (
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
-                            {product.availableColors.map((c: any) => (
-                                <div
-                                    key={c.code}
-                                    className="rounded-xl   p-4 text-center bg-white shadow-sm hover:shadow-md transition cursor-pointer"
-                                >
-                                    <div className="w-full h-28 rounded-md overflow-hidden mb-3">
-                                        <Image
-                                            src={c.img}
-                                            alt={c.name}
-                                            width={300}
-                                            height={200}
-                                            className="object-cover w-full h-full cursor-pointer"
-                                            onClick={() => {
-                                                setLightboxImg(c.img);
-                                                setLightboxOpen(true);
-                                            }}
-                                        />
-                                    </div>
-                                    <div className="text-sm font-medium">{c.name}</div>
-                                    <div className="text-xs text-gray-500">{c.code}</div>
-                                </div>
-                            ))}
+                {/* Colors Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+                    {product.availableColors.map((c: any) => (
+                        <div
+                            key={c.code}
+                            className="rounded-xl p-4 text-center bg-white shadow-sm hover:shadow-md transition cursor-pointer"
+                        >
+                            <div className="w-full h-28 rounded-md overflow-hidden mb-3">
+                                <Image
+                                    src={c.img}
+                                    alt={c.name}
+                                    width={300}
+                                    height={200}
+                                    className="object-cover w-full h-full cursor-pointer"
+                                    onClick={() => {
+                                        setLightboxImg(c.img);
+                                        setLightboxOpen(true);
+                                    }}
+                                />
+                            </div>
+
+                            <div className="text-sm font-medium">{c.name}</div>
+                            <div className="text-xs text-gray-500">{c.code}</div>
                         </div>
-                    )}
+                    ))}
                 </div>
             </section>
+
 
             {/* Lightbox Modal */}
             {lightboxOpen && (
@@ -184,7 +162,7 @@ export default function ProductClient({ product }: any) {
                             className="w-full h-auto rounded-lg"
                         />
 
-                        <button
+                         <button
                             onClick={() => setLightboxOpen(false)}
                             className="absolute top-4 right-4 text-white text-3xl font-bold"
                         >
@@ -357,8 +335,8 @@ export default function ProductClient({ product }: any) {
                     </div>
                 </div>
             </section>
- 
- 
+
+
             <div className="h-24"></div>
         </div>
     );

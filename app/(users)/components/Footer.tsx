@@ -13,7 +13,7 @@ export default function Footer() {
                 <span className="text-white font-bold">IS</span>
               </div>
               <div>
-                <div className="text-primary font-bold text-xl">Ideall Solutions</div>
+                <div className="text-primary font-bold text-xl">Ideall Solutionz</div>
                 <div className="text-gray-900">Global Procurement Solutions</div>
               </div>
               {/* <Image
@@ -26,7 +26,7 @@ export default function Footer() {
                                             /> */}
             </div>
             <p className="text-primary mb-4 max-w-md">
-              Ideall Solutions Singapore PTE LTD specializes in international trade and procurement solutions for premium interior products.
+              Ideall Solutionz Singapore PTE LTD specializes in international trade and procurement solutions for premium interior products.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-primary">

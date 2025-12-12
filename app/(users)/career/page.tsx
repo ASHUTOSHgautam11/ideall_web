@@ -6,7 +6,6 @@ import ContactBanner from '../components/ContactBanner';
 import CoreValues from '../components/CoreValues';
 // import PartnershipOpportunities from '../components/PartnershipOpportunities';
 import CareerInfo from '../components/CareerInfo';
-
 export default function Career() {
   return (
     <>

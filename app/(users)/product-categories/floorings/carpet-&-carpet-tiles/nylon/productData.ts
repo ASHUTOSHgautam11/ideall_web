@@ -146,6 +146,8 @@ export const products: ProductType[] = [
       downloadSheet: "",
     },
   },
+
+  
   {
     title: "Professional Texture Series",
     slug: "professional-texture-series",

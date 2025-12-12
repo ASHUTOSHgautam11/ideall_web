@@ -21,7 +21,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
             <div className="w-full">
                 <SubHeading
                     title="Who We Are"
-                    description="Founded in 2002, Ideall Solutionz has extensive experience as a trusted sourcing partner and product design specialist for Flooring experts including Design Houses, Architectural firms, distributors and MNCs across over 40 countries in Asia, Asia-Pacific and the Middle East. Ideallss specialises in four categories of Lifestyle Goods, namely Flooring, Fabrics, Furniture and Fashion walls (note to ashutosh: put link from here into the products sections), and we leverage our trusted import partners with over two-decades of supplier-client relationships from over 18 countries to best curate flooring solutions tailored to your needs with the highest quality products."
+                    description="Founded in 2002, Ideall Solutionz has extensive experience as a trusted Partner and product design specialist for Flooring's. We engage and consult Life Style solutions including Design Houses, Architectural firms, distributors and MNCs across over 40 countries in Asia, Asia-Pacific and the Middle East. Ideallss specialises in four categories of Lifestyle Goods, namely Flooring, Fabrics, Furniture and Fashion walls, and we leverage our trusted import partners with over two-decades of supplier-client relationships from over 18 countries to best curate Life Style solutions tailored to your needs with the highest quality products."
                 />
             </div>
 
@@ -39,10 +39,10 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                         </h2>
                         {/* Paragraph */}
 
-                        <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-8 leading-relaxed text-gray-900 m-4">
+                        {/* <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-8 leading-relaxed text-gray-900 m-4">
                             Our Sourcing, Your Strength. We empower global businesses by
                             connecting them to high-quality lifestyle goods through an extensive, reliable, and efficient  .
-                        </p>
+                        </p> */}
                         {/* About Image */}
                         <div className="mb-5 max-w-sm mx-auto p-5 ">
                             <img
@@ -53,7 +53,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                         </div>
                         {/* Paragraph */}
                         <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-8 leading-relaxed text-gray-900 m-4">
-                            Your Sourcing Partner for a Connected World.<br />
+                            Your O&M Partner for completing your product Portfolio.<br />
                             Our Sourcing, Your Strength. Empowering global businesses with seamless access to premium lifestyle products through a trusted, efficient, and expansive supply network.
                         </p>
 
