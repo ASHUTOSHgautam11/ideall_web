@@ -39,10 +39,10 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                         </h2>
                         {/* Paragraph */}
 
-                        {/* <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-8 leading-relaxed text-gray-900 m-4">
+                        <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-8 leading-relaxed text-gray-900 m-4">
                             Our Sourcing, Your Strength. We empower global businesses by
                             connecting them to high-quality lifestyle goods through an extensive, reliable, and efficient  .
-                        </p> */}
+                        </p>
                         {/* About Image */}
                         <div className="mb-5 max-w-sm mx-auto p-5 ">
                             <img
@@ -52,14 +52,17 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                             />
                         </div>
                         {/* Paragraph */}
-                        <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-8 leading-relaxed text-gray-900 m-4">
-                            Your O&M Partner for completing your product Portfolio.<br />
+                        {/* <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-8 leading-relaxed text-gray-900 m-4">
+                            Your OEM Partner for completing your product Portfolio.<br />
                             Our Sourcing, Your Strength. Empowering global businesses with seamless access to premium lifestyle products through a trusted, efficient, and expansive supply network.
+                        </p> */}
+                        <p className="text-sm sm:text-base md:text-lg mb-10 sm:mb-8 leading-relaxed text-gray-900 m-4">
+                            Your OEM Partner for completing your product Portfolio.<br />
+                            We are a virtual factory to fulfill your requirements with right Engineering and Marketing specialists with decades of experience in executing flawlessly.
                         </p>
 
 
 
-  
                         {/* Logo / Brand */}
                         {/* <div className="flex flex-col items-center space-y-2">
                             <div className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center">
