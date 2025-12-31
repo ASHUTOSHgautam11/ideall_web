@@ -254,8 +254,8 @@ export const products: ProductType[] = [
     slug: "idl-galactic",
     code: "IDL GALACTIC 01A,01B,01C",
     colors: "16 Colors",
-    img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 01A+01B+01C.jpg",
-    thumbnail: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 01A+01B+01C.jpg",
+    img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 01A-01B-01C.jpg",
+    thumbnail: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 01A-01B-01C.jpg",
     specPdf: "/assets/pdf/floorings/naylon/urban-concrete-series-specifications.pdf",
     description:
       "IDL GALACTIC captures a cosmic sense of scale, bringing depth and movement inspired by the universe. IDL GALACTIC layered texture reflects Jovian strength and presence, adding bold character to modern interiors. With a refined, heavenly aesthetic, GALACTIC transforms commercial spaces into environments that feel expansive, dynamic, and forward-looking.",
@@ -270,12 +270,12 @@ export const products: ProductType[] = [
     applications: "HIGH-TRAFFIC COMMERCIAL AREAS, Corporate offices, Meeting rooms, Reception areas, Co-working spaces",
     sustainability: "Cradle to Cradle Certified; Contains recycled content",
     installationGallery: [
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 01A+01B+01C.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 02A+02B+02C.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 03B+02C.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 04A+04B+03C+05A+05B.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 05A+05B+03C.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 06A+06B+04C.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 01A-01B-01C.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 02A-02B-02C.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 03B-02C.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 04A-04B-03C-05A-05B.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 05A-05B-03C.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-galactic/IDL GALACTIC 06A-06B-04C.jpg",
     ],
     technicalSpecs: [
       { label: "CONSTRUCTION", value: "MULTI-LEVEL LOOP" },
@@ -473,8 +473,8 @@ export const products: ProductType[] = [
     slug: "idl-obsidian",
     code: "IDL OBSIDIAN-501,502,503,507",
     colors: "5 Colors",
-    img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501+502+503+507.jpg",
-    thumbnail: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501+502+503+507.jpg",
+    img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501-502-503-507.jpg",
+    thumbnail: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501-502-503-507.jpg",
 
     // PDF path matching urban category format
     specPdf: "/assets/pdf/floorings/naylon/professional-texture-series-specifications.pdf",
@@ -495,20 +495,20 @@ export const products: ProductType[] = [
 
     // Updated to match folder structure like urban collection
     installationGallery: [
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501+502+503+507.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501+502+505.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501+502.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 502+503+507.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 502+511.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 502+505.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501-502-503-507.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501-502-505.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 501-502.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 502-503-507.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 502-511.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 502-505.jpg",
       "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503 ROOMSHOT.jpg",
       "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503+502 ROOMSHOT.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503+502.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503+511.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503-502 ROOMSHOT.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503-502.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503-511.jpg",
       "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 505.jpg",
       "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 507.jpg",
-      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503+501+502.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/IDL OBSIDIAN 503-501-502.jpg",
       
       
       
