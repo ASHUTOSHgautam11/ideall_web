@@ -28,15 +28,8 @@ export default function Floorings() {
       applications: ['Executive offices', 'Hotels', 'High-end residential'],
       imageUrl: '/assets/products/floorings/woolblend/Wool_Blend_Tiles.jpg',
       href: '/product-categories/floorings/carpet-&-carpet-tiles/wool-blend',
-    },
-    {
-      title: 'Solution Dyed Nylon',
-      description: 'Advanced solution-dyed nylon tiles with exceptional colorfastness and durability.',
-      features: ['UV stable', 'High traffic rated', 'Permanent color', 'Bleach cleanable'],
-      applications: ['Airports', 'Hospitals', 'Educational institutions'],
-      imageUrl: '/assets/products/floorings/solutiondyednylon/Solution_Dyed_Nylon.jpg',
-      href: '/product-categories/floorings/carpet-&-carpet-tiles/solution-dyed',
-    },
+    }
+     
   ];
 
   return (
