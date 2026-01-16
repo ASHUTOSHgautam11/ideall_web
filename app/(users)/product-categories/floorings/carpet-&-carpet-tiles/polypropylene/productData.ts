@@ -993,6 +993,365 @@ export const products: ProductType[] = [
       downloadSheet: ""
     }
   },
+  {
+    title: "IDL TUNDRA",
+    slug: "idl-tundra",
+    code: "IDL TUNDRA 01, 02, 03, 04",
+    colors: "4 Color",
+    img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA-02.jpg",
+    thumbnail: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA-02.jpg",
+    specPdf: "/assets/pdf/floorings/polypropylene/professional-texture-series-specifications.pdf",
+    description:
+      "IDL TUNDRA evokes the serene beauty of a vast expanse, bringing a sense of openness and calm to interior spaces. Its understated texture mirrors the simplicity of flat land, creating a clean and balanced foundation for modern interiors. Inspired by the open country, IDL TUNDRA enhances commercial spaces with subtle depth and a timeless, natural appeal.",
+
+    features: [
+      "Enhanced nylon 6.6 construction",
+      "Multi-level loop construction",
+      "High soil resistance",
+      "Built for heavy foot traffic"
+    ],
+
+    applications: "COMMERCIAL SPACE, Executive offices, Conference centers, Retail",
+
+    sustainability: "Cradle to Cradle Certified; Contains recycled content",
+
+
+    installationGallery: [
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA-02.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA-01-02.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA 01-02.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA-01.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA-04.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA-03.jpg",
+    ],
+
+    technicalSpecs: [
+      { label: "CONSTRUCTION", value: "LOOP PILE" },
+      { label: "MATERIAL/YARN", value: "POLYPROPYLENE (PP)" },
+      { label: "GAUGE", value: "1/12G" },
+      { label: "STITCHES", value: "44" },
+      { label: "PILE WEIGHT", value: "500 g/m² ±5%" },
+      { label: "PILE HEIGHT", value: "3mm–6mm" },
+      { label: "PRIMARY BACKING", value: "NON-WOVEN FABRICS" },
+      { label: "SECONDARY BACKING", value: "PVC" },
+      { label: "TILE SIZE", value: "25CM × 100CM" },
+      { label: "PACKING", value: "20PCS/CTN" }
+
+
+    ],
+
+    performanceRatings: [
+      { label: "FLAMMABILITY", value: "GB 8624 B1" },
+      { label: "SMOKE DENSITY TEST", value: "PASS" },
+      { label: "FIRE CLASS", value: "B1 (B-s1, t0)" },
+      { label: "STATIC CONTROL", value: "PASS" }
+
+    ],
+
+    idealApplications: [
+      "COMMERCIAL SPACE ",
+      "Executive offices",
+      "Conference centers",
+      "Retail spaces",
+      "Workstations",
+      "Premium commercial spaces"
+    ],
+
+
+    availableColors: [
+      { name: "IDL TUNDRA", code: "IT-01", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA 01.jpg" },
+      { name: "IDL TUNDRA", code: "IT-02", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA 02.jpg" },
+      { name: "IDL TUNDRA", code: "IT-03", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA 03.jpg" },
+      { name: "IDL TUNDRA", code: "IT-04", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/IDL TUNDRA 04.jpg" },
+
+    ],
+
+
+    certifications: [
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/icon1.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/icon2.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/icon3.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/icon4.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/icon5.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/icon6.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-tundra/icon7.png",
+
+    ],
+
+    installationSteps: [
+      {
+        id: 1,
+        title: "Pre-Installation",
+        description:
+          "Subfloor preparation, moisture testing, and acclimatization requirements for optimal installation results."
+      },
+      {
+        id: 2,
+        title: "Professional Installation",
+        description:
+          "Quarter-turn or ashlar installation patterns with precision cutting and seamless edge alignment."
+      },
+      {
+        id: 3,
+        title: "Maintenance Protocol",
+        description:
+          "Regular vacuuming, spot cleaning procedures, and professional deep cleaning schedules."
+      }
+    ],
+
+
+    ctaLinks: {
+      requestSamples: "",
+      technicalSupport: "",
+      downloadSheet: ""
+    }
+  },
+  {
+    title: "IDL UNICORN",
+    slug: "idl-unicorn",
+    code: "IDL UNICORN 01, 02, 03, 04",
+    colors: "4 Color",
+    img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN-01-03.jpg",
+    thumbnail: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN-01-03.jpg",
+    specPdf: "/assets/pdf/floorings/polypropylene/professional-texture-series-specifications.pdf",
+    description:
+      "IDL UNICORN captures the mythical elegance of the Monoceros, bringing a sense of refined grace to interiors. IDL UNICORN design embodies purity, creating a clean and uplifting atmosphere in any space. With subtle textures that convey power, IDL UNICORN adds presence and confidence to modern commercial environments.",
+
+    features: [
+      "Enhanced nylon 6.6 construction",
+      "Multi-level loop construction",
+      "High soil resistance",
+      "Built for heavy foot traffic"
+    ],
+
+    applications: "COMMERCIAL SPACE, Executive offices, Conference centers, Retail",
+
+    sustainability: "Cradle to Cradle Certified; Contains recycled content",
+
+
+    installationGallery: [
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN-01-03.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN-02.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN-03.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN-04.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN-01.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN 04 ROOMSHOT.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN 02-04.jpg",
+    ],
+
+    technicalSpecs: [
+      { label: "CONSTRUCTION", value: "LOOP PILE" },
+      { label: "MATERIAL/YARN", value: "POLYPROPYLENE (PP)" },
+      { label: "GAUGE", value: "1/12G" },
+      { label: "STITCHES", value: "44" },
+      { label: "PILE WEIGHT", value: "500 g/m² ±5%" },
+      { label: "PILE HEIGHT", value: "3mm–5.5mm" },
+      { label: "PRIMARY BACKING", value: "NON-WOVEN FABRICS" },
+      { label: "SECONDARY BACKING", value: "PVC" },
+      { label: "TILE SIZE", value: "50CM × 50CM" },
+      { label: "PACKING", value: "20PCS/CTN" }
+
+
+    ],
+
+    performanceRatings: [
+      { label: "SMOKE DENSITY TEST", value: "PASS" },
+      { label: "FIRE CLASS", value: "B1 (B-s1, t0)" },
+      { label: "STATIC CONTROL", value: "PASS" }
+
+    ],
+
+    idealApplications: [
+      "COMMERCIAL SPACE ",
+      "Executive offices",
+      "Conference centers",
+      "Retail spaces",
+      "Workstations",
+      "Premium commercial spaces"
+    ],
+
+
+    availableColors: [
+      { name: "IDL UNICORN", code: "IU-01", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN 01.jpg" },
+      { name: "IDL UNICORN", code: "IU-02", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN 02.jpg" },
+      { name: "IDL UNICORN", code: "IU-03", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN 03.jpg" },
+      { name: "IDL UNICORN", code: "IU-04", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/IDL UNICORN 04.jpg" },
+
+    ],
+
+
+    certifications: [
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/icon1.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/icon2.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/icon3.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/icon4.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/icon5.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/icon6.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-unicorn/icon7.png",
+
+    ],
+
+    installationSteps: [
+      {
+        id: 1,
+        title: "Pre-Installation",
+        description:
+          "Subfloor preparation, moisture testing, and acclimatization requirements for optimal installation results."
+      },
+      {
+        id: 2,
+        title: "Professional Installation",
+        description:
+          "Quarter-turn or ashlar installation patterns with precision cutting and seamless edge alignment."
+      },
+      {
+        id: 3,
+        title: "Maintenance Protocol",
+        description:
+          "Regular vacuuming, spot cleaning procedures, and professional deep cleaning schedules."
+      }
+    ],
+
+
+    ctaLinks: {
+      requestSamples: "",
+      technicalSupport: "",
+      downloadSheet: ""
+    }
+  },
+  {
+    title: "IDL XTREME, CIQUOA, KAILAS",
+    slug: "idl-xtreme-cioua-kailas",
+    code: "IDL XTREME 01, 02, 03, 04, 05, 06, 07, 08, 09, 10 IDL CIQUOA 01, 02, 03, 04, 05, 06, 07 IDL KAILAS 01, 02, 03, 04, 05, 06, 07",
+    colors: "17 Color",
+    img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME-01.jpg",
+    thumbnail: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME-01.jpg",
+    specPdf: "/assets/pdf/floorings/polypropylene/professional-texture-series-specifications.pdf",
+    description:
+      ": IDL XTREME + CIQUOA + KAILAS delivers a radical design that energizes interiors with bold, contemporary flair. Inspired by the crisp beauty of a snowy mountain, it brings freshness and clarity to any space. Its textured surface adds depth and dimension, creating a striking visual impact ideal for modern commercial environments.",
+
+    features: [
+      "Enhanced nylon 6.6 construction",
+      "Multi-level loop construction",
+      "High soil resistance",
+      "Built for heavy foot traffic"
+    ],
+
+    applications: "COMMERCIAL SPACE, Executive offices, Conference centers, Retail",
+
+    sustainability: "Cradle to Cradle Certified; Contains recycled content",
+
+
+    installationGallery: [
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME-01.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME-06.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME-10.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 07-08.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 07-08 ROOMSHOT.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 03-10.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS 03-06.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS 07-IDL CIQUOA 07.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS-02.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS-04.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL CIQUOA 04 ROOMSHOT.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL CIQUOA 06 ROOMSHOT.jpg",
+    ],
+
+    technicalSpecs: [
+      { label: "CONSTRUCTION", value: "LOOP PILE" },
+      { label: "MATERIAL/YARN", value: "POLYPROPYLENE (PP)" },
+      { label: "GAUGE", value: "1/10G" },
+      { label: "PILE WEIGHT", value: "550–650 g/m²" },
+      { label: "PILE HEIGHT", value: "3.5–4mm" },
+      { label: "TILE SIZE", value: "50CM × 50CM / 25CM × 100CM" },
+      { label: "BACKING", value: "PVC" }
+
+    ],
+
+    performanceRatings: [
+      { label: "SMOKE DENSITY TEST", value: "PASS" },
+      { label: "FIRE CLASS", value: "B1 (B-s1, t0)" },
+      { label: "STATIC CONTROL", value: "PASS" }
+
+    ],
+
+    idealApplications: [
+      "COMMERCIAL SPACE ",
+      "Executive offices",
+      "Conference centers",
+      "Retail spaces",
+      "Workstations",
+      "Premium commercial spaces"
+    ],
+
+
+    availableColors: [
+      { name: "IDL XTREME", code: "IX-01", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 01.jpg" },
+      { name: "IDL XTREME", code: "IX-02", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 02.jpg" },
+      { name: "IDL XTREME", code: "IX-03", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 03.jpg" },
+      { name: "IDL XTREME", code: "IX-04", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 04.jpg" },
+      { name: "IDL XTREME", code: "IX-05", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 05.jpg" },
+      { name: "IDL XTREME", code: "IX-06", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 06.jpg" },
+      { name: "IDL XTREME", code: "IX-07", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 07.jpg" },
+      { name: "IDL XTREME", code: "IX-08", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 08.jpg" },
+      { name: "IDL XTREME", code: "IX-09", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 09.jpg" },
+      { name: "IDL XTREME", code: "IX-10", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL XTREME 10.jpg" },
+      { name: "IDL KAILAS", code: "IK-01", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS 01.jpg" },
+      { name: "IDL KAILAS", code: "IK-02", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS 02.jpg" },
+      { name: "IDL KAILAS", code: "IK-03", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS 03.jpg" },
+      { name: "IDL KAILAS", code: "IK-04", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS 04.jpg" },
+      { name: "IDL KAILAS", code: "IK-05", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS 05.jpg" },
+      { name: "IDL KAILAS", code: "IK-06", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS 06.jpg" },
+      { name: "IDL KAILAS", code: "IK-07", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL KAILAS 07.jpg" },
+      { name: "IDL CIQUOA", code: "IC-01", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL CIQUOA 01.jpg" },
+      { name: "IDL CIQUOA", code: "IC-02", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL CIQUOA 02.jpg" },
+      { name: "IDL CIQUOA", code: "IC-03", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL CIQUOA 03.jpg" },
+      { name: "IDL CIQUOA", code: "IC-04", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL CIQUOA 04.jpg" },
+      { name: "IDL CIQUOA", code: "IC-05", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL CIQUOA 05.jpg" },
+      { name: "IDL CIQUOA", code: "IC-06", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL CIQUOA 06.jpg" },
+      { name: "IDL CIQUOA", code: "IC-07", img: "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/IDL CIQUOA 07.jpg" },
+    ],
+
+
+    certifications: [
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/icon1.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/icon2.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/icon3.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/icon4.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/icon5.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/icon6.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/polypropylene/idl-xtreme-cioua-kailas/icon7.png",
+
+    ],
+
+    installationSteps: [
+      {
+        id: 1,
+        title: "Pre-Installation",
+        description:
+          "Subfloor preparation, moisture testing, and acclimatization requirements for optimal installation results."
+      },
+      {
+        id: 2,
+        title: "Professional Installation",
+        description:
+          "Quarter-turn or ashlar installation patterns with precision cutting and seamless edge alignment."
+      },
+      {
+        id: 3,
+        title: "Maintenance Protocol",
+        description:
+          "Regular vacuuming, spot cleaning procedures, and professional deep cleaning schedules."
+      }
+    ],
+
+
+    ctaLinks: {
+      requestSamples: "",
+      technicalSupport: "",
+      downloadSheet: ""
+    }
+  },
 
 
   // Add more polypropylene products here
