@@ -18,7 +18,7 @@ export default function Floorings() {
       description: 'Cost-effective carpet tiles with excellent stain resistance and easy maintenance.',
       features: ['Moisture resistant', 'Budget friendly', 'Easy to clean', 'Fade resistant'],
       applications: ['Educational facilities', 'Healthcare', 'Light commercial'],
-      imageUrl: '/assets/products/floorings/polyproplene/Polypropylene_Tiles.jpg',
+      imageUrl: '/assets/products/floorings/Carpet&CarpetTiles/polypropylene/polypropylene.JPG',
       href: '/product-categories/floorings/carpet-&-carpet-tiles/polypropylene',
     },
     {
