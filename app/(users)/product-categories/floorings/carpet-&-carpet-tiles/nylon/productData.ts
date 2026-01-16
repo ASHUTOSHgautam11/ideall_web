@@ -556,13 +556,13 @@ export const products: ProductType[] = [
 
     // Same certifications array format as urban
     certifications: [
-      "/assets/products/floorings/nylon/urban/icon1.jpg",
-      "/assets/products/floorings/nylon/urban/icon2.jpg",
-      "/assets/products/floorings/nylon/urban/icon3.jpg",
-      "/assets/products/floorings/nylon/urban/icon4.jpg",
-      "/assets/products/floorings/nylon/urban/icon5.jpg",
-      "/assets/products/floorings/nylon/urban/icon6.jpg",
-      "/assets/products/floorings/nylon/urban/icon7.jpg"
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/icon1.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/icon2.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/icon3.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/icon4.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/icon5.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/icon6.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-obsidian/icon7.png"
     ],
 
     installationSteps: [
@@ -618,7 +618,7 @@ export const products: ProductType[] = [
 
     sustainability: "Cradle to Cradle Certified; Contains recycled content",
 
-    // Updated to match folder structure like urban collection
+    
     installationGallery: [
       "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/IDL SHOWY 01 ROOMSHOT.jpg",
       "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/IDL SHOWY 01.jpg",
@@ -670,7 +670,7 @@ export const products: ProductType[] = [
       "Premium commercial spaces"
     ],
 
-    // Same folder pattern as urban colors
+     
     availableColors: [
       { name: "IDL SHOWY", code: "IS-01", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/IDL SHOWY TILE-01.jpg" },
       { name: "IDL SHOWY", code: "IS-02", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/IDL SHOWY TILE-02.jpg" },
@@ -684,17 +684,151 @@ export const products: ProductType[] = [
       
     ],
 
-    // Same certifications array format as urban
+    
     certifications: [
-      "/assets/products/floorings/nylon/urban/icon1.jpg",
-      "/assets/products/floorings/nylon/urban/icon2.jpg",
-      "/assets/products/floorings/nylon/urban/icon3.jpg",
-      "/assets/products/floorings/nylon/urban/icon4.jpg",
-      "/assets/products/floorings/nylon/urban/icon5.jpg",
-      "/assets/products/floorings/nylon/urban/icon6.jpg",
-      "/assets/products/floorings/nylon/urban/icon7.jpg",
-      "/assets/products/floorings/nylon/urban/icon8.jpg",
-      "/assets/products/floorings/nylon/urban/icon9.jpg"
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/icon1.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/icon2.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/icon3.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/icon4.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/icon5.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/icon6.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/icon7.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/icon8.png",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-showy/icon9.png"
+    ],
+
+    installationSteps: [
+      {
+        id: 1,
+        title: "Pre-Installation",
+        description:
+          "Subfloor preparation, moisture testing, and acclimatization requirements for optimal installation results."
+      },
+      {
+        id: 2,
+        title: "Professional Installation",
+        description:
+          "Quarter-turn or ashlar installation patterns with precision cutting and seamless edge alignment."
+      },
+      {
+        id: 3,
+        title: "Maintenance Protocol",
+        description:
+          "Regular vacuuming, spot cleaning procedures, and professional deep cleaning schedules."
+      }
+    ],
+
+     
+    ctaLinks: {
+      requestSamples: "",
+      technicalSupport: "",
+      downloadSheet: ""
+    }
+  },
+  {
+    title: "IDL TWILIGHT",
+    slug: "idl-twilight",
+    code: "IDL TWILIGHT-02",
+    colors: "15 Colors",
+    img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 02.jpg",
+    thumbnail: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 02.jpg",
+
+    
+    specPdf: "/assets/pdf/floorings/naylon/professional-texture-series-specifications.pdf",
+
+    description:
+      "IDL TWILIGHT is inspired by the quiet transition of dusk, when light gently fades, and the atmosphere deepens. Its flowing texture reflects the mood of gloam and nightfall, creating depth and visual intrigue within the space. Designed for sophisticated commercial interiors, it delivers a calm yet dramatic presence that transforms environments with subtle elegance.",
+
+    features: [
+      "Enhanced nylon 6.6 construction",
+      "Multi-level loop construction",
+      "High soil resistance",
+      "Built for heavy foot traffic"
+    ],
+
+    applications: "HIGH-TRAFFIC COMMERCIAL AREAS, Executive offices, Conference centers, Retail",
+
+    sustainability: "Cradle to Cradle Certified; Contains recycled content",
+
+     
+    installationGallery: [
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 02.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT-07.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 07.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 06-ROOMSHOT.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 06.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 08 ROOMSHOT.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 08.jpg",
+       
+       
+      
+      
+      
+    ],
+
+    technicalSpecs: [
+      { label: "CONSTRUCTION", value: "MULTI-LEVEL LOOP (ENDLESS DESIGN)" },
+      { label: "YARN", value: "100% UNIVERSAL (USA) NYLON 6 " },
+      { label: "COLOUR SYSTEM", value: "100% SOLUTION DYED" },
+      { label: "GAUGE & STITCHES", value: "COLORSHIFT@8 STITCHES PER INCH" },
+      { label: "TOTAL TUFTED PILE WEIGHT", value: "28 Oz/Yd²" },
+      { label: "TOTAL WEIGHT", value: "5900 gm/m² (+/- 100 gm)" },
+      { label: "PILE HEIGHT", value: "4.0~8.5mm (+/-0.5mm)" },
+      // { label: "PRIMARY BACKING", value: "NON-WOVEN (UNITIKA-JAPAN)" },
+      // { label: "SECONDARY BACKING", value: "PVC REINFORCED WITH FIBERGLASS" },
+      // { label: "OPTIONAL BACKING", value: "ANTI-SLIP BACKING FOR GLUE FREE INSTALLATION (LEAD TIME 60 DAYS, MOQ 300 SQM/COLOUR)" },
+      // { label: "TILE SIZE", value: "STOCKS 50cm X 50cm [OPTIONS- 60cm X 60cm or 100cm X 100cm (Lead time 60 days)]" },
+      // { label: "PACKING", value: "20 TILES/BOX (5.00 SQM)" },
+       
+    ],
+
+    performanceRatings: [
+      { label: "SMOKE DENSITY TEST", value: "ASTM E 662 (LESS THAN 450)" },
+      { label: "STATIC CONTROL", value: "LIFETIME STATIC PROTECTION" },
+      { label: "FIRE CLASS", value: "ASTM E 648-10 CLASS 1 GB 8624-2012-B1                                                              " },
+      { label: "FORMALDEHYDE PURIFICATION", value: "PASSES (JC/T 1074-2008) CLASS I" },
+      
+    ],
+
+    idealApplications: [
+      "HIGH-TRAFFIC COMMERCIAL AREAS",
+      "Executive offices",
+      "Conference centers",
+      "Retail spaces",
+      "Workstations",
+      "Premium commercial spaces"
+    ],
+
+     
+    availableColors: [
+      { name: "IDL TWILIGHT", code: "IT-02-1", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 02-1.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-02-2", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 02-2.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-02-4", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 02-4.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-06-1", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 06-1.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-06-2", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 06-2.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-06-3", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 06-3.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-06-4", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 06-4.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-07-1", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 07-1.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-07-2", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 07-2.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-07-3", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 07-3.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-07-4", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 07-4.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-08-1", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 08-1.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-08-2", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 08-2.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-08-3", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 08-3.jpg" },
+      { name: "IDL TWILIGHT", code: "IT-08-4", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-twilight/IDL TWILIGHT 08-4.jpg" },
+
+    ],
+
+     
+    certifications: [
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon1.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon2.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon3.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon4.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon5.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon6.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon8.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon9.png",
     ],
 
     installationSteps: [
@@ -725,159 +859,131 @@ export const products: ProductType[] = [
       downloadSheet: ""
     }
   },
-  // {
-  //   title: "Urban Concrete Series",
-  //   slug: "urban-concrete-series",
-  //   code: "UC-2401",
-  //   colors: "6 Colors",
-  //   img: "/assets/products/nylon/naylon2.avif",
-  //   thumbnail: "/assets/products/nylon/naylon2.avif",
-  //   specPdf: "/assets/pdf/floorings/naylon/urban-concrete-series-specifications.pdf",
-  //   description:
-  //     "Contemporary nylon carpet tiles featuring weathered concrete aesthetics perfect for modern office environments.",
-  //   features: [
-  //     "Solution-dyed nylon 6.6 fibers",
-  //     "Textured concrete-inspired pattern",
-  //     "Class 33 commercial rating",
-  //     "Anti-static properties",
-  //     "Stain-resistant treatment",
-  //     "Easy installation system",
-  //   ],
-  //   applications: "Corporate offices, Meeting rooms, Reception areas, Co-working spaces",
-  //   sustainability: "Cradle to Cradle Certified; Contains recycled content",
-  //   installationGallery: [
-  //     "/assets/products/floorings/nylon/urban/naylon1.avif",
-  //     "/assets/products/floorings/nylon/urban/naylon2.avif",
-  //     "/assets/products/floorings/nylon/urban/naylon3.avif",
-  //     "/assets/products/floorings/nylon/urban/naylon4.png",
-  //   ],
-  //   technicalSpecs: [
-  //     { label: "Construction", value: "Tufted loop pile" },
-  //     { label: "Fiber Content", value: "100% Solution-dyed Nylon 6.6" },
-  //     { label: "Pile Height", value: "6.5mm" },
-  //     { label: "Tile Size", value: "50cm x 50cm" },
-  //     { label: "Total Thickness", value: "9.5mm" },
-  //     { label: "Tufts Per Sqm", value: "200,000" },
-  //     { label: "Backing", value: "Recycled bitumen with fiberglass" },
-  //   ],
-  //   performanceRatings: [
-  //     { label: "Wear Rating", value: "Class 33 - Heavy Commercial" },
-  //     { label: "Light Fastness", value: "ISO 105-B02 Grade 6" },
-  //     { label: "Static Generation", value: "< 2kV (AATCC 134)" },
-  //     { label: "Flammability", value: "Class 1 (BS EN 13501-1)" },
-  //     { label: "Sound Absorption", value: "aw = 0.15 (ISO 354)" },
-  //     { label: "Indentation Resistance", value: "Grade A (ISO 3416)" },
-  //   ],
-  //   idealApplications: [
-  //     "Corporate offices",
-  //     "Meeting rooms",
-  //     "Reception areas",
-  //     "Co-working spaces",
-  //     "Professional services",
-  //     "Open plan offices",
-  //   ],
-  //   availableColors: [
-  //     { name: "Metropolitan Grey", code: "MG-01", img: "/assets/products/floorings/nylon/urban/nayloncolor1.jpg" },
-  //     { name: "Urban Charcoal", code: "UC-02", img: "/assets/products/floorings/nylon/urban/nayloncolor2.jpg" },
-  //     { name: "Industrial Concrete", code: "IC-03", img: "/assets/products/floorings/nylon/urban/nayloncolor3.jpg" },
-  //     { name: "Modern Stone", code: "MS-04", img: "/assets/products/floorings/nylon/urban/nayloncolor4.jpg" },
-  //     { name: "Business Grey", code: "BG-05", img: "/assets/products/floorings/nylon/urban/nayloncolor5.jpg" },
-  //     { name: "Executive Slate", code: "ES-06", img: "/assets/products/floorings/nylon/urban/nayloncolor6.jpg" },
-  //   ],
-  //   certifications: [
-  //     "/assets/products/floorings/nylon/urban/icon1.jpg",
-  //     "/assets/products/floorings/nylon/urban/icon2.jpg",
-  //     "/assets/products/floorings/nylon/urban/icon3.jpg",
-  //     "/assets/products/floorings/nylon/urban/icon4.jpg",
-  //     "/assets/products/floorings/nylon/urban/icon5.jpg",
-  //     "/assets/products/floorings/nylon/urban/icon6.jpg",
-  //     "/assets/products/floorings/nylon/urban/icon7.jpg",
-  //   ],
+  {
+    title: "IDL ULTIMO",
+    slug: "idl-ultimo",
+    code: "IDL ULTIMO-05,04,01",
+    colors: "06 Colors",
+    img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 2-3-5.jpg",
+    thumbnail: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 2-3-5.jpg",
 
-  //   installationSteps: [
-  //     {
-  //       id: 1,
-  //       title: "Pre-Installation",
-  //       description:
-  //         "Subfloor preparation, moisture testing, and acclimatization requirements for optimal installation results.",
-  //     },
-  //     {
-  //       id: 2,
-  //       title: "Professional Installation",
-  //       description:
-  //         "Quarter-turn or ashlar installation patterns with precision cutting and seamless edge alignment.",
-  //     },
-  //     {
-  //       id: 3,
-  //       title: "Maintenance Protocol",
-  //       description:
-  //         "Regular vacuuming, spot cleaning procedures, and professional deep cleaning schedules.",
-  //     },
-  //   ],
-  //   ctaLinks: {
-  //     requestSamples: "",
-  //     technicalSupport: "",
-  //     downloadSheet: "",
-  //   },
-  // },
+    
+    specPdf: "/assets/pdf/floorings/naylon/professional-texture-series-specifications.pdf",
 
-  // --- add other products similarly, below are a couple more examples ---
+    description:
+      "IDL ULTIMO features subtle, mild lines that create a refined, understated texture for modern interiors. IDL ULTIMO’S pattern of identical elements delivers a sense of harmony and balance throughout the space. With an analogous design, it enhances commercial environments with quiet elegance and cohesive style.",
 
-  // {
-  //   title: "Professional Texture Series",
-  //   slug: "professional-texture-series",
-  //   code: "PT-2402",
-  //   colors: "8 Colors",
-  //   img: "/assets/products/nylon/naylon2.avif",
-  //   thumbnail: "/assets/products/nylon/naylon2.avif",
-  //   description:
-  //     "High-performance nylon carpet tiles engineered for demanding commercial environments.",
-  //   features: [
-  //     "Enhanced nylon 6.6 construction",
-  //     "Multi-level loop construction",
-  //     "High soil resistance",
-  //     "Built for heavy foot traffic",
-  //   ],
-  //   applications: "Executive offices, Conference centers, Retail",
-  //   sustainability: "GREENGUARD Gold certified",
-  //   installationGallery: [
-  //     "/images/flooring/gallery/professional-1.jpg",
-  //     "/images/flooring/gallery/professional-2.jpg",
-  //     "/images/flooring/gallery/professional-3.jpg",
-  //   ],
-  //   technicalSpecs: [
-  //     { label: "Construction", value: "Tufted loop pile" },
-  //     { label: "Fiber Content", value: "Solution-dyed Nylon 6.6" },
-  //     { label: "Pile Height", value: "5.8mm" },
-  //   ],
-  //   performanceRatings: [{ label: "Wear Rating", value: "Class 33" }],
-  //   idealApplications: ["Executive offices", "Conference centers"],
-  //   availableColors: [
-  //     { name: "Corporate Blue", code: "CB-01", img: "/images/flooring/colors/cb-01.jpg" },
-  //     { name: "Office Taupe", code: "OT-02", img: "/images/flooring/colors/ot-02.jpg" },
-  //   ],
-  //   certifications: ["Green Label Plus certified"],
-  //   installationSteps: [
-  //     {
-  //       id: 1,
-  //       title: "Pre-Installation",
-  //       description: "Check subfloor and moisture readings.",
-  //     },
-  //     {
-  //       id: 2,
-  //       title: "Installation",
-  //       description: "Use quarter-turn pattern for best aesthetics.",
-  //     },
-  //     {
-  //       id: 3,
-  //       title: "Maintenance",
-  //       description: "Regular vacuuming and annual deep clean.",
-  //     },
-  //   ],
-  //   ctaLinks: {
-  //     requestSamples: "",
-  //   },
-  // },
+    features: [
+      "Enhanced nylon 6.6 construction",
+      "Multi-level loop construction",
+      "High soil resistance",
+      "Built for heavy foot traffic"
+    ],
 
-  // add more products as needed...
+    applications: "HIGH-TRAFFIC COMMERCIAL AREAS, Executive offices, Conference centers, Retail",
+
+    sustainability: "Cradle to Cradle Certified; Contains recycled content",
+
+     
+    installationGallery: [
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 2-3-5.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 2-3-6.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 03-01-02.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 05-04-01.JPG",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 2-3.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 03-04-06.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 6.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 02-03.jpg",
+      "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 04-01-02.jpg",
+       
+       
+      
+      
+      
+    ],
+
+    technicalSpecs: [
+      { label: "CONSTRUCTION", value: "LOOP PILE" },
+      { label: "YARN", value: "NYLON" },
+      { label: "GAUGE", value: "1/10" },
+      { label: "PILE HEIGHT", value: "2.5-4mm" },
+      { label: "TOTAL HEIGHT", value: "5.5mm" },
+      { label: "PILE WEIGHT", value: "430 GSM" },
+      { label: "TOTAL WEIGHT", value: "4120 GSM" },
+      { label: "BACKING", value: "PVC" },
+      { label: "SIZE", value: "50cmx50cm" },
+      
+       
+    ],
+
+    performanceRatings: [
+      { label: "WEAR RATING", value: "BS EN ISO 9405 GRADE A" },
+      { label: "LIGHT FASTNESS", value: "BS EN ISO 105-B02 GRADE 6" },
+      { label: "FLAMMABILITY", value: "BS EN 13501-1 CLASS Cfl-S1" },
+      { label: "SOUND ABSORPTION", value: "BS EN ISO 354 AW=0.20" },
+      
+    ],
+
+    idealApplications: [
+      "HIGH-TRAFFIC COMMERCIAL AREAS",
+      "Executive offices",
+      "Conference centers",
+      "Retail spaces",
+      "Workstations",
+      "Premium commercial spaces"
+    ],
+
+     
+    availableColors: [
+      { name: "IDL ULTIMO", code: "IU-01", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 01.jpg" },
+      { name: "IDL ULTIMO", code: "IU-02", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 02.jpg" },
+      { name: "IDL ULTIMO", code: "IU-03", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 03.jpg" },
+      { name: "IDL ULTIMO", code: "IU-04", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 04.jpg" },
+      { name: "IDL ULTIMO", code: "IU-05", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 05.jpg" },
+      { name: "IDL ULTIMO", code: "IU-06", img: "/assets/products/floorings/Carpet&CarpetTiles/nylon/idl-ultimo/IDL ULTIMO 06.jpg" },
+       
+
+    ],
+
+     
+    certifications: [
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon1.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon2.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon3.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon4.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon5.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon6.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon8.png",
+      "/assets/products/floorings/carpet&CarpetTiles/nylon/idl-twilight/icon9.png",
+    ],
+
+    installationSteps: [
+      {
+        id: 1,
+        title: "Pre-Installation",
+        description:
+          "Subfloor preparation, moisture testing, and acclimatization requirements for optimal installation results."
+      },
+      {
+        id: 2,
+        title: "Professional Installation",
+        description:
+          "Quarter-turn or ashlar installation patterns with precision cutting and seamless edge alignment."
+      },
+      {
+        id: 3,
+        title: "Maintenance Protocol",
+        description:
+          "Regular vacuuming, spot cleaning procedures, and professional deep cleaning schedules."
+      }
+    ],
+
+    // Same CTA structure as Urban Concrete Series
+    ctaLinks: {
+      requestSamples: "",
+      technicalSupport: "",
+      downloadSheet: ""
+    }
+  }
+   
 ];

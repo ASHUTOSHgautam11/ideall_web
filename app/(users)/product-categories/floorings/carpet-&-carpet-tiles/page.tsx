@@ -10,7 +10,7 @@ export default function Floorings() {
       description: 'High-performance nylon carpet tiles suitable for commercial and residential applications.',
       features: ['Stain resistant', 'Easy installation', 'High durability', 'Modular design'],
       applications: ['Office spaces', 'Hotels', 'Retail environments'],
-      imageUrl: '/assets/products/floorings/nylon/Nylon_Carpet_Tiles.avif',
+      imageUrl: '/assets/products/floorings/Carpet&CarpetTiles/nylon/Nylon_Carpet_Tiles.jpg',
       href: '/product-categories/floorings/carpet-&-carpet-tiles/nylon',
     },
     {

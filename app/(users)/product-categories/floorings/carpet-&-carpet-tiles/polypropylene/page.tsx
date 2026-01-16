@@ -13,7 +13,7 @@ export default function ProductListing() {
             <HeroVideoSection
                 heading="Polypropylene Carpet Tiles Collection"
                 description="Cost-effective and durable carpet tiles engineered for functional commercial spaces."
-                videoSrc="/assets/video/video5.mp4"
+                videoSrc="/assets/video/video4.mp4"
             />
 
             <div className="w-full py-8">

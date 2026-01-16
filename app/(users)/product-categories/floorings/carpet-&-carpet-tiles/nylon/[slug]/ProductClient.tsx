@@ -162,7 +162,7 @@ export default function ProductClient({ product }: any) {
                             className="w-full h-auto rounded-lg"
                         />
 
-                         <button
+                        <button
                             onClick={() => setLightboxOpen(false)}
                             className="absolute top-4 right-4 text-white text-3xl font-bold"
                         >
@@ -247,12 +247,10 @@ export default function ProductClient({ product }: any) {
                 <h2 className="text-2xl font-semibold mb-6">Sustainability & Certifications</h2>
 
                 <div className="bg-[#faf7f0] p-10 rounded-xl">
-                    {/* Grid: 4 items in first row, 3 in second */}
                     <div className="grid grid-cols-4 gap-6">
-                        {/* Row 1: 4 items */}
-                        {product.certifications.slice(0, 4).map((img: string, i: number) => (
+                        {product.certifications.map((img: string, i: number) => (
                             <div
-                                key={`top-${i}`}
+                                key={i}
                                 className="bg-white p-4 rounded-xl border shadow-sm hover:shadow-md transition flex items-center justify-center"
                             >
                                 <Image
@@ -264,25 +262,10 @@ export default function ProductClient({ product }: any) {
                                 />
                             </div>
                         ))}
-
-                        {/* Row 2: 3 items (span across 3 columns) */}
-                        {product.certifications.slice(4, 7).map((img: string, i: number) => (
-                            <div
-                                key={`bottom-${i}`}
-                                className="bg-white p-4 rounded-xl border shadow-sm hover:shadow-md transition flex items-center justify-center"
-                            >
-                                <Image
-                                    src={img}
-                                    alt={`certification-${i + 5}`}
-                                    width={80}
-                                    height={80}
-                                    className="object-contain w-20 h-20"
-                                />
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>
+
 
             {/* Installation & Maintenance */}
             <section className="mt-20 bg-[#b58e6d] p-8 md:p-10 rounded-2xl">
