@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const specializations = [
   {
-    title: 'Floorings',
+    title: 'Flooring Systems',
     description: 'Premium flooring solutions from hardwood to luxury stone',
     features: [
       'Carpet & Carpet Tils',
@@ -21,7 +21,7 @@ const specializations = [
     link: '/product-categories/floorings',   // 👈 Add unique link
   },
   {
-    title: 'Furniture',
+    title: 'Furniture Solutions',
     description: 'Curated collections from worldwide high-quality manufacturers',
     features: [
       'Custom Manufacturing',
@@ -34,7 +34,7 @@ const specializations = [
     link: '/product-categories/furniture',
   },
   {
-    title: 'Fabrics',
+    title: 'Fabrics & Soft Finishes',
     description: 'Luxury textiles and specialty materials for interior design',
     features: [
       'Designer Fabrics',
@@ -47,7 +47,7 @@ const specializations = [
     link: '/product-categories/fabrics',
   },
   {
-    title: 'Fashion Walls',
+    title: 'Feature & Fashion Walls',
     description: 'Innovative wall solutions and decorative finishes',
     features: [
       '3D Wall Panels',
@@ -66,7 +66,7 @@ export default function PortfolioSection() {
     <>
       <Heading>Portfolio</Heading>
       <SubHeading
-        title="Explore Our Specializations"
+        title="Our Specialisations"
         description="Explore our expertise across four core domains, each thoughtfully crafted to deliver exceptional results. From visionary design to premium, high-performance solutions, we unite creativity, innovation, and quality. Our tailored offerings are built to meet the unique demands of every client with precision and care. Partner with us and experience a new standard of excellence across every specialization."
       />
 

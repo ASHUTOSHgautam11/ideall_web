@@ -20,7 +20,7 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
 
             <div className="w-full">
                 <SubHeading
-                    title="Who We Are"
+                    title="What Ideall Does"
                     description="Founded in 2002, Ideall Solutionz has extensive experience as a trusted Partner and product design specialist for Flooring's. We engage and consult Life Style solutions including Design Houses, Architectural firms, distributors and MNCs across over 40 countries in Asia, Asia-Pacific and the Middle East. Ideallss specialises in four categories of Lifestyle Goods, namely Flooring, Fabrics, Furniture and Fashion walls, and we leverage our trusted import partners with over two-decades of supplier-client relationships from over 18 countries to best curate Life Style solutions tailored to your needs with the highest quality products."
                 />
             </div>
