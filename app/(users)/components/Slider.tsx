@@ -24,13 +24,14 @@ interface Slide {
 const slides: Slide[] = [
   {
     type: 'hero',
-    alt: 'Your Partner for Life Style Goods & Finishing Solutionz',
-    title: 'Your Partner for Life Style Goods & Finishing Solutionz',
+    // alt: 'Your Partner for Life Style Goods & Finishing Solutionz',
+    alt: 'Efficient Pipelines for Interior Goods That Deliver.',
+    title: 'Efficient Pipelines for Interior Goods That Deliver.',
     subtitle: 'Our Sourcing, Your Strength',
     description:
-      'Headquartered in Singapore and active across Asia, the Middle East, and Africa, Ideall Solutionz operates in over 40+ countries. Our long-standing supplier partnerships and regional expertise culminated over the past two decades, allow us to empower global businesses by connecting them to high-quality lifestyle goods at the right place, price and time.',
-    primaryCta: 'Discover Your Advantage',
-    secondaryCta: 'Contact Our Sourcing Experts',
+      'Ideall Solutionz delivers high-quality interior goods through efficient, reliable supply pipelines — reducing logistical friction while maintaining technical, quality, and delivery standards across every project.',
+    primaryCta: 'Explore Our Solutions',
+    secondaryCta: 'Work With Ideall',
     href: '/contact',
   },
   {
