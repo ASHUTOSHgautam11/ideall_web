@@ -32,7 +32,7 @@ const slides: Slide[] = [
       'Ideall Solutionz delivers high-quality interior goods through efficient, reliable supply pipelines — reducing logistical friction while maintaining technical, quality, and delivery standards across every project.',
     primaryCta: 'Explore Our Solutions',
     secondaryCta: 'Work With Ideall',
-    href: '/contact',
+    href: '/product-categories',
   },
   {
     img: '/assets/slider/slider3.png',
@@ -199,6 +199,7 @@ export default function Slider(): JSX.Element {
                       asChild
                     >
                       <Link href={currentSlide.href}>{currentSlide.primaryCta}</Link>
+                      
                     </Button>
                   )}
 
