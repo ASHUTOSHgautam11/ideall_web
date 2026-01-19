@@ -12,7 +12,7 @@ const benefits = [
     title: 'Global Network',
     description:
       'Premium manufacturer and supplier connections across Asia, Europe, and the Americas.',
-    stat: '50+',
+    stat: '200+',
     statLabel: 'Global Partners',
   },
   {
@@ -28,7 +28,7 @@ const benefits = [
     title: 'Trade Expertise',
     description:
       'Decades of navigating trade, customs, and logistics for seamless delivery.',
-    stat: '15+',
+    stat: '20+',
     statLabel: 'Years Experience',
   },
   {
