@@ -107,7 +107,7 @@ export default function WhyPartner() {
                   <Card className="h-full group relative rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 bg-white w-full">
                     <CardContent className="relative p-6 flex flex-col items-center text-center h-full">
                       {/* Icon */}
-                      <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center mb-4 group-hover:bg-gray-200 transition-colors duration-300">
+                      <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary-300 transition-colors duration-300">
                         <Icon className="w-6 h-6 text-gray-700" />
                       </div>
 

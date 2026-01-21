@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Added useEffect for keyboard support
 
 export default function ProductClient({ product }: any) {
     const [activeTab, setActiveTab] = useState<"room" | "colors">("room");
@@ -10,6 +10,48 @@ export default function ProductClient({ product }: any) {
     // Lightbox states
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxImg, setLightboxImg] = useState("");
+    const [lightboxIndex, setLightboxIndex] = useState(0); // New: track current index
+
+    // Combine all images into one array for carousel
+    const allImages = [
+        ...product.installationGallery,
+        ...product.availableColors.map((c: any) => c.img),
+    ];
+
+    // Handle image click — now also sets index
+    const openLightbox = (img: string) => {
+        const index = allImages.indexOf(img);
+        if (index !== -1) {
+            setLightboxImg(img);
+            setLightboxIndex(index);
+            setLightboxOpen(true);
+        }
+    };
+
+    // Navigation functions
+    const nextImage = () => {
+        const nextIdx = (lightboxIndex + 1) % allImages.length;
+        setLightboxIndex(nextIdx);
+        setLightboxImg(allImages[nextIdx]);
+    };
+
+    const prevImage = () => {
+        const prevIdx = (lightboxIndex - 1 + allImages.length) % allImages.length;
+        setLightboxIndex(prevIdx);
+        setLightboxImg(allImages[prevIdx]);
+    };
+
+    // Keyboard navigation (optional but nice)
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (!lightboxOpen) return;
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'Escape') setLightboxOpen(false);
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [lightboxOpen, lightboxIndex]);
 
     return (
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
@@ -105,10 +147,7 @@ export default function ProductClient({ product }: any) {
                                 width={400}
                                 height={260}
                                 className="object-cover h-40 w-full transition-transform duration-500 hover:scale-105 cursor-pointer"
-                                onClick={() => {
-                                    setLightboxImg(img);
-                                    setLightboxOpen(true);
-                                }}
+                                onClick={() => openLightbox(img)}
                             />
                         </div>
                     ))}
@@ -132,10 +171,7 @@ export default function ProductClient({ product }: any) {
                                     width={300}
                                     height={200}
                                     className="object-cover w-full h-full cursor-pointer"
-                                    onClick={() => {
-                                        setLightboxImg(c.img);
-                                        setLightboxOpen(true);
-                                    }}
+                                    onClick={() => openLightbox(c.img)}
                                 />
                             </div>
 
@@ -147,13 +183,26 @@ export default function ProductClient({ product }: any) {
             </section>
 
 
-            {/* Lightbox Modal */}
+            {/* ✨ UPDATED LIGHTBOX MODAL WITH CAROUSEL NAVIGATION ✨ */}
             {lightboxOpen && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center"
-                    onClick={() => setLightboxOpen(false)}
+                    className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+                    onClick={(e) => e.target === e.currentTarget && setLightboxOpen(false)}
                 >
-                    <div className="relative max-w-4xl w-full px-4">
+                    {/* Previous Button */}
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            prevImage();
+                        }}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold"
+                        aria-label="Previous"
+                    >
+                        ‹
+                    </button>
+
+                    {/* Image */}
+                    <div className="relative max-w-4xl w-full">
                         <Image
                             src={lightboxImg}
                             alt="Full screen"
@@ -161,17 +210,35 @@ export default function ProductClient({ product }: any) {
                             height={800}
                             className="w-full h-auto rounded-lg"
                         />
-
-                        <button
-                            onClick={() => setLightboxOpen(false)}
-                            className="absolute top-4 right-4 text-white text-3xl font-bold"
-                        >
-                            ×
-                        </button>
+                        {/* Optional: Show position indicator */}
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-2 py-1 rounded text-sm">
+                            {lightboxIndex + 1} / {allImages.length}
+                        </div>
                     </div>
+
+                    {/* Next Button */}
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            nextImage();
+                        }}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold"
+                        aria-label="Next"
+                    >
+                        ›
+                    </button>
+
+                    {/* Close Button */}
+                    <button
+                        onClick={() => setLightboxOpen(false)}
+                        className="absolute top-4 right-4 text-white text-3xl font-bold"
+                    >
+                        ×
+                    </button>
                 </div>
             )}
 
+            {/* The rest of your sections remain UNCHANGED */}
             <section className="mt-20">
                 <div className="grid lg:grid-cols-3 gap-8">
 

@@ -90,7 +90,7 @@ const TrustedByGlobal: React.FC = () => {
     >
       {/* Header */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl lg:text-4xl font-bold text-[#926f4e] mb-3">
+        <h2 className="text-3xl lg:text-4xl font-bold text-secondary mb-3">
           TRUSTED BY GLOBAL BUSINESSES
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">

@@ -17,8 +17,8 @@ const specializations = [
       'Natural Stone Solutions',
       'Eco-friendly Options'
     ],
-    image: '/assets/portfolio/vartical1.jpg',
-    link: '/product-categories/floorings',   // 👈 Add unique link
+    image: '/assets/images/Flooring.png',
+    link: '/product-categories/floorings',   
   },
   {
     title: 'Furniture Solutions',
@@ -30,7 +30,7 @@ const specializations = [
       'Designer Partnerships',
       'Quality Assurance'
     ],
-    image: '/assets/portfolio/vartical2.jpg',
+    image: '/assets/images/Furniture.png',
     link: '/product-categories/furniture',
   },
   {
@@ -43,7 +43,7 @@ const specializations = [
       'Custom Weaving',
       'Sustainable Options'
     ],
-    image: '/assets/portfolio/vartical3.jpg',
+    image: '/assets/images/Fabrics.png',
     link: '/product-categories/fabrics',
   },
   {
@@ -56,7 +56,7 @@ const specializations = [
       'Custom Solutions',
       'Installation Support'
     ],
-    image: '/assets/portfolio/vartical4.jpg',
+    image: '/assets/images/walls.png',
     link: '/product-categories/walls',
   }
 ];
