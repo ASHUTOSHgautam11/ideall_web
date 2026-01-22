@@ -17,9 +17,9 @@ export default function OurStory() {
       <CompanyTimeline />
       <WhatSetsUsApart/>
       <OurProcess/>
-      <StoryHero />
+      {/* <StoryHero /> */}
       <CoreValues />
-      <Mission />
+      {/* <Mission /> */}
     </main>
   );
 }

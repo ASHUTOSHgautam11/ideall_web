@@ -25,17 +25,17 @@ const slides: Slide[] = [
   {
     type: 'hero',
     // alt: 'Your Partner for Life Style Goods & Finishing Solutionz',
-    alt: 'Efficient Pipelines for Interior Goods That Deliver.',
-    title: 'Efficient Pipelines for Interior Goods That Deliver.',
+    alt: 'Reliable Supply Pipelines for Interior Goods',
+    title: 'Reliable Supply Pipelines for Interior Goods',
     subtitle: 'Our Sourcing, Your Strength',
     description:
-      'Ideall Solutionz delivers high-quality interior goods through efficient, reliable supply pipelines — reducing logistical friction while maintaining technical, quality, and delivery standards across every project.',
+      'Ideall Solutionz streamlines sourcing and fulfillment for interior goods—minimizing delays and complexity while meeting technical requirements, quality standards, and project timelines.',
     primaryCta: 'Explore Our Solutions',
     secondaryCta: 'Work With Ideall',
     href: '/product-categories',
   },
   {
-    img: '/assets/slider/slider3.png',
+    img: '/assets/images/slider-2.jpeg',
     alt: 'Premium Flooring Solutions',
     title: 'Premium Flooring Solutions',
     description: 'Global sourcing of luxury flooring materials with quality assurance',
@@ -43,7 +43,7 @@ const slides: Slide[] = [
     href: '/product-categories/floorings',
   },
   {
-    img: '/assets/slider/slider6.png',
+    img: '/assets/images/slider-3.png',
     alt: 'Luxury Furniture Sourcing',
     title: 'Luxury Furniture Sourcing',
     description: 'International procurement of high-end furniture pieces',

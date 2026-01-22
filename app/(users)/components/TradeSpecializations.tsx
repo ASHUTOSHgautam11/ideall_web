@@ -66,8 +66,8 @@ export default function PortfolioSection() {
     <>
       <Heading>Portfolio</Heading>
       <SubHeading
-        title="Our Specialisations"
-        description="Explore our expertise across four core domains, each thoughtfully crafted to deliver exceptional results. From visionary design to premium, high-performance solutions, we unite creativity, innovation, and quality. Our tailored offerings are built to meet the unique demands of every client with precision and care. Partner with us and experience a new standard of excellence across every specialization."
+        title="OUR PORTFOLIO"
+        description="Explore our expertise across four core categories—each curated to support design intent, performance requirements, and project timelines. From concept to specification, we combine product knowledge, sourcing capability, and quality control to deliver solutions that meet the demands of every client with precision."
       />
 
       <section className="w-full py-10 bg-white mb-8">

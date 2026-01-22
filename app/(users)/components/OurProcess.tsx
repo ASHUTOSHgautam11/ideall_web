@@ -1,164 +1,116 @@
 "use client";
 
-import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-interface Step {
-  id: number;
-  title: string;
-  description: string;
-}
+const steps = [
+  {
+    id: 1,
+    title: "Consultation",
+    description: "Understand your specific requirements and goals",
+    image: "/assets/images/process-1-1.png",
+  },
+  {
+    id: 2,
+    title: "Sourcing",
+    description: "Identify and vet the best suppliers for your needs",
+    image: "/assets/images/process-2-2.png",
+  },
+  {
+    id: 3,
+    title: "Quality Control",
+    description: "Ensure products meet your standards before shipping",
+    image: "/assets/images/process-3-1.png",
+  },
+  {
+    id: 4,
+    title: "Delivery",
+    description: "Handle logistics and deliver to your destination",
+    image: "/assets/images/process-4-1.avif",
+  },
+];
 
-const OurProcess: React.FC = () => {
-  const steps: Step[] = [
-    {
-      id: 1,
-      title: "Consultation",
-      description: "Understand your specific requirements and goals",
-    },
-    {
-      id: 2,
-      title: "Sourcing",
-      description: "Identify and vet the best suppliers for your needs",
-    },
-    {
-      id: 3,
-      title: "Quality Control",
-      description: "Ensure products meet your standards before shipping",
-    },
-    {
-      id: 4,
-      title: "Delivery",
-      description: "Handle logistics and deliver to your destination",
-    },
-  ];
-
-  // Animation Variants
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.3, delayChildren: 0.4 },
-    },
-  };
-
-  const stepVariants: Variants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
+export default function VerticalProcess() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-gray-100 relative overflow-hidden">
-      <div className="container mx-auto px-6 max-w-6xl">
-        {/* Section Title */}
+    <section className="py-28 bg-white">
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-14"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-24"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+          <h2 className="text-5xl font-semibold text-[#c9a36a] mb-4">
             Our Process
           </h2>
-          <p className="text-lg text-gray-900 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-700 max-w-2xl mx-auto text-xl">
             A streamlined approach to connecting you with the right products and
             ensuring your success.
           </p>
         </motion.div>
 
-        {/* Animated Steps */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-8 relative"
-        >
-          {steps.map((step, index) => (
-            <React.Fragment key={step.id}>
+        {/* Timeline */}
+        <div className="relative">
+          {/* Center line */}
+          <div className="absolute left-1/2 top-0 h-full w-[2px] bg-gray-200 -translate-x-1/2" />
+
+          <div className="space-y-24">
+            {steps.map((step, index) => (
               <motion.div
-                variants={stepVariants}
-                className="flex flex-col items-center text-center flex-1 max-w-[230px] mx-auto"
+                key={step.id}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className={`relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
+                  index % 2 === 0 ? "" : "md:direction-rtl"
+                }`}
               >
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-xl font-semibold mb-4 shadow-lg"
+                {/* Image */}
+                <div
+                  className={`relative h-[240px] rounded-xl overflow-hidden ${
+                    index % 2 === 0 ? "md:order-1" : "md:order-2"
+                  }`}
                 >
-                  {step.id}
-                </motion.div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-gray-900 leading-relaxed">
-                  {step.description}
-                </p>
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                {/* Content */}
+                <div
+                  className={`${
+                    index % 2 === 0 ? "md:order-2" : "md:order-1"
+                  }`}
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-[#1c1235] text-white flex items-center justify-center font-semibold">
+                      {step.id}
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {step.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-gray-600 leading-relaxed max-w-md">
+                    {step.description}
+                  </p>
+                </div>
+
+                {/* Dot on center line */}
+                <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
+                  <div className="w-4 h-4 rounded-full bg-[#1c1235]" />
+                </div>
               </motion.div>
-
-              {/* Arrows between steps */}
-              {index < steps.length - 1 && (
-                <>
-                  {/* Desktop horizontal arrow */}
-                  <motion.div
-                    variants={stepVariants}
-                    className="hidden md:flex items-center justify-center"
-                  >
-                    <svg
-                      width="34"
-                      height="34"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="text-primary"
-                    >
-                      <path
-                        d="M5 12H19M19 12L12 19M19 12L12 5"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </motion.div>
-
-                  {/* Mobile vertical arrow */}
-                  <motion.div
-                    variants={stepVariants}
-                    className="flex md:hidden justify-center my-4"
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="text-primary rotate-90"
-                    >
-                      <path
-                        d="M5 12H19M19 12L12 19M19 12L12 5"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </motion.div>
-                </>
-              )}
-            </React.Fragment>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Decorative background line */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[120%] h-px bg-gradient-to-r from-transparent via-indigo-200 to-transparent opacity-50"></div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
-};
-
-export default OurProcess;
+}

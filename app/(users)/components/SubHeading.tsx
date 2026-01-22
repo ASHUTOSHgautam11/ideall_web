@@ -16,7 +16,8 @@ const SubHeading: React.FC<SubHeadingProps> = ({ title, description, className =
         max-w-full 
         mx-4 sm:mx-8 md:mx-12 lg:mx-20 
         px-2 sm:px-4 md:px-6 lg:px-0 
-        mb-6 sm:mb-8 md:mb-12
+        mb-6 sm:mb-8 md:mb-12 lg:mb-0
+        
         ${className}
       `}
     >

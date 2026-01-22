@@ -4,22 +4,22 @@ const values = [
   {
     icon: Heart,
     title: 'Excellence',
-    description: 'Uncompromising commitment to quality in every aspect of our service delivery.',
+    description: 'An uncompromising commitment to quality, consistency, and accountability in every deliverable.',
   },
   {
     icon: Users,
     title: 'Integrity',
-    description: 'Building trust through transparent processes and honest business practices.',
+    description: 'Trust built through transparency, clear communication, and principled business practices.',
   },
   {
     icon: Lightbulb,
     title: 'Innovation',
-    description: 'Continuously evolving our methods to deliver cutting-edge solutions.',
+    description: 'Continuous improvement in how we source, solve, and deliver—so clients stay ahead.',
   },
   {
     icon: Target,
     title: 'Partnership',
-    description: 'Creating long-term relationships built on mutual success and shared values.',
+    description: 'Long-term relationships grounded in mutual success, shared goals, and dependable execution.',
   },
 ];
 
@@ -33,7 +33,7 @@ export default function CoreValues() {
             Our Core Values
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray/90 leading-relaxed">
-            At Ideall Solutionz, our core values guide every decision and define every partnership. We believe in integrity — fostering transparency and trust in everything we do. Driven by innovation and a commitment to excellence, we consistently deliver solutions that create lasting value for our clients.
+            At Ideall Solutionz, our values guide how we work, how we deliver, and how we build long-term partnerships. They shape every decision—from sourcing and service standards to how we collaborate with clients and partners.
           </p>
         </div>
 

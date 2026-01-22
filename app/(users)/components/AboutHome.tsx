@@ -14,15 +14,37 @@ interface AboutUsProps {
 
 const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
     return (
-        <section className={`w-full py-12 md:py-16 ${className}`}>
+        <section className={`w-full ${className}`}>
             {/* Section Heading */}
             <Heading>About Us</Heading>
 
             <div className="w-full">
                 <SubHeading
-                    title="What Ideall Does"
-                    description="Founded in 2002, Ideall Solutionz has extensive experience as a trusted Partner and product design specialist for Flooring's. We engage and consult Life Style solutions including Design Houses, Architectural firms, distributors and MNCs across over 40 countries in Asia, Asia-Pacific and the Middle East. Ideallss specialises in four categories of Lifestyle Goods, namely Flooring, Fabrics, Furniture and Fashion walls, and we leverage our trusted import partners with over two-decades of supplier-client relationships from over 18 countries to best curate Life Style solutions tailored to your needs with the highest quality products."
+                    title="WHAT IDEALL DOES"
+                    description="Founded in 2002, Ideall Solutionz is a trusted partner and product design specialist in flooring and lifestyle interior solutions. We consult and collaborate with design houses, architectural practices, distributors, and multinational corporations across more than 40 countries in Asia, Asia-Pacific, and the Middle East."
                 />
+                <p
+                    className="
+            text-sm 
+            sm:text-base 
+            md:text-lg 
+            lg:text-xl 
+            text-gray-700 
+            leading-relaxed 
+             
+            text-left 
+        max-w-full 
+        mx-4 sm:mx-8 md:mx-12 lg:mx-20 
+        px-2 sm:px-4 md:px-6 lg:px-0 
+        mb-6 sm:mb-8 md:mb-12
+          "
+                >
+                    Ideall Solutionz curates four categories of lifestyle goods—Flooring, Fabrics, Furniture, and Feature Walls—supported by a long-established network of import partners built over two decades. With supplier-client relationships spanning 18+ countries, we source and tailor solutions to your project needs, delivering high-quality products with dependable standards from specification through fulfilment.
+                </p>
+
+
+
+
             </div>
 
             {/* Main Content Grid */}
@@ -82,52 +104,79 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                         {/* Section 1 */}
                         <div>
                             <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
-                                Redefining Innovation
+                                Global Network
                             </h3>
                             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90">
-                                Crafted to inspire, designed to endure — redefining modern luxury.
+                                Strategic offices in India, China, and Singapore.
                             </p>
                         </div>
 
                         {/* Section 2 */}
                         <div>
                             <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
-                                Crafting Dreams into Reality
+                                Quality Assured
                             </h3>
                             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90">
-                                Turning inspiration into enduring creation.
+                                Rigorous vetting and quality control processes.
                             </p>
                         </div>
                         {/* Section 3 */}
                         <div>
                             <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
-                                Crafting Dreams into Reality
+                                Expert Team
                             </h3>
                             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90">
-                                Born from skilled hands and visionary minds — craftsmanship worth celebrating.
+                                Deep expertise in lifestyle goods and logistics.
                             </p>
                         </div>
 
                         {/* Section 4 */}
                         <div>
                             <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
-                                Timeless Elegance
+                                Proven Results
                             </h3>
                             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90 mb-10">
-                                Refined today, revered forever.
+                                Track record of successful partnerships since 2002.
                             </p>
 
                             {/* Section 5 */}
                             <Link href="/our-story">
                                 <Button
-                                    variant="outline"
-                                    size="sm"
-                                    className="text-white border-white hover:bg-white hover:text-[#272557] transition-all duration-300 group"
+                                    size="lg"
+                                    className="
+            relative
+            overflow-hidden
+            text-white
+            border border-white/40
+            bg-gradient-to-r from-[#272557] to-[#3a3f87]
+            hover:from-[#3a3f87] hover:to-[#272557]
+            shadow-md
+            hover:shadow-xl
+            hover:-translate-y-[2px]
+            transition-all
+            duration-300
+            group
+        "
                                 >
-                                    Know More
-                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                    <span className="relative z-10 flex items-center">
+                                        Know More
+                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                    </span>
+
+                                    {/* Glow overlay */}
+                                    <span
+                                        className="
+                absolute
+                inset-0
+                bg-white/10
+                opacity-0
+                group-hover:opacity-100
+                transition
+            "
+                                    />
                                 </Button>
                             </Link>
+
                         </div>
                     </div>
                 </div>
