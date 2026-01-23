@@ -31,16 +31,34 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-primary">
                 <MapPin size={16} />
-                <span>Ideall Solutionz Singapore Pte Ltd</span>
+                <a
+                  href="https://www.google.com/maps/place/Ideall+Solutionz+Singapore+Pte.+Ltd./@1.326158,103.897907,16z/data=!4m6!3m5!1s0x31da17f61790530f:0xed61a573020f2cdd!8m2!3d1.3261581!4d103.8979072!16s%2Fg%2F1ptwq450x?hl=en&entry=ttu&g_ep=EgoyMDI2MDEyMC4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline transition"
+                >
+                  Ideall Solutionz Singapore Pte Ltd
+                </a>
               </div>
-              <div className="flex items-center space-x-2 text-primary">
+
+              <a
+                href="https://wa.me/6563254142"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-primary hover:underline"
+              >
                 <Phone size={16} />
                 <span>+65 63254142</span>
-              </div>
-              <div className="flex items-center space-x-2 text-primary">
+              </a>
+
+              <a
+                href="mailto:sales@ideallss.com"
+                className="flex items-center space-x-2 text-primary hover:underline hover:opacity-80 transition"
+              >
                 <Mail size={16} />
                 <span>sales@ideallss.com</span>
-              </div>
+              </a>
+
               {/* WhatsApp Node */}
               <a
                 href="https://wa.me/6591559097"

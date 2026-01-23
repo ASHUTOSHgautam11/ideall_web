@@ -19,26 +19,26 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
             <Heading>About Us</Heading>
 
             <div className="w-full">
-                <SubHeading
+                {/* <SubHeading
                     title="WHAT IDEALL DOES"
                     description="Founded in 2002, Ideall Solutionz is a trusted partner and product design specialist in flooring and lifestyle interior solutions. We consult and collaborate with design houses, architectural practices, distributors, and multinational corporations across more than 40 countries in Asia, Asia-Pacific, and the Middle East."
-                />
+                /> */}
                 <p
                     className="
-            text-sm 
-            sm:text-base 
-            md:text-lg 
-            lg:text-xl 
-            text-gray-700 
-            leading-relaxed 
-             
-            text-left 
-        max-w-full 
-        mx-4 sm:mx-8 md:mx-12 lg:mx-20 
-        px-2 sm:px-4 md:px-6 lg:px-0 
-        mb-6 sm:mb-8 md:mb-12
-          "
+    text-sm 
+    sm:text-base 
+    md:text-lg 
+    lg:text-xl 
+    text-gray-700 
+    leading-loose
+    text-left 
+    max-w-full 
+    mx-4 sm:mx-8 md:mx-12 lg:mx-20 
+    px-2 sm:px-4 md:px-6 lg:px-0 
+    mb-6 sm:mb-8 md:mb-12
+  "
                 >
+                    Founded in 2002, Ideall Solutionz is a trusted partner and product design specialist in flooring and lifestyle interior solutions. We consult and collaborate with design houses, architectural practices, distributors, and multinational corporations across more than 40 countries in Asia, Asia-Pacific, and the Middle East.
                     Ideall Solutionz curates four categories of lifestyle goods—Flooring, Fabrics, Furniture, and Feature Walls—supported by a long-established network of import partners built over two decades. With supplier-client relationships spanning 18+ countries, we source and tailor solutions to your project needs, delivering high-quality products with dependable standards from specification through fulfilment.
                 </p>
 
