@@ -73,7 +73,7 @@ export default function Navigation() {
                 src="/IDEALLS LOGO.png"
                 alt="Ideall Solutions Logo"
                 width={100}
-                height={90}
+                height={100}
                 className="object-contain"
                 priority
               />
@@ -84,7 +84,7 @@ export default function Navigation() {
               ${scrolled ? 'text-[#926f4e]' : 'text-white'}
             `}
             >
-              Ideall Solutionz
+              Ideall Solutionz Singapore Pte Ltd
             </span>
           </Link>
 
