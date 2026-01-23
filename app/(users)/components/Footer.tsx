@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -41,6 +41,16 @@ export default function Footer() {
                 <Mail size={16} />
                 <span>sales@ideallss.com</span>
               </div>
+              {/* WhatsApp Node */}
+              <a
+                href="https://wa.me/6563254142"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-primary hover:underline"
+              >
+                <MessageCircle size={16} />
+                <span>Chat on WhatsApp</span>
+              </a>
             </div>
           </div>
 
@@ -80,7 +90,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-primary mb-4">Our Services</h3>
             <ul className="space-y-2 text-primary">
-               
+
               <li>
                 <Link href="product-categories/floorings" className="text-primary hover:text-primary transition-colors duration-200">
                   Floorings
@@ -101,15 +111,15 @@ export default function Footer() {
                   Fashion Walls
                 </Link>
               </li>
-               
-                
+
+
             </ul>
           </div>
         </div>
 
         <div className="border-t border-primary-900 mt-8 pt-8 text-center">
           <p className="text-primary">
-           © 2002-2025 Ideall Solutionz Singapore Pte Ltd. All rights reserved.
+            © 2002-2025 Ideall Solutionz Singapore Pte Ltd. All rights reserved.
           </p>
         </div>
       </div>
