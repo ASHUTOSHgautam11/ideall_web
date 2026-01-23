@@ -72,7 +72,7 @@ export default function Navigation() {
               <Image
                 src="/IDEALLS LOGO.png"
                 alt="Ideall Solutions Logo"
-                width={90}
+                width={100}
                 height={90}
                 className="object-contain"
                 priority

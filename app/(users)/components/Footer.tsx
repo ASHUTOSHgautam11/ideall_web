@@ -13,7 +13,7 @@ export default function Footer() {
                 <span className="text-white font-bold">IS</span>
               </div>
               <div>
-                <div className="text-primary font-bold text-xl">Ideall Solutionz</div>
+                <div className="text-primary font-bold text-xl">Ideall Solutionz Singapore Pte Ltd</div>
                 <div className="text-gray-900">Global Procurement Solutions</div>
               </div>
               {/* <Image
@@ -26,20 +26,20 @@ export default function Footer() {
                                             /> */}
             </div>
             <p className="text-primary mb-4 max-w-md">
-              Ideall Solutionz Singapore PTE LTD specializes in international trade and procurement solutions for premium interior products.
+              Ideall Solutionz Singapore Pte Ltd specializes in international trade and procurement solutions for premium interior products.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-primary">
                 <MapPin size={16} />
-                <span>Singapore, Global Operations</span>
+                <span>Ideall Solutionz Singapore Pte Ltd</span>
               </div>
               <div className="flex items-center space-x-2 text-primary">
                 <Phone size={16} />
-                <span>+65 1234 5678</span>
+                <span>+65 63254142</span>
               </div>
               <div className="flex items-center space-x-2 text-primary">
                 <Mail size={16} />
-                <span>info@ideallsolutions.sg</span>
+                <span>sales@ideallss.com</span>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function Footer() {
 
         <div className="border-t border-primary-900 mt-8 pt-8 text-center">
           <p className="text-primary">
-            © 2025 Ideall Solutionz Singapore PTE LTD. All rights reserved.
+           © 2002-2025 Ideall Solutionz Singapore Pte Ltd. All rights reserved.
           </p>
         </div>
       </div>
