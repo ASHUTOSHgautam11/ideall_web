@@ -43,7 +43,7 @@ export default function Footer() {
               </div>
               {/* WhatsApp Node */}
               <a
-                href="https://wa.me/6563254142"
+                href="https://wa.me/6591559097"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-primary hover:underline"
