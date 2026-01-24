@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -8,23 +9,30 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
+           
+
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">IS</span>
+              <div className="">
+                <Image
+                  src="/IDEALLS LOGO.png"
+                  alt="Ideall Solutionz Logo"
+                  width={90}
+                  height={90}
+                  className="object-contain"
+                  priority
+                />
               </div>
+
               <div>
-                <div className="text-primary font-bold text-xl">Ideall Solutionz Singapore Pte Ltd</div>
-                <div className="text-gray-900">Global Procurement Solutions</div>
+                <div className="text-primary font-bold text-xl">
+                  Ideall Solutionz Singapore Pte Ltd
+                </div>
+                <div className="text-gray-900">
+                  Global Procurement Solutions
+                </div>
               </div>
-              {/* <Image
-                                              src="/IDEALLS LOGO.png"
-                                              alt="Ideall Solutions Logo"
-                                              width={200}
-                                              height={140}
-                                              className="object-contain"
-                                              priority
-                                            /> */}
             </div>
+
             <p className="text-primary mb-4 max-w-md">
               Ideall Solutionz Singapore Pte Ltd specializes in international trade and procurement solutions for premium interior products.
             </p>

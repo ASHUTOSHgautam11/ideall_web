@@ -79,13 +79,13 @@ export default function Navigation() {
               />
             </div>
 
-            <span
+            {/* <span
               className={`hidden md:inline font-semibold text-base transition-colors duration-300
               ${scrolled ? 'text-[#926f4e]' : 'text-white'}
             `}
             >
               Ideall Solutionz Singapore Pte Ltd
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}
