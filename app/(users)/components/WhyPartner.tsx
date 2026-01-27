@@ -89,9 +89,9 @@ export default function WhyPartner() {
         description=" We connect businesses with a global network of trusted manufacturers and suppliers, providing seamless access to premium products worldwide. Through rigorous quality assurance and compliance expertise, we ensure every delivery meets the highest international standards. Backed by decades of trade experience, we simplify complex logistics so you can focus on growth. Partner with us to enhance efficiency, reliability, and long-term success."
       />
 
-      <section className="relative m-20 overflow-hidden">
-        {/* Full-width container */}
-        <div className="w-full px-4 md:px-[10vw]">
+      {/* SECTION — layout unchanged, spacing made responsive */}
+      <section className="relative overflow-hidden mt-8 sm:mt-12 md:mt-16 lg:mt-20 mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+        <div className="w-full px-4 sm:px-6 md:px-[8vw] lg:px-[10vw]">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
@@ -122,8 +122,12 @@ export default function WhyPartner() {
                       </div>
 
                       {/* Title & Description */}
-                      <h3 className="text-lg font-semibold text-gray-800 mb-2">{benefit.title}</h3>
-                      <p className="text-sm text-gray-600 leading-relaxed">{benefit.description}</p>
+                      <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {benefit.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </motion.div>
