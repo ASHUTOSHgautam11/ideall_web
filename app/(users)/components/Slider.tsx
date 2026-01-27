@@ -43,7 +43,7 @@ const slides: Slide[] = [
     href: '/product-categories/floorings',
   },
   {
-    img: '/assets/images/slider-3.jpeg',
+    img: '/assets/images/slider-3-3.jpg',
     alt: 'Luxury Furniture Sourcing',
     title: 'Luxury Furniture Sourcing',
     description: 'International procurement of high-end furniture pieces',
