@@ -41,14 +41,11 @@ const SubHeading: React.FC<SubHeadingProps> = ({ title, description, className =
       {description && (
         <p
           className="
-            text-sm 
-            sm:text-base 
-            md:text-lg 
-            lg:text-xl 
-            text-gray-700 
-            leading-relaxed 
-            max-w-full
-          "
+    text-sm sm:text-base md:text-lg lg:text-xl
+    text-gray-700
+    leading-6 sm:leading-7 md:leading-8 lg:leading-9
+    max-w-full
+  "
         >
           {description}
         </p>
