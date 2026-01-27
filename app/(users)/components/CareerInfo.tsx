@@ -48,6 +48,22 @@ const JOBS: Job[] = [
             "Proficiency in Tally ERP or similar software.",
         ],
     },
+    {
+        id: 3,
+        title: "Import-Export Documentation Executive",
+        department: "Logistics / Operations",
+        location: "Mumbai",
+        type: "Full-time",
+        experience: "1-3 years",
+        posted: "2025-04-10",
+        description:
+            "Handle all documentation processes related to import and export shipments, ensuring compliance with international trade regulations and smooth customs clearance.",
+        requirements: [
+            "Bachelor's in Business, Logistics, or related field.",
+            "1-3 years in import-export or logistics.",
+             
+        ],
+    }
 ];
 
 const DEPARTMENTS = ["All", "Sales", "Finance", "IT", "Documentation"];
