@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useRef, useEffect } from 'react';
@@ -49,7 +50,7 @@ export default function CompanyTimeline() {
     if (!timelineRef.current) return;
 
     timelineRef.current.scrollBy({
-      left: direction === 'left' ? -350 : 350,
+      left: direction === 'left' ? -250 : 250, // smaller scroll for mobile
       behavior: 'smooth',
     });
   };
@@ -61,7 +62,6 @@ export default function CompanyTimeline() {
       const { scrollLeft, scrollWidth, clientWidth } = timelineRef.current;
 
       if (scrollLeft + clientWidth >= scrollWidth - 10) {
-        // Reset to start when near end
         timelineRef.current.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
         scrollTimeline('right');
@@ -72,8 +72,7 @@ export default function CompanyTimeline() {
   }, []);
 
   return (
-    <section className="py-16 relative overflow-hidden">
-      {/* Subtle animated background */}
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-white"></div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
@@ -81,7 +80,7 @@ export default function CompanyTimeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-primary"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-primary"
         >
           Our Milestones
         </motion.h2>
@@ -91,7 +90,7 @@ export default function CompanyTimeline() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-base text-center sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mt-4 mb-12"
+          className="text-sm sm:text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-6 sm:leading-7 md:leading-8 mt-4 mb-10 sm:mb-12 text-center"
         >
           From our foundation to becoming a global leader, each milestone marks our
           commitment to innovation and excellence.
@@ -102,17 +101,17 @@ export default function CompanyTimeline() {
           <button
             onClick={() => scrollTimeline('left')}
             aria-label="Scroll left"
-            className="bg-gradient-to-r from-primary to-primary-600 text-white p-3 rounded-full shadow-xl hover:from-secondary hover:to-purple-600 transition-all duration-300 mr-4 z-20 group"
+            className="bg-gradient-to-r from-primary to-primary-600 text-white p-2 sm:p-3 rounded-full shadow-xl hover:from-secondary hover:to-purple-600 transition-all duration-300 mr-2 sm:mr-4 z-20 group text-sm sm:text-base"
           >
-            <span className="text-xl font-bold">‹</span>
+            ‹
           </button>
 
           {/* Timeline scroll area */}
           <div
             ref={timelineRef}
-            className="relative flex overflow-x-hidden space-x-6 sm:space-x-8 py-8 w-full max-w-6xl"
+            className="relative flex overflow-x-hidden space-x-4 sm:space-x-6 py-6 w-full max-w-full"
           >
-            <div className="relative flex space-x-6 sm:space-x-8 min-w-max">
+            <div className="relative flex space-x-4 sm:space-x-6 min-w-max">
               {/* Glowing timeline line */}
               <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-pink-500 -translate-y-1/2 z-0 rounded-full shadow-[0_0_15px_rgba(107,33,161,0.4)]" />
 
@@ -122,24 +121,23 @@ export default function CompanyTimeline() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="relative flex-shrink-0 w-56 sm:w-64 md:w-72 lg:w-80 z-10"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative flex-shrink-0 w-44 xs:w-48 sm:w-56 md:w-72 lg:w-80 z-10"
                 >
-                  {/* Card with lift & glow on hover */}
-                  <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
-                    <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mb-2">
+                  <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
+                    <div className="text-lg sm:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mb-1 sm:mb-2">
                       {event.year}
                     </div>
-                    <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-3">
+                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-800 mb-2 sm:mb-3">
                       {event.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-5 sm:leading-6 md:leading-7 flex-grow">
                       {event.description}
                     </p>
                   </div>
 
                   {/* Dot with pulse animation */}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-3 w-6 h-6 bg-white border-4 border-white rounded-full shadow-lg z-20">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-3 w-5 h-5 sm:w-6 sm:h-6 bg-white border-4 border-white rounded-full shadow-lg z-20">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary animate-ping opacity-75"></div>
                     <div className="absolute inset-1 rounded-full bg-gradient-to-r from-primary to-secondary"></div>
                   </div>
@@ -152,9 +150,9 @@ export default function CompanyTimeline() {
           <button
             onClick={() => scrollTimeline('right')}
             aria-label="Scroll right"
-            className="bg-gradient-to-r from-primary to-primary-600 text-white p-3 rounded-full shadow-xl hover:from-secondary hover:to-purple-600 transition-all duration-300 ml-4 z-20 group"
+            className="bg-gradient-to-r from-primary to-primary-600 text-white p-2 sm:p-3 rounded-full shadow-xl hover:from-secondary hover:to-purple-600 transition-all duration-300 ml-2 sm:ml-4 group text-sm sm:text-base"
           >
-            <span className="text-xl font-bold">›</span>
+            ›
           </button>
         </div>
       </div>
