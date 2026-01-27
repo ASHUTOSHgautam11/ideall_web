@@ -25,12 +25,9 @@ const AboutHome: React.FC<AboutUsProps> = ({ className = '' }) => {
                 /> */}
                 <p
                     className="
-    text-sm 
-    sm:text-base 
-    md:text-lg 
-    lg:text-xl 
+    text-sm sm:text-base md:text-lg lg:text-xl 
     text-gray-700 
-    leading-loose
+    leading-6 sm:leading-7 md:leading-8 lg:leading-9
     text-left 
     max-w-full 
     mx-4 sm:mx-8 md:mx-12 lg:mx-20 

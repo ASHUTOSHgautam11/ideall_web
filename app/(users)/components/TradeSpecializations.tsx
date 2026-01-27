@@ -71,21 +71,17 @@ export default function PortfolioSection() {
       /> */}
       <p
         className="
-            text-sm 
-            sm:text-base 
-            md:text-lg 
-            lg:text-xl 
-            text-gray-700 
-            leading-relaxed 
-             
-            text-left 
-        max-w-full 
-        mx-4 sm:mx-8 md:mx-12 lg:mx-20 
-        px-2 sm:px-4 md:px-6 lg:px-0 
-        mb-6 sm:mb-8 md:mb-12
-          "
+    text-sm sm:text-base md:text-lg lg:text-xl
+    text-gray-700
+    leading-6 sm:leading-7 md:leading-8 lg:leading-9
+    text-left
+    max-w-full
+    mx-4 sm:mx-8 md:mx-12 lg:mx-20
+    px-2 sm:px-4 md:px-6 lg:px-0
+    mb-6 sm:mb-8 md:mb-12
+  "
       >
-       Explore our expertise across four core categories—each curated to support design intent, performance requirements, and project timelines. From concept to specification, we combine product knowledge, sourcing capability, and quality control to deliver solutions that meet the demands of every client with precision.
+        Explore our expertise across four core categories—each curated to support design intent, performance requirements, and project timelines. From concept to specification, we combine product knowledge, sourcing capability, and quality control to deliver solutions that meet the demands of every client with precision.
       </p>
 
       <section className="w-full py-10 bg-white mb-8">
