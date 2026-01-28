@@ -159,16 +159,12 @@ export default function Slider(): JSX.Element {
               >
                 <h1
                   className="
-    text-2xl sm:text-3xl md:text-4xl
-    lg:text-4xl xl:text-6xl
-    font-extrabold
-    mb-4 sm:mb-6
-    leading-normal
-    sm:leading-normal
-    md:leading-relaxed
-    lg:leading-relaxed
-    xl:leading-snug
-  "
+            text-2xl sm:text-3xl md:text-4xl 
+            lg:text-4xl xl:text-6xl 
+            font-extrabold 
+            mb-4 sm:mb-6 
+            leading-snug
+          "
                   style={{ fontFamily: 'var(--font-playfair)' }}
                 >
                   {currentSlide.title}
@@ -203,7 +199,7 @@ export default function Slider(): JSX.Element {
                       asChild
                     >
                       <Link href={currentSlide.href}>{currentSlide.primaryCta}</Link>
-
+                      
                     </Button>
                   )}
 
