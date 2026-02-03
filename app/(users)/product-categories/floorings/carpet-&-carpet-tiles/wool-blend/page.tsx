@@ -11,8 +11,8 @@ export default function ProductListing() {
     return (
         <>
             <HeroVideoSection
-                heading="Nylon Carpet Tiles Collection"
-                description="Premium modular tiles crafted for style and strength. Ideal for commercial and residential spaces with heavy foot traffic."
+                heading="Wool Blend Tiles Collection"
+                description="Experience the perfect blend of natural wool and modern durability. Our wool blend tiles bring warmth, elegance, and long-lasting performance to every commercial space."
                 videoSrc="/assets/video/video4.mp4"
             />
 

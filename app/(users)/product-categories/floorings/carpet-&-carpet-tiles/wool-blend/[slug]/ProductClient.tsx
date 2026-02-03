@@ -63,7 +63,7 @@ export default function ProductClient({ product }: any) {
                         href="/product-categories/floorings/carpet-&-carpet-tiles/wool-blend"
                         className="hover:text-secondary transition"
                     >
-                        ← Back to Nylon Carpet Tiles Collection
+                        ← Back to Wool Blend Tiles Collection
                     </Link>
                 </nav>
             </div>
