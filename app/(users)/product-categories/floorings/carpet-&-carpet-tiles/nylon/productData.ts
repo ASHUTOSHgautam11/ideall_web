@@ -522,7 +522,7 @@ export const products: ProductType[] = [
       { label: "TOTAL TUFTED PILE WEIGHT", value: "680 GSM (31 Oz/Yd²)" },
       { label: "TOTAL WEIGHT", value: "3000 gm/m² (+/- 100gm)" },
       { label: "PRIMARY BACKING", value: "NON-WOVEN " },
-      { label: "SECONDARY BACKING", value: "HIGH PERFORMANCE PVC REINFORCED WTH FIBERGLASS " },
+      { label: "SECONDARY BACKING", value: "HIGH PERFORMANCE PVC REINFORCED WTH FIBERGLASS" },
       { label: "TILE SIZE", value: "25cm X 100cm " },
       { label: "PACKING", value: "20 TILES/BOX (5.00 SQM)" }
     ],

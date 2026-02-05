@@ -176,10 +176,11 @@ export default function ProductClient({ product }: any) {
                 <div className="grid lg:grid-cols-3 gap-8">
 
                     {/* Technical Specifications */}
-                    <div className="p-8 rounded-2xl border border-[#E2E8F0] 
-        bg-gradient-to-br from-[#FFFFFF] to-[#F7F9FC]
-        shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-
+                    <div
+                        className="p-8 rounded-2xl border border-[#E2E8F0]
+  bg-gradient-to-br from-[#FFFFFF] to-[#F7F9FC]
+  shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    >
                         <h2 className="text-xl font-semibold mb-6 flex items-center gap-3">
                             <span className="w-2 h-5 bg-secondary rounded-sm"></span>
                             <span className="text-secondary">Technical Specifications</span>
@@ -187,19 +188,31 @@ export default function ProductClient({ product }: any) {
 
                         <div className="divide-y divide-gray-200">
                             {product.technicalSpecs.map((item: any, i: number) => (
-                                <div key={i} className="py-3 flex justify-between text-sm">
-                                    <span className="text-gray-500">{item.label}</span>
-                                    <span className="font-semibold text-gray-900">{item.value}</span>
+                                <div
+                                    key={i}
+                                    className="py-3 grid grid-cols-2 gap-6 text-sm"
+                                >
+                                    {/* Specification label */}
+                                    <span className="text-gray-500">
+                                        {item.label}
+                                    </span>
+
+                                    {/* Specification value */}
+                                    <span className="font-semibold text-gray-900 text-right">
+                                        {item.value}
+                                    </span>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    {/* Performance Ratings */}
-                    <div className="p-8 rounded-2xl border border-[#E2E8F0] 
-        bg-gradient-to-br from-[#FFFFFF] to-[#F7F9FC]
-        shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
 
+                    {/* Performance Ratings */}
+                    <div
+                        className="p-8 rounded-2xl border border-[#E2E8F0]
+  bg-gradient-to-br from-[#FFFFFF] to-[#F7F9FC]
+  shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    >
                         <h2 className="text-xl font-semibold mb-6 flex items-center gap-3">
                             <span className="w-2 h-5 bg-secondary rounded-sm"></span>
                             <span className="text-secondary">Performance Ratings</span>
@@ -207,9 +220,19 @@ export default function ProductClient({ product }: any) {
 
                         <div className="divide-y divide-gray-200">
                             {product.performanceRatings.map((item: any, i: number) => (
-                                <div key={i} className="py-3 flex justify-between text-sm">
-                                    <span className="text-gray-500">{item.label}</span>
-                                    <span className="font-semibold text-gray-900">{item.value}</span>
+                                <div
+                                    key={i}
+                                    className="py-3 grid grid-cols-2 gap-6 text-sm"
+                                >
+                                    {/* Spec name */}
+                                    <span className="text-gray-500">
+                                        {item.label}
+                                    </span>
+
+                                    {/* Spec value */}
+                                    <span className="font-semibold text-gray-900 text-right">
+                                        {item.value}
+                                    </span>
                                 </div>
                             ))}
                         </div>
