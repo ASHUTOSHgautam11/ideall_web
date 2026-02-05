@@ -1,5 +1,4 @@
 import HeroVideoSection from '@/app/(users)/components/HeroVideoSection';
-import OnlineBrochure from '@/app/(users)/components/OnlineBrochure';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -130,7 +129,6 @@ export default function Floorings() {
           ))}
         </section>
       </main>
-      <OnlineBrochure />
     </>
   );
 }
