@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronRight } from "lucide-react";
+import OnlineBrochure from "../OnlineBrochure";
 
 interface ProductCategoryItem {
   name: string;
@@ -92,6 +93,7 @@ const Subcategory: React.FC<SubcategoryProps> = ({
       <br />
       <br />
       <br />
+      {/* <OnlineBrochure /> */}
     </div>
   );
 };

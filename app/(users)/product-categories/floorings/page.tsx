@@ -40,7 +40,7 @@ export default function Floorings() {
 
   return (
     <main>
-      <HeroVideoSection heading='Floorings' description='Premium flooring solutions sourced from global manufacturers with stringent quality standards.' videoSrc='/assets/video/video4.mp4' />
+        <HeroVideoSection heading='Floorings' description='Premium flooring solutions sourced from global manufacturers with stringent quality standards.' videoSrc='/assets/video/video4.mp4'/>
       <Subcategory {...data} />
     </main>
   );
