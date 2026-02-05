@@ -16,7 +16,7 @@ export default function ContactBanner() {
             <Link href="/contact">Contact Our Team</Link>
           </Button>
           <Button size="lg" variant="outline" className="bg-secondary border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg">
-            <Link href="/product-categories">View Our Categories</Link>
+            <Link href="/product-categories">Browse Our Portfolio</Link>
           </Button>
         </div>
       </div>
