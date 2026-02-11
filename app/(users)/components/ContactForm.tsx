@@ -60,7 +60,7 @@ export default function ContactForm() {
     <>
       {/* SECTION TOP HEADING */}
       <div className="text-center mb-12 mt-12">
-        <h2 className="text-3xl font-semibold text-gray-800">Start Your Project Today</h2>
+        <h2 className="text-4xl font-semibold text-gray-800">Start Your Project Today</h2>
         <p className="text-gray-600 mt-2">
           Tell us what you're looking for and our specialists will guide you through the next steps.
         </p>

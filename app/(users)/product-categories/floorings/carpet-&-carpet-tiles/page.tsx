@@ -26,7 +26,7 @@ export default function Floorings() {
       description: 'Premium natural fiber carpet tiles offering luxury feel and superior performance.',
       features: ['Natural insulation', 'Luxurious texture', 'Flame resistant', 'Eco friendly'],
       applications: ['Executive offices', 'Hotels', 'High-end residential'],
-      imageUrl: '/assets/products/floorings/woolblend/Wool_Blend_Tiles.jpg',
+      imageUrl: '/assets/products/floorings/woolblend/Wool_Blend_Tiles.png',
       href: '/product-categories/floorings/carpet-&-carpet-tiles/wool-blend',
     }
      

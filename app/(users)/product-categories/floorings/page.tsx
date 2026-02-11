@@ -14,7 +14,7 @@ export default function Floorings() {
       },
       {
         name: 'Artificial and Sports Grass',
-        imageUrl: '/assets/products/floorings/ArtificialandSportsGrass/Artificial and Sports Grass.webp',
+        imageUrl: '/assets/products/floorings/ArtificialandSportsGrass/Artificial and Sports Grass.jpeg',
         description: 'Realistic, low-maintenance synthetic turf.',
       },
       {
