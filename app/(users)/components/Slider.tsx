@@ -124,7 +124,7 @@ export default function Slider(): JSX.Element {
             {/* Background Video */}
             <div className="absolute inset-0 overflow-hidden">
               <video
-                src="/assets/HomeHero1.mp4"
+                src="/assets/video/slider2.mp4"
                 poster="/assets/HomeHero.png"
                 autoPlay
                 loop

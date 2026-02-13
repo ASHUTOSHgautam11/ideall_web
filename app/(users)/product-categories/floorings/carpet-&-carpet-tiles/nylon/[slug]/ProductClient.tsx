@@ -2,74 +2,106 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react"; // Added useEffect for keyboard support
+import { useState, useEffect } from "react";
 
 export default function ProductClient({ product }: any) {
     const [activeTab, setActiveTab] = useState<"room" | "colors">("room");
 
-    // Lightbox states
-    const [lightboxOpen, setLightboxOpen] = useState(false);
-    const [lightboxImg, setLightboxImg] = useState("");
-    const [lightboxIndex, setLightboxIndex] = useState(0); // New: track current index
+    // Carousel states for main image
+    const [currentRoomIndex, setCurrentRoomIndex] = useState(0);
 
-    // Combine all images into one array for carousel
-    const allImages = [
-        ...product.installationGallery,
-        ...product.availableColors.map((c: any) => c.img),
-    ];
+    // Lightbox states - separate for room shots and colors
+    const [roomLightboxOpen, setRoomLightboxOpen] = useState(false);
+    const [roomLightboxIndex, setRoomLightboxIndex] = useState(0);
 
-    // Handle image click — now also sets index
-    const openLightbox = (img: string) => {
-        const index = allImages.indexOf(img);
-        if (index !== -1) {
-            setLightboxImg(img);
-            setLightboxIndex(index);
-            setLightboxOpen(true);
-        }
+    const [colorLightboxOpen, setColorLightboxOpen] = useState(false);
+    const [colorLightboxIndex, setColorLightboxIndex] = useState(0);
+
+    // Auto-rotate room shots
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentRoomIndex(prev =>
+                (prev + 1) % product.installationGallery.length
+            );
+        }, 5000); // Change every 5 seconds
+
+        return () => clearInterval(interval);
+    }, [product.installationGallery.length]);
+
+    // Room Lightbox Navigation
+    const openRoomLightbox = (index: number) => {
+        setRoomLightboxIndex(index);
+        setRoomLightboxOpen(true);
     };
 
-    // Navigation functions
-    const nextImage = () => {
-        const nextIdx = (lightboxIndex + 1) % allImages.length;
-        setLightboxIndex(nextIdx);
-        setLightboxImg(allImages[nextIdx]);
+    const nextRoomImage = () => {
+        const nextIdx = (roomLightboxIndex + 1) % product.installationGallery.length;
+        setRoomLightboxIndex(nextIdx);
     };
 
-    const prevImage = () => {
-        const prevIdx = (lightboxIndex - 1 + allImages.length) % allImages.length;
-        setLightboxIndex(prevIdx);
-        setLightboxImg(allImages[prevIdx]);
+    const prevRoomImage = () => {
+        const prevIdx = (roomLightboxIndex - 1 + product.installationGallery.length) % product.installationGallery.length;
+        setRoomLightboxIndex(prevIdx);
     };
 
-    // Keyboard navigation (optional but nice)
+    // Color Lightbox Navigation
+    const openColorLightbox = (index: number) => {
+        setColorLightboxIndex(index);
+        setColorLightboxOpen(true);
+    };
+
+    const nextColorImage = () => {
+        const nextIdx = (colorLightboxIndex + 1) % product.availableColors.length;
+        setColorLightboxIndex(nextIdx);
+    };
+
+    const prevColorImage = () => {
+        const prevIdx = (colorLightboxIndex - 1 + product.availableColors.length) % product.availableColors.length;
+        setColorLightboxIndex(prevIdx);
+    };
+
+    // Keyboard navigation
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (!lightboxOpen) return;
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'ArrowLeft') prevImage();
-            if (e.key === 'Escape') setLightboxOpen(false);
+            if (roomLightboxOpen) {
+                if (e.key === 'ArrowRight') nextRoomImage();
+                if (e.key === 'ArrowLeft') prevRoomImage();
+                if (e.key === 'Escape') setRoomLightboxOpen(false);
+            }
+            if (colorLightboxOpen) {
+                if (e.key === 'ArrowRight') nextColorImage();
+                if (e.key === 'ArrowLeft') prevColorImage();
+                if (e.key === 'Escape') setColorLightboxOpen(false);
+            }
         };
+
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [lightboxOpen, lightboxIndex]);
+    }, [roomLightboxOpen, roomLightboxIndex, colorLightboxOpen, colorLightboxIndex]);
 
     return (
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
 
             {/* Back Navigation */}
             <div className="max-w-7xl mx-auto mb-12">
-                <nav className="text-lg text-primary flex items-center space-x-2">
-                    <Link
-                        href="/product-categories/floorings/carpet-&-carpet-tiles/nylon"
-                        className="hover:text-secondary transition"
+                <Link
+                    href="/product-categories/floorings/carpet-&-carpet-tiles/nylon"
+                    className="inline-flex items-center text-secondary-600 hover:text-primary transition-colors group"
+                >
+                    <svg
+                        className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                     >
-                        ← Back to Nylon Carpet Tiles Collection
-                    </Link>
-                </nav>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <span className="text-base font-medium">Back to Nylon Carpet Tiles Collection</span>
+                </Link>
             </div>
 
             {/* Product Overview */}
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
 
                 {/* Left Side */}
                 <div>
@@ -87,46 +119,156 @@ export default function ProductClient({ product }: any) {
                         {product.code}
                     </div>
 
+                    {/* Key Features */}
                     <div className="mt-8">
-                        <h3 className="font-semibold text-xl text-gray-900">Key Features</h3>
-                        <ul className="list-disc ml-6 mt-3 space-y-1 text-gray-700">
+                        <h3 className="font-semibold text-xl text-gray-900">
+                            Key Features
+                        </h3>
+                        <ul className="list-disc ml-6 mt-3 space-y-2 text-gray-700">
                             {product.features.map((f: string, i: number) => (
                                 <li key={i}>{f}</li>
                             ))}
                         </ul>
                     </div>
 
+                    {/* Applications */}
                     <div className="mt-6">
-                        <h3 className="font-semibold text-xl text-gray-900">Applications</h3>
-                        <p className="text-gray-700 mt-2">{product.applications}</p>
+                        <h3 className="font-semibold text-xl text-gray-900">
+                            Applications
+                        </h3>
+                        <p className="text-gray-700 mt-2">
+                            {product.applications}
+                        </p>
                     </div>
 
-                    {/* Buttons under overview */}
-                    <div className="flex gap-4 mt-8">
-                        <button className="px-5 py-2 bg-primary text-white rounded-lg">
-                            Request Samples
-                        </button>
+                    {/* Buttons */}
+                    <div className="flex flex-wrap gap-4 mt-8">
+                        <Link href="/contact">
+                            <button className="px-6 py-3 bg-primary text-white rounded-lg shadow hover:opacity-90 transition">
+                                Request Samples
+                            </button>
+                        </Link>
+
                         <Link
                             href={product.specPdf}
                             download
-                            className="px-5 py-2 border border-gray-500 rounded-lg inline-block"
+                            className="px-6 py-3 border border-gray-400 rounded-lg inline-block hover:bg-secondary transition"
                         >
                             Download Specs
                         </Link>
                     </div>
                 </div>
 
-                {/* Right Side Image */}
-                <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                    <Image
-                        src={product.img}
-                        alt={product.title}
-                        width={1000}
-                        height={700}
-                        className="object-cover w-full h-[420px] md:h-[520px] transition-transform duration-500 hover:scale-[1.03]"
-                    />
+                {/* Right Side - Product Gallery */}
+                <div className="w-full">
+
+                    {/* Main Image with Cursor Zoom */}
+                    <div
+                        className="relative rounded-xl overflow-hidden bg-gray-100 shadow-md cursor-zoom-in"
+                        onMouseMove={(e) => {
+                            const container = e.currentTarget;
+                            const img = container.querySelector("img") as HTMLImageElement;
+                            if (!img) return;
+
+                            const { left, top, width, height } = container.getBoundingClientRect();
+                            const x = ((e.clientX - left) / width) * 100;
+                            const y = ((e.clientY - top) / height) * 100;
+
+                            img.style.transformOrigin = `${x}% ${y}%`;
+                            img.style.transform = "scale(2)";
+                        }}
+                        onMouseLeave={(e) => {
+                            const img = e.currentTarget.querySelector("img") as HTMLImageElement;
+                            if (!img) return;
+
+                            img.style.transformOrigin = "center";
+                            img.style.transform = "scale(1)";
+                        }}
+                    >
+                        <Image
+                            src={product.installationGallery[currentRoomIndex]}
+                            alt={`${product.title} preview`}
+                            width={1000}
+                            height={700}
+                            className="w-full h-[420px] md:h-[520px] object-cover transition-transform duration-300 ease-out"
+                        />
+                    </div>
+
+                    {/* Thumbnails + Arrows */}
+                    <div className="mt-5 relative">
+
+                        {/* Thumbnails Container */}
+                        <div
+                            id="thumbnail-container"
+                            className="flex gap-3 overflow-x-auto scroll-smooth no-scrollbar px-8"
+                        >
+                            {product.installationGallery.map((img: string, idx: number) => (
+                                <div
+                                    key={idx}
+                                    onClick={() => setCurrentRoomIndex(idx)}
+                                    className={`cursor-pointer overflow-hidden border transition-all duration-200 flex-shrink-0
+                        ${idx === currentRoomIndex
+                                            ? 'border-primary ring-2 ring-primary'
+                                            : 'border-gray-200 opacity-70 hover:opacity-100'
+                                        }`}
+                                >
+                                    <Image
+                                        src={img}
+                                        alt={`Thumbnail ${idx + 1}`}
+                                        width={100}
+                                        height={70}
+                                        className="w-[45px] h-[60px] object-cover"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Left Arrow */}
+                        <button
+                            onClick={() => {
+                                const container = document.getElementById('thumbnail-container');
+                                container?.scrollBy({ left: -200, behavior: 'smooth' });
+                            }}
+                            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                className="w-4 h-4"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+
+                        {/* Right Arrow */}
+                        <button
+                            onClick={() => {
+                                const container = document.getElementById('thumbnail-container');
+                                container?.scrollBy({ left: 200, behavior: 'smooth' });
+                            }}
+                            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                className="w-4 h-4"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                    </div>
                 </div>
+
             </div>
+
+
 
             {/* Gallery */}
             <section className="mt-20">
@@ -147,7 +289,7 @@ export default function ProductClient({ product }: any) {
                                 width={400}
                                 height={260}
                                 className="object-cover h-40 w-full transition-transform duration-500 hover:scale-105 cursor-pointer"
-                                onClick={() => openLightbox(img)}
+                                onClick={() => openRoomLightbox(i)}
                             />
                         </div>
                     ))}
@@ -159,10 +301,11 @@ export default function ProductClient({ product }: any) {
 
                 {/* Colors Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
-                    {product.availableColors.map((c: any) => (
+                    {product.availableColors.map((c: any, idx: number) => (
                         <div
                             key={c.code}
                             className="rounded-xl p-4 text-center bg-white shadow-sm hover:shadow-md transition cursor-pointer"
+                            onClick={() => openColorLightbox(idx)}
                         >
                             <div className="w-full h-28 rounded-md overflow-hidden mb-3">
                                 <Image
@@ -171,7 +314,6 @@ export default function ProductClient({ product }: any) {
                                     width={300}
                                     height={200}
                                     className="object-cover w-full h-full cursor-pointer"
-                                    onClick={() => openLightbox(c.img)}
                                 />
                             </div>
 
@@ -182,61 +324,299 @@ export default function ProductClient({ product }: any) {
                 </div>
             </section>
 
-
-            {/* ✨ UPDATED LIGHTBOX MODAL WITH CAROUSEL NAVIGATION ✨ */}
-            {lightboxOpen && (
+            {/* Room Shots Lightbox */}
+            {roomLightboxOpen && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
-                    onClick={(e) => e.target === e.currentTarget && setLightboxOpen(false)}
+                    className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6"
+                    onClick={(e) =>
+                        e.target === e.currentTarget && setRoomLightboxOpen(false)
+                    }
                 >
-                    {/* Previous Button */}
-                    <button
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            prevImage();
-                        }}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold"
-                        aria-label="Previous"
-                    >
-                        ‹
-                    </button>
+                    <div className="bg-white rounded-lg w-full max-w-6xl max-h-[92vh] flex flex-col overflow-hidden shadow-2xl">
 
-                    {/* Image */}
-                    <div className="relative max-w-4xl w-full">
-                        <Image
-                            src={lightboxImg}
-                            alt="Full screen"
-                            width={1200}
-                            height={800}
-                            className="w-full h-auto rounded-lg"
-                        />
-                        {/* Optional: Show position indicator */}
-                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-2 py-1 rounded text-sm">
-                            {lightboxIndex + 1} / {allImages.length}
+                        {/* Header */}
+                        <div className="flex justify-between items-center px-6 py-4 border-b bg-white">
+                            <div className="flex items-center gap-4">
+                                <h2 className="text-lg font-semibold text-gray-800">
+                                    {product.title}
+                                </h2>
+
+                                <div className="bg-blue-600 text-white text-xs font-medium px-3 py-1 rounded-full">
+                                    {product.installationGallery.length} Images
+                                </div>
+                            </div>
+
+                            <button
+                                onClick={() => setRoomLightboxOpen(false)}
+                                className="text-gray-600 text-2xl hover:text-black transition"
+                            >
+                                ✕
+                            </button>
+                        </div>
+
+                        {/* Image Section */}
+                        <div className="relative flex items-center justify-center bg-gray-100 flex-1">
+
+                            {/* Left Arrow */}
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    prevRoomImage();
+                                }}
+                                className="absolute left-4 bg-black/70 text-white w-10 h-10 flex items-center justify-center rounded-md hover:bg-black transition z-10"
+                            >
+                                ‹
+                            </button>
+
+                            {/* Image Container with Zoom */}
+                            <div
+                                className="relative overflow-hidden"
+                                onMouseMove={(e) => {
+                                    const container = e.currentTarget;
+                                    const img = container.querySelector('img') as HTMLImageElement;
+                                    if (!img) return;
+
+                                    const { left, top, width, height } = container.getBoundingClientRect();
+                                    const x = ((e.clientX - left) / width) * 100;
+                                    const y = ((e.clientY - top) / height) * 100;
+
+                                    img.style.transformOrigin = `${x}% ${y}%`;
+                                    img.style.transform = 'scale(2)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    const container = e.currentTarget;
+                                    const img = container.querySelector('img') as HTMLImageElement;
+                                    if (!img) return;
+
+                                    img.style.transformOrigin = 'center';
+                                    img.style.transform = 'scale(1)';
+                                }}
+                            >
+                                <Image
+                                    src={product.installationGallery[roomLightboxIndex]}
+                                    alt="Room shot"
+                                    width={1400}
+                                    height={900}
+                                    className="max-h-[70vh] w-auto object-contain transition-transform duration-300 ease-out"
+                                />
+
+                                {/* Bottom Gradient Overlay */}
+                                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+
+                                {/* Bottom Left - Title */}
+                                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded shadow">
+                                    <div className="text-sm font-semibold text-gray-800 uppercase tracking-wide">
+                                        {product.title}
+                                    </div>
+                                </div>
+
+                                {/* Bottom Right - Code */}
+                                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded shadow">
+                                    <div className="text-sm font-medium text-gray-700 uppercase tracking-wide">
+                                        {product.availableColors[roomLightboxIndex]?.code || "BL01 IRIDIUM SILVER"}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right Arrow */}
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    nextRoomImage();
+                                }}
+                                className="absolute right-4 bg-black/70 text-white w-10 h-10 flex items-center justify-center rounded-md hover:bg-black transition z-10"
+                            >
+                                ›
+                            </button>
+
+                            {/* Counter */}
+                            <div className="absolute top-4 right-4 bg-black/80 text-white text-sm px-3 py-1 rounded">
+                                {roomLightboxIndex + 1} / {product.installationGallery.length}
+                            </div>
+                        </div>
+
+                        {/* Bottom Section - Thumbnails Only */}
+                        <div className="bg-white border-t px-6 py-4">
+
+                            <div className="flex gap-3 overflow-x-auto no-scrollbar">
+                                {product.installationGallery?.map(
+                                    (img: string, idx: number) => (
+                                        <div
+                                            key={idx}
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setRoomLightboxIndex(idx);
+                                            }}
+                                            className={`cursor-pointer border-2 rounded-md ${idx === roomLightboxIndex
+                                                ? "border-blue-600"
+                                                : "border-transparent opacity-60 hover:opacity-100"
+                                                }`}
+                                        >
+                                            <Image
+                                                src={img}
+                                                alt={`Thumbnail ${idx + 1}`}
+                                                width={70}
+                                                height={60}
+                                                className="object-cover rounded"
+                                            />
+                                        </div>
+                                    )
+                                )}
+                            </div>
                         </div>
                     </div>
-
-                    {/* Next Button */}
-                    <button
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            nextImage();
-                        }}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl font-bold"
-                        aria-label="Next"
-                    >
-                        ›
-                    </button>
-
-                    {/* Close Button */}
-                    <button
-                        onClick={() => setLightboxOpen(false)}
-                        className="absolute top-4 right-4 text-white text-3xl font-bold"
-                    >
-                        ×
-                    </button>
                 </div>
             )}
+
+            {/* Color Tiles Lightbox */}
+            {colorLightboxOpen && (
+                <div
+                    className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6"
+                    onClick={(e) =>
+                        e.target === e.currentTarget && setColorLightboxOpen(false)
+                    }
+                >
+                    <div className="bg-white rounded-lg w-full max-w-6xl max-h-[92vh] flex flex-col overflow-hidden shadow-2xl">
+
+                        {/* Header */}
+                        <div className="flex justify-between items-center px-6 py-4 border-b bg-white">
+                            <div className="flex items-center gap-4">
+                                <h2 className="text-lg font-semibold text-gray-800">
+                                    {product.title}
+                                </h2>
+
+                                <div className="bg-blue-600 text-white text-xs font-medium px-3 py-1 rounded-full">
+                                    {product.availableColors.length} Images
+                                </div>
+                            </div>
+
+                            <button
+                                onClick={() => setColorLightboxOpen(false)}
+                                className="text-gray-600 text-2xl hover:text-black transition"
+                            >
+                                ✕
+                            </button>
+                        </div>
+
+                        {/* Image Section */}
+                        <div className="relative flex items-center justify-center bg-gray-100 flex-1">
+
+                            {/* Left Arrow */}
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    prevColorImage();
+                                }}
+                                className="absolute left-4 bg-black/70 text-white w-10 h-10 flex items-center justify-center rounded-md hover:bg-black transition z-10"
+                            >
+                                ‹
+                            </button>
+
+                            {/* Image Container with Zoom */}
+                            <div
+                                className="relative overflow-hidden"
+                                onMouseMove={(e) => {
+                                    const container = e.currentTarget;
+                                    const img = container.querySelector('img') as HTMLImageElement;
+                                    if (!img) return;
+
+                                    const { left, top, width, height } = container.getBoundingClientRect();
+                                    const x = ((e.clientX - left) / width) * 100;
+                                    const y = ((e.clientY - top) / height) * 100;
+
+                                    img.style.transformOrigin = `${x}% ${y}%`;
+                                    img.style.transform = 'scale(2)';
+                                }}
+                                onMouseLeave={(e) => {
+                                    const container = e.currentTarget;
+                                    const img = container.querySelector('img') as HTMLImageElement;
+                                    if (!img) return;
+
+                                    img.style.transformOrigin = 'center';
+                                    img.style.transform = 'scale(1)';
+                                }}
+                            >
+                                <Image
+                                    src={product.availableColors[colorLightboxIndex].img}
+                                    alt="Color tile"
+                                    width={1400}
+                                    height={900}
+                                    className="max-h-[70vh] w-auto object-contain transition-transform duration-300 ease-out"
+                                />
+
+                                {/* Bottom Gradient Overlay */}
+                                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+
+                                {/* Bottom Left - Title */}
+                                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded shadow">
+                                    <div className="text-sm font-semibold text-gray-800 uppercase tracking-wide">
+                                        {product.title}
+                                    </div>
+                                </div>
+
+                                {/* Bottom Right - Code */}
+                                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded shadow">
+                                    <div className="text-sm font-medium text-gray-700 uppercase tracking-wide">
+                                        {product.availableColors[colorLightboxIndex].code}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right Arrow */}
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    nextColorImage();
+                                }}
+                                className="absolute right-4 bg-black/70 text-white w-10 h-10 flex items-center justify-center rounded-md hover:bg-black transition z-10"
+                            >
+                                ›
+                            </button>
+
+                            {/* Counter */}
+                            <div className="absolute top-4 right-4 bg-black/80 text-white text-sm px-3 py-1 rounded">
+                                {colorLightboxIndex + 1} / {product.availableColors.length}
+                            </div>
+                        </div>
+
+                        {/* Bottom Section (Thumbnails Only) */}
+                        <div className="bg-white border-t px-6 py-4">
+
+                            <div className="flex gap-3 overflow-x-auto no-scrollbar">
+                                {product.availableColors?.map(
+                                    (c: { img: string; name: string; code: string }, idx: number) => {
+                                        if (!c?.img) return null;
+
+                                        return (
+                                            <div
+                                                key={c.code || idx}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setColorLightboxIndex(idx);
+                                                }}
+                                                className={`cursor-pointer border-2 rounded-md ${idx === colorLightboxIndex
+                                                    ? "border-blue-600"
+                                                    : "border-transparent opacity-60 hover:opacity-100"
+                                                    }`}
+                                            >
+                                                <Image
+                                                    src={c.img}
+                                                    alt={c.name || `Color ${idx + 1}`}
+                                                    width={90}
+                                                    height={70}
+                                                    className="object-cover rounded"
+                                                />
+                                            </div>
+                                        );
+                                    }
+                                )}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            )}
+
 
             {/* The rest of your sections remain UNCHANGED */}
             <section className="mt-20">
@@ -397,20 +777,28 @@ export default function ProductClient({ product }: any) {
                         </p>
                     </div>
                     <div className="flex flex-wrap gap-3">
-                        <button className="px-5 py-2 bg-[#b58e6d] text-white text-sm rounded-lg hover:bg-[#a67c52] transition">
+                        <Link
+                            href="/contact"
+                            className="px-5 py-2 bg-[#b58e6d] text-white text-sm rounded-lg hover:bg-[#a67c52] transition inline-block text-center"
+                        >
                             Request Samples
-                        </button>
-                        <button className="px-5 py-2 border border-gray-400 text-gray-700 text-sm rounded-lg hover:bg-gray-50 transition">
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="px-5 py-2 border border-gray-400 text-gray-700 text-sm hover:text-white rounded-lg hover:bg-primary transition inline-block text-center"
+                        >
                             Technical Support
-                        </button>
-                        <button className="px-5 py-2 border border-gray-400 text-gray-700 text-sm rounded-lg hover:bg-gray-50 transition">
+                        </Link>
+                        <Link
+                            href={product.specPdf}
+                            download
+                            className="px-5 py-2 border border-gray-400 text-gray-700 text-sm hover:text-white rounded-lg hover:bg-primary transition inline-block text-center"
+                        >
                             Download Data Sheet
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
-
-
             <div className="h-24"></div>
         </div>
     );
